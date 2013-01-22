@@ -97,7 +97,16 @@ textarea {
 	
 	body { font-family:"Bliss Basic Regular", 'Gill Sans', Calibri, 'Helvetica Neue', Arial, sans-serif; font-weight:normal; font-style:normal; }
 
+	body {
+		font-size: 1.5em;
+		margin: 20%;
+	}
 
+	h1 {
+		font-weight: normal;
+		font-size: 1em;
+	}
+	
 
 
 
