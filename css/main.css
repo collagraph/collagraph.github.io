@@ -20,7 +20,7 @@ textarea {
 
 body {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.618em;
 }
 
 /*
@@ -101,14 +101,16 @@ textarea {
 		font-size: 1.5em;
 		margin: 20%;
 	}
+	
+	.site-container {
+		max-width: 40em;
+	}
 
 	h1 {
 		font-weight: normal;
 		font-size: 1em;
 	}
 	
-
-
 
 
 
