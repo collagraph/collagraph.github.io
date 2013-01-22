@@ -93,10 +93,31 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   /* Vertical rhythm of 34px (easily adjusted upwards) */
+   
+   /* Modular scale 16px & 98px at 1.618 */
+   
+	/*
+	98.000	6.125	6.125	753.846
+	67.773	4.236	4.236	521.331
+	60.569	3.786	3.786	465.915
+	41.887	2.618	2.618	322.208
+	37.434	2.34	2.34	287.954
+	25.888	1.618	1.618	199.138
+	23.136	1.446	1.446	177.969
+	16.000	1	    1	    123.077
+	14.299	0.894	0.894	109.992
+	9.889	0.618	0.618	76.069
+	8.837	0.552	0.552	67.977
+	6.112	0.382	0.382	47.015
+	5.462	0.341	0.341	42.015
+	3.778	0.236	0.236	29.062
+	*/
+
 	/* Fontdeck tester styes */
 	
 	body { 
-		margin: 9.424em 5.824em 15.247em 9.424em;
+		margin: 6.854em 0 0 11.089em;
 		font-family:"Bliss Basic Regular", 'Gill Sans', Calibri, 'Helvetica Neue', Arial, sans-serif;
 		font-weight:normal;
 		font-style:normal;
@@ -110,19 +131,20 @@ textarea {
 		display: block;
 		text-align: right;
 		font-size: 1.625em;
-		line-height: 1em;
+		line-height: 1.036em;
 	}
 
 	h1 {
 		font-weight: normal;
 		font-size: 3.786em;
-		line-height: 1em;
+		line-height: 1.123em;
 		text-align: justify;
 	}
 	
 	p {
+		text-indent: 4.236em;
 		font-size: 1.618em;
-		line-height: 34px;
+		line-height: 1.313em;
 		text-align: justify;
 	}
 	
