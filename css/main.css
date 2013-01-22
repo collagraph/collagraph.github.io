@@ -95,20 +95,35 @@ textarea {
 
 	/* Fontdeck tester styes */
 	
-	body { font-family:"Bliss Basic Regular", 'Gill Sans', Calibri, 'Helvetica Neue', Arial, sans-serif; font-weight:normal; font-style:normal; }
-
-	body {
-		font-size: 1.5em;
-		margin: 20%;
+	body { 
+		margin: 9.424em 5.824em 15.247em 9.424em;
+		font-family:"Bliss Basic Regular", 'Gill Sans', Calibri, 'Helvetica Neue', Arial, sans-serif;
+		font-weight:normal;
+		font-style:normal;
 	}
 	
 	.site-container {
-		max-width: 40em;
+		max-width: 32.659em;
+	}
+	
+	.org.fn {
+		display: block;
+		text-align: right;
+		font-size: 1.625em;
+		line-height: 1em;
 	}
 
 	h1 {
 		font-weight: normal;
-		font-size: 1em;
+		font-size: 3.786em;
+		line-height: 1em;
+		text-align: justify;
+	}
+	
+	p {
+		font-size: 1.618em;
+		line-height: 34px;
+		text-align: justify;
 	}
 	
 
