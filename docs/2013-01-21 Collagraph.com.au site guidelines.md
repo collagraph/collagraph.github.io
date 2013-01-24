@@ -34,17 +34,24 @@
 
 ## Content
 
-+ Title
-+ What is Collagraph?
-+ What do we do?
-+ Contact information 
+### Title
+>	Collagraph
+### What is Collagraph?
+
+>	Collagraph craft beautiful online publishing systems.
+Luke Bacon and Robert Irish are a web design and content strategy partnership based in Sydney, Australia. We work with forward thinking clients on projects that make an impact.
+
+### What do we do?
+
+### Contact information 
+
+>	info@collagraph.com.au  
+	call Luke on +61406566693
 
 ### Three points
 
 - “We built websites tailored to your goals, and establish measurement processes to help you track them and improve your communications.”
- - 
-- “We help you to develop your content to make it clear, beautiful and usable - for both you and your audience.”
- - 
+- “We help you to develop your content to make it clear, beautiful and usable - for both you and your audience.” 
 - “We're strong believers in universal accessibility - one site, that looks and works on all devices and all kinds of people.”
  - 
 
