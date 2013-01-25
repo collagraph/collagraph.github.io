@@ -529,13 +529,40 @@ textarea {
  */
 /* _typography.scss */
 body {
-  font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif; }
+
+h1 {
+  color: #666; }
+
+.org {
+  color: #222; }
+
+.contact ul,
+#beliefs ul {
+  list-style: none;
+  padding: 0; }
+
+.contentinfo small {
+  display: block; }
+
+.date-stamp abbr {
+  border: none;
+  text-decoration: none; }
+
+h1 {
+  font-size: 1.1em; }
+
+span {
+  display: block;
+  font-size: 1.618em; }
+
+p {
+  font-size: 1.7798em; }
 
 /* _Colour.scss */
 body {
-  background-image: url("images/bg.jpg"); }
+  background-image: url("images/bg.jpg");
+  margin: 1em 1.618em 2.618em; }
 
 /* ==========================================================================
    Helper classes
