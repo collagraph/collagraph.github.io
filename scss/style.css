@@ -529,8 +529,13 @@ textarea {
  */
 /* _typography.scss */
 body {
-  font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif;
-  text-align: center; }
+  font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif; }
+
+h1 {
+  color: #666; }
+
+.org {
+  color: #222; }
 
 .contact ul,
 #beliefs ul {
@@ -546,7 +551,12 @@ body {
 
 /* _Colour.scss */
 body {
-  background-image: url("images/bg.jpg"); }
+  background-image: url("images/bg.jpg");
+  padding: 0 7%;
+  margin: 1em 0; }
+
+.logo {
+  width: 45%; }
 
 /* ==========================================================================
    Helper classes
