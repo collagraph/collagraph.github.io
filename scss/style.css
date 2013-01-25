@@ -554,14 +554,20 @@ h1 {
   border: none;
   text-decoration: none; }
 
+h1 {
+  font-size: 1.1em; }
+
+span {
+  display: block;
+  font-size: 1.618em; }
+
+p {
+  font-size: 1.7798em; }
+
 /* _Colour.scss */
 body {
   background-image: url("images/bg.jpg");
-  padding: 0 7%;
-  margin: 1em 0; }
-
-.logo {
-  width: 9.4em; }
+  margin: 1em 1.618em 2.618em; }
 
 /* ==========================================================================
    Helper classes
