@@ -1,4 +1,9 @@
 /* _Colour.scss */
+
+h1 { color: #666; }
+
+.org {color: #222;}
+
 a {
 	color: #20764c;
 	text-decoration: none;
@@ -8,9 +13,9 @@ a {
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-}
-a:hover, 
-a:focus {
+	&:hover, 
+	&:focus {
 	color: #15297d;
 	border-color: #15297d;
+	}
 }

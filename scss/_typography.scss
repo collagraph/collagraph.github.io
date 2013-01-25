@@ -4,9 +4,6 @@ body {
 	font-family:"Bliss Basic Regular", Calibri, 'Helvetica Neue', Arial, sans-serif;
 }
 
-h1 { color: #666;}
-.org {color: #222;}
-
 .contact ul,
 #beliefs ul {
 	list-style: none;
@@ -24,11 +21,14 @@ h1 { color: #666;}
 
 h1 {
 	font-size: 1.1em;
+	font-weight: normal;
 }
-span {
+.org {
 	display: block;
 	font-size: 1.618em;
 }
-.leader {
+.lead {
 	font-size: 1.7798em;
 }
+
+h2,h3 { font-weight: normal;}

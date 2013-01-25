@@ -531,12 +531,6 @@ textarea {
 body {
   font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif; }
 
-h1 {
-  color: #666; }
-
-.org {
-  color: #222; }
-
 .contact ul,
 #beliefs ul {
   list-style: none;
@@ -555,16 +549,26 @@ h1 {
   text-decoration: none; }
 
 h1 {
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  font-weight: normal; }
 
-span {
+.org {
   display: block;
   font-size: 1.618em; }
 
-.leader {
+.lead {
   font-size: 1.7798em; }
 
+h2, h3 {
+  font-weight: normal; }
+
 /* _Colour.scss */
+h1 {
+  color: #666; }
+
+.org {
+  color: #222; }
+
 a {
   color: #20764c;
   text-decoration: none;
@@ -574,18 +578,17 @@ a {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-
-a:hover,
-a:focus {
-  color: #15297d;
-  border-color: #15297d; }
+  a:hover, a:focus {
+    color: #15297d;
+    border-color: #15297d; }
 
 body {
   background-image: url("images/bg.jpg");
   margin: 1em 1.618em 2.618em; }
 
 .logo {
-  width: 8.6em; }
+  width: 8.6em;
+  margin-left: -.2em; }
 
 /* ==========================================================================
    Helper classes
