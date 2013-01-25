@@ -14,4 +14,8 @@ sitemap.xml
 sitemap.xml.gz
 .DS_store
 
+<<<<<<< Updated upstream
 .scssc
+=======
+scss/.sass-cache/25ce50eaccfd227fc9760f1c649d1ee3b9e536a0/_style.scssc
+>>>>>>> Stashed changes
