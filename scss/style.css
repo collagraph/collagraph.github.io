@@ -560,9 +560,21 @@ p {
   font-size: 1.7798em; }
 
 /* _Colour.scss */
+a {
+  color: #20764c;
+  text-decoration: none;
+  border-bottom: 0.1em solid #20764c; }
+
+a:hover,
+a:focus {
+  color: #15297d; }
+
 body {
   background-image: url("images/bg.jpg");
   margin: 1em 1.618em 2.618em; }
+
+.logo {
+  width: 8.6em; }
 
 /* ==========================================================================
    Helper classes
