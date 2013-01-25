@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en">
+ <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="scss/style.css">
+        
+    <!-- fontdeck - Bliss -->
+	<script type="text/javascript">
+	WebFontConfig = { fontdeck: { id: '28667' } };
+	
+	(function() {
+	  var wf = document.createElement('script');
+	  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	  wf.type = 'text/javascript';
+	  wf.async = 'true';
+	  var s = document.getElementsByTagName('script')[0];
+	  s.parentNode.insertBefore(wf, s);
+	})();
+	</script>
+	<script type="text/javascript">
+	var random_images_array = ['collagraph-blue-green.png', 'collagraph-green-pink.png'];
+    function getRandomImage(imgAr, path) {
+	    path = path || 'images/'; // default path here
+	    var num = Math.floor( Math.random() * imgAr.length );
+	    var img = imgAr[ num ];
+	    var imgStr = '<img alt="Collagraph logo" class="logo" src="' + path + img + '" />';
+	    document.write(imgStr); document.close();
+	}
+    </script>
+</head>
+<body class="vard">
+	<!--<img alt="Collagraph logo" class="logo" src="/images/collagraph-blue-green.png" />-->
+	<script type="text/javascript">
+		getRandomImage(random_images_array);
+	</script>
+	<h1><span class="org fn">Collagraph</span> craft beautiful online publishing systems.</h1>
+	<p class="lead"><a href="http://twitter.com/equivalentideas.com" title="Luke Bacon (@equivalentideas) on Twitter">Luke Bacon</a> and <a href="http://robertfortesue.com.au" title="Robert's personal website">Robert Irish</a> are a web design and content strategy partnership based in Sydney, Australia. We work with forward thinking clients on projects that make an impact.</p>
+	<address class="contact">
+		<ul>
+			<li><a class="email" href="mailto:info@collagraph.com.au">info@collagraph.com.au</a></li>
+			<li>Call Luke on <span class="tel">+61 (0) 406 566 693</span></li>
+		</ul>
+	</address>
+	<section id="beliefs">
+		<ul>
+			<li>
+				<h2>A site that works for you</h2>
+				<p>A website constructed to to achieve <em>your</em> goals. We design from the ground up to suit your specific needs and establish measurement processes so you can track success and constantly improve your communications.</p>
+			</li>
+			<li>
+				<h2>Content for the web</h2>
+				<p>We help you to develop strong web content publishing workflows, content that's clear, beautiful, usable and structured to prosper online.</p>
+			</li>
+			<li>
+				<h2>Multi-device</h2>
+				<p>We're strong believers in universal accessibility&mdash;one site that looks great and functions seamlessly whether you're on a mobile, tablet, desktop, </p>
+			</li>
+		</ul>
+	</section>
+<!--
+	<section id="case-studies">
+		<h2>Our Work</h2>
+			<ul>
+				<li><h3>Investigate.org.au</h3>
+					<p></p>			
+				</li>
+			</ul>
+	</section>
+-->
+	<footer role="contentinfo" class="contentinfo">
+		<small class="legal">&copy; Robert Irish &amp; Luke Bacon</small>
+		<small class="date-stamp">Collagraph <abbr title="Established">EST.</abbr> 2012</small>
+	</footer>
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>

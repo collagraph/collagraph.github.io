@@ -1,0 +1,34 @@
+/* _typography.scss */
+
+body { 
+	font-family:"Bliss Basic Regular", Calibri, 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 { color: #666;}
+.org {color: #222;}
+
+.contact ul,
+#beliefs ul {
+	list-style: none;
+	padding: 0;
+}
+
+.contact li {
+	display: block;
+	padding: 0.25em;
+	margin: 0 0 0.125em;
+}
+
+.contentinfo small { display: block; }
+.date-stamp abbr { border: none; text-decoration: none; }
+
+h1 {
+	font-size: 1.1em;
+}
+span {
+	display: block;
+	font-size: 1.618em;
+}
+.leader {
+	font-size: 1.7798em;
+}

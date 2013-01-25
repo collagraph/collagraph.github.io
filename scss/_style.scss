@@ -1,0 +1,16 @@
+/*
+ * Style.scss
+ * General styles
+ */
+
+@import "typography";
+
+@import "colour";
+
+body {
+	background-image: url('images/bg.jpg');
+	margin: 1em 1.618em 2.618em;
+}
+.logo {
+	width: 8.6em;
+}
