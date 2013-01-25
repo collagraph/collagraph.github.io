@@ -3,8 +3,14 @@ a {
 	color: #20764c;
 	text-decoration: none;
 	border-bottom: 0.1em solid #20764c;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 a:hover, 
 a:focus {
 	color: #15297d;
+	border-color: #15297d;
 }
