@@ -523,7 +523,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* Style.scss */
+/*
+ * Style.scss
+ * General styles
+ */
 /* _typography.scss */
 body {
   font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif;
@@ -531,6 +534,9 @@ body {
   font-style: normal; }
 
 /* _Colour.scss */
+body {
+  background-image: url("/bg.jpg"); }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

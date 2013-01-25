@@ -1,5 +1,12 @@
-/* Style.scss */
+/*
+ * Style.scss
+ * General styles
+ */
 
 @import "typography";
 
 @import "colour";
+
+body {
+	background-image: url('/bg.jpg');
+}
