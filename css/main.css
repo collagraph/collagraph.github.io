@@ -19,8 +19,8 @@ textarea {
 }
 
 body {
-    font-size: 0.618em;
-    line-height: 1.618em;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 /*
@@ -93,6 +93,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+<<<<<<< HEAD
    /* Vertical rhythm of 34px (easily adjusted upwards) */
    
    /* Modular scale 16px & 98px at 1.618 */
@@ -149,6 +150,13 @@ textarea {
 		text-align: justify;
 	}
 	
+=======
+
+
+
+
+
+>>>>>>> Working
 
 
 
@@ -268,10 +276,14 @@ textarea {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
+<<<<<<< HEAD
     body {
 	    font-size: 1em;
 	    line-height: 1.618em;
 	}
+=======
+    /* Style adjustments for viewports that meet the condition */
+>>>>>>> Working
 }
 
 @media print,
