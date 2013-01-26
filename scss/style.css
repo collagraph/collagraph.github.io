@@ -550,12 +550,6 @@ body {
   font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.125em; }
 
-h1 {
-  color: #666; }
-
-.org {
-  color: #222; }
-
 .contact ul,
 #beliefs ul {
   list-style: none;
@@ -563,8 +557,8 @@ h1 {
 
 .contact li {
   display: block;
-  padding: 0.25em;
-  margin: 0 0 0.125em; }
+  padding: 0.236em;
+  margin: 0 0 0.146em; }
 
 .contentinfo small {
   display: block; }
@@ -584,7 +578,7 @@ h1 span {
 a {
   color: #20764c;
   text-decoration: none;
-  border-bottom: 0.1em solid #20764c;
+  border-bottom: 0.102em solid #20764c;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -595,6 +589,12 @@ a:hover,
 a:focus {
   color: #15297d;
   border-color: #15297d; }
+
+h1 {
+  color: #666; }
+
+.org {
+  color: #222; }
 
 body {
   background-image: url("images/bg.jpg");
