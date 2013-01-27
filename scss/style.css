@@ -548,7 +548,8 @@ textarea {
 */
 body {
   font-family: "Bliss Basic Regular", Calibri, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.125em; }
+  font-size: 1.125em;
+  line-height: 1.4; }
 
 .contact ul,
 #beliefs ul {
