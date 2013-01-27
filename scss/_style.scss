@@ -9,8 +9,11 @@
 
 body {
 	background-image: url('images/bg.jpg');
-	margin: 1em 1.618em 2.618em;
+	margin: 0 auto;
+	padding: 1em 1.618em 2.618em;
+	max-width: 29.03em;
 }
+
 .logo {
 	width: 8.6em;
 	margin-left: -.2em;
