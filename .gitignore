@@ -1,6 +1,7 @@
 .htaccess
 sitemap.xml
 *.log
+*.orig
 sitemap.xml
 sitemap.xml.gz
 .DS_store
@@ -9,3 +10,4 @@ sitemap.xml.gz
 
 /scss/.sass-cache/ed36d7d389b7b32d023a869e93700fe6044dfd4f/_colour.scssc
 /scss/.sass-cache/ed36d7d389b7b32d023a869e93700fe6044dfd4f/_style.scssc
+/scss/.sass-cache
