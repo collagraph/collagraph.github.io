@@ -1,7 +1,27 @@
 /* _typography.scss */
 
-body { 
-	font-family:"Bliss Basic Regular", Calibri, 'Helvetica Neue', Arial, sans-serif;
+/*
+18px @ 1.618em
+845.479	46.971	52.842	6,503.685
+522.546	29.03	32.659	4,019.585
+322.958	17.942	20.185	2,484.292
+199.603	11.089	12.475	1,535.408
+123.364	6.854	7.71	948.954
+76.245	4.236	4.765	586.500
+47.123	2.618	2.945	362.485
+29.124	1.618	1.82	224.031
+18	1	1.125	138.462
+11.125	0.618	0.695	85.577
+6.876	0.382	0.43	52.892
+4.25	0.236	0.266	32.692
+2.627	0.146	0.164	20.208
+1.624	0.09	0.102	12.492
+1.004	0.056	0.063	7.723
+*/
+
+body {
+	font-family: "Bliss Basic Regular", Calibri, 'Helvetica Neue', Arial, sans-serif;
+	font-size: 1.125em;
 }
 
 .contact ul,
@@ -12,8 +32,8 @@ body {
 
 .contact li {
 	display: block;
-	padding: 0.25em;
-	margin: 0 0 0.125em;
+	padding: 0.236em;
+	margin: 0 0 0.146em;
 }
 
 .contentinfo small { display: block; }
