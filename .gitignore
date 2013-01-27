@@ -1,6 +1,7 @@
 .htaccess
 sitemap.xml
 *.log
+*.orig
 sitemap.xml
 sitemap.xml.gz
 .DS_store
