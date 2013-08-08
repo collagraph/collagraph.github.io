@@ -37,8 +37,7 @@
     <script src="<?php echo $site_url; ?>/js/modernizr.min.js"></script>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="<?php echo $site_url; ?>/reset.css" />
-    <link rel="stylesheet" href="<?php echo $site_url; ?>/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- SEO -->
     <link rel="canonical" href="<?php echo $site_url . '/' . $page_slug; ?>" />
