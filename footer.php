@@ -1,4 +1,3 @@
-      </div> <!-- #wrapper -->
 
     <!-- Include respond.js for < IE 9 -->
     <!--[if lt IE 9]>

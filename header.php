@@ -56,5 +56,3 @@
 </head>
 
 <body class="<?php echo $page_slug; ?>">
-
-    <div class="wrapper">
