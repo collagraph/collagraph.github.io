@@ -2,13 +2,9 @@
 	<img alt="" />
 	<h1>Collagraph</h1>
 
-	<p>Clear design for the web</p>
+	<p>Clear design for the web, based in Sydney, Australia.</p>
 	
 </header>
-
-	
-<p>Collagraph is a web design and content strategy partnership based in Sydney, Australia.</p>
-
 	
 <ul>
 	<li>Email: info@collagrph.com.au</li>
