@@ -19,7 +19,7 @@
 	
 	<p>A website designed from the ground up to achieve <em>your</em> goals. We make sure you, and your users, are happy.</p>
 	
-	<h3>Content for the web</h3>
+	<h3>Content strategy</h3>
 	
 	<p>We help you to develop strong web content that&#8217;s clear and effective. Well organised information puts you in control.</p>
 	
