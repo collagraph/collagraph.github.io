@@ -29,6 +29,42 @@ mark {background-color: #ddd; color: #222; font-style: italic; font-weight: bold
 input:-moz-placeholder {color:#888;}
 textarea:-moz-placeholder {color:#888;}
 
+/* Typefaces
+-------------------------------------------------------------------------------*/
+
+body {
+	font-family: 'Open Sans';
+}
+
+/* Colours 
+-------------------------------------------------------------------------------*/
+
+$text-base: #333;
+
+$background: #fff ;
+
+$primary: blue;
+
+$discrete: #aaa ;
+
+$contrast: #555 ;
+
+body {
+	color: $text-base;
+	background-color: $background;
+}
+
+a {
+	color: $primary;
+}
+
+
+/* Type-scale 
+-------------------------------------------------------------------------------*/
+
+
+
+
 /* Tools
 -------------------------------------------------------------------------------*/
 
