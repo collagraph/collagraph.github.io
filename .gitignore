@@ -11,3 +11,4 @@ sitemap.xml.gz
 /scss/.sass-cache/ed36d7d389b7b32d023a869e93700fe6044dfd4f/_style.scssc
 /scss/.sass-cache
 .DS_Store
+/style.css
