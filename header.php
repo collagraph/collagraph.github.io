@@ -1,4 +1,4 @@
-<header class="h-card">
+<header class="h-card site-header">
 
 	<img class="logo u-logo" src="images/temp-logo-iii.png" alt="Collagraph logo" />
 
