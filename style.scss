@@ -47,14 +47,15 @@ base	1.125rem		18px
 -------------------------------------------------------------------------------*/
 
 body {
-	font-family: "ff-meta-serif-web-pro", georgia;
+	font-family: "ff-meta-web-pro", "open sans", sans-serif ;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
-.logo, .distinct, h2, h3 {
-	font-family: "ff-meta-web-pro", "open sans", sans-serif ;
+/* serif elements */
+p {
+	font-family: "ff-meta-serif-web-pro", georgia;
 }
 
 img.logo {
