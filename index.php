@@ -12,14 +12,14 @@
 
 <!-- What we do -->
 
-<section id="what-we-do">
-	<h2>What we do</h2>
+<section id="our-approach">
+	<h2>Our approach</h2>
 	
 	<h3>Designed for you</h3>
 	
 	<p>A website designed from the ground up to achieve <em>your</em> goals. We make sure you, and your users, are happy.</p>
 	
-	<h3>Content for the web</h3>
+	<h3>Content strategy</h3>
 	
 	<p>We help you to develop strong web content that&#8217;s clear and effective. Well organised information puts you in control.</p>
 	
@@ -46,5 +46,9 @@
 	
 	<h3>Luke Bacon</h3>
 </section>
+
+<form>
+		
+</form>
 
 <?php require_once('footer.php'); ?>
