@@ -1,6 +1,6 @@
 <header>
 
-	<img src="images/logo.png" alt="Collagraph logo" />
+	<img class="logo" src="images/logo.png" alt="Collagraph logo" />
 
 	<h1 class="logo">Collagraph</h1>
 
