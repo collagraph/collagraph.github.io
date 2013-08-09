@@ -9,6 +9,6 @@
 </header>
 	
 <ul>
-	<li>Email: info@collagrph.com.au</li>
-	<li>Phone: +61 406566693</li>
+	<li>Email: <a href="mailto:info@collagraph.com.au">info@collagrph.com.au</a></li>
+	<li>Phone: <a href="tel:+61406566693">+61 406 566 693</a></li>
 </ul>
