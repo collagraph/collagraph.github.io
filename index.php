@@ -12,28 +12,44 @@
 
 <!-- What we do -->
 
-<section id="our-approach" class="our-approach main">
+<section id="our-approach" class="our-approach">
+
 	<h2>Our approach</h2>
 	
-	<h3>Designed for you</h3>
+	<div class="principle">
 	
-	<p>A website designed from the ground up to achieve <em>your</em> goals. We make sure you, and your users, are happy.</p>
+		<h3>Designed for you</h3>
+		
+		<p>A website designed from the ground up to achieve <em>your</em> goals. We make sure you, and your users, are happy.</p>
 	
-	<h3>Content strategy</h3>
+	</div>
 	
-	<p>Well organised information puts you in control. We help you to develop strong web content that&#8217;s clear and effective.</p>
+	<div class="principle">
 	
-	<h3>Mobile, Tablet, Desktop, ?</h3>
+		<h3>Content strategy</h3>
+		
+		<p>Well organised information puts you in control. We help you to develop strong web content that&#8217;s clear and effective.</p>
 	
-	<p>One site that looks and works great, no matter how your users view it.</p>
+	</div>
+	
+	<div class="principle">
+	
+		<h3>Mobile, Tablet, Desktop, ?</h3>
+		
+		<p>One site that looks and works great, no matter how your users view it.</p>
+	
+	</div>
+	
 </section>
 
 <section id="our-work" class="our-work main">
+
 	<h2>Our work</h2>
 
 	<h3>The Plan</h3>
 	
 	<h3>Investigate.org.au</h3>
+
 </section>
 
 <!--
