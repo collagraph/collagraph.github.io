@@ -61,23 +61,40 @@
 	<h3>Luke Bacon</h3>
 </section>
 -->
-
 <form id="contact" class="contact-form main" >
-<!--
-		<legend></legend>
-		
-			<label for="contact-name">Your name</label>
+		<h2>Contact</h2>
+		<p>Let us know about your project</p>
+	
+		<fieldset>
+			<label for="contact-name">Your name <span class="discrete">(required)</span></label>
 			<input type="text" required id="contact-name" name="contact-name" />
+		</fieldset>
+		
+		<fieldset>
+			<label for="contact-email">Email address <span class="discrete">(required)</span></label>
+			<input type="email" required id="contact-email" name="contact-email" />
+		</fieldset>
 
-		<label for="email">Your name</label>
-		<input type="email" required id="contact-email" name="contact-email" />
+		<fieldset>	
+			<label for="contact-org">Organisation/Company</label>
+			<input type="text" id="contact-org" name="contact-org" />
+		</fieldset>
 		
-		<label for="org">Organisation/Company</label>
-		<input type="text" id="contact-org" name="contact-org" />
+		<fieldset>
+			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
+			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
+		</fieldset>
+
+		<fieldset class="form-additional">		
+			<label for="dealine-q">Does the project have a deadline?</label>
+			<input type="checkbox" name="deadline-q"/>
+		</fieldset>
+
+		<fieldset class="form-additional">
+			<label for="budget-q">Do you have a rough budget for us?</label>
+			<input type="checkbox" name="budget-q"/>
+		</fieldset>
 		
-		<label for="contact-pref"></label>
-		
--->
 </form>
 
 <?php require_once('footer.php'); ?>

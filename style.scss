@@ -80,6 +80,10 @@ h1.logo {
 	display: block;
 }
 
+.discrete {
+	font-size: .875rem;
+}
+
 .details {
 	margin-top: 2rem;
 	font-size: 1rem;
@@ -139,7 +143,7 @@ $background: #fafafa;
 
 $primary: blue;
 
-$discrete: #aaa;
+$discrete: #888;
 
 $contrast: #9b8f8f;
 
@@ -150,6 +154,13 @@ body {
 
 a {
 	color: $primary;
+	&:hover,
+	&:focus {
+		color: darken($primary, 20%);
+	}
+	&:active {
+		
+	}
 }
 
 #our-approach {
@@ -183,6 +194,46 @@ a {
 	color: #eee;
 }
 
+.contact-form {
+	background-color: lighten($contrast, 38%);
+}
+
+.discrete {
+	color: $discrete;
+}
+
+
+/* Forms 
+-------------------------------------------------------------------------------*/
+
+fieldset {
+	display: block;
+}
+label,
+input {
+	display: block;
+}
+
+label {
+	margin: 1rem 0 0;
+}
+
+.textarea {
+	max-width: 100%;
+	margin-bottom: 1.25rem;	
+}
+
+.form-additional {
+	label {
+		display: inline-block;
+	}
+	input[type="checkbox"] {
+		display: inline-block;
+		width: 2rem;
+		vertical-align: middle;
+		overflow: visible;
+	}
+}
 
 /* Layout 
 -------------------------------------------------------------------------------*/
