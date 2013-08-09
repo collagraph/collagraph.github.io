@@ -190,8 +190,26 @@ label,
 input {
 	display: block;
 }
+
+label {
+	margin: 1rem 0 0;
+}
+
 .textarea {
 	max-width: 100%;
+	margin-bottom: 1.25rem;	
+}
+
+.form-additional {
+	label {
+		display: inline-block;
+	}
+	input[type="checkbox"] {
+		display: inline-block;
+		width: 2rem;
+		vertical-align: middle;
+		overflow: visible;
+	}
 }
 
 /* Layout 

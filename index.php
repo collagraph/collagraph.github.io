@@ -69,12 +69,12 @@
 			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
 		</fieldset>
 
-		<fieldset>		
+		<fieldset class="form-additional">		
 			<label for="dealine-q">Does the project have a deadline?</label>
 			<input type="checkbox" name="deadline-q"/>
 		</fieldset>
 
-		<fieldset>
+		<fieldset class="form-additional">
 			<label for="budget-q">Do you have a rough budget for us?</label>
 			<input type="checkbox" name="budget-q"/>
 		</fieldset>
