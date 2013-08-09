@@ -1,7 +1,9 @@
 <header>
-	<img alt="" />
+
+	<img src="images/logo.png" alt="Collagraph logo" />
+
 	<h1 class="logo">Collagraph</h1>
-	
+
 	<p>Clear design for the web, based in Sydney, Australia.</p>
 	
 </header>
