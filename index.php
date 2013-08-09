@@ -33,9 +33,8 @@
 
 	<h3>The Plan</h3>
 	
-	<h3>Marawa The Amazing</h3>
-	
 	<h3>Investigate.org.au</h3>
+
 
 </section>
 
