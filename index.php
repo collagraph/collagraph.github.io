@@ -13,6 +13,8 @@
 <!-- What we do -->
 
 <section id="our-approach" class="our-approach main">
+<section id="our-approach" class="our-approach">
+
 	<h2>Our approach</h2>
 	
 	<h3>Designed for you</h3>
