@@ -12,8 +12,8 @@
 
 <!-- What we do -->
 
-<section id="what-we-do">
-	<h2>What we do</h2>
+<section id="our-approach">
+	<h2>Our approach</h2>
 	
 	<h3>Designed for you</h3>
 	
