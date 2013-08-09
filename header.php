@@ -1,6 +1,6 @@
 <header class="h-card">
 
-	<img class="logo u-logo" src="images/logo.png" alt="Collagraph logo" />
+	<img class="logo u-logo" src="images/temp-logo-iii.png" alt="Collagraph logo" />
 
 	<h1 class="logo p-name">Collagraph</h1>
 
