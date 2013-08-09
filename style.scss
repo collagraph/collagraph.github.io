@@ -29,16 +29,33 @@ mark {background-color: #ddd; color: #222; font-style: italic; font-weight: bold
 input:-moz-placeholder {color:#888;}
 textarea:-moz-placeholder {color:#888;}
 
-/* Typefaces
+/* Webfonts
+-------------------------------------------------------------------------------*/
+
+
+/* Type-scale 
+-------------------------------------------------------------------------------
+
+
+base	1.125em		18px
+
+
+
+*/
+
+/* Type
 -------------------------------------------------------------------------------*/
 
 body {
 	font-family: "ff-meta-serif-web-pro", georgia;
+	font-size: 1.125em;
 }
 
-.logo {
+.logo, h3 {
 	font-family: "ff-meta-web-pro", "open sans" ;
 }
+
+
 
 /* Colours 
 -------------------------------------------------------------------------------*/
