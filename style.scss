@@ -153,6 +153,13 @@ body {
 
 a {
 	color: $primary;
+	&:hover,
+	&:focus {
+		color: darken($primary, 20%);
+	}
+	&:active {
+		
+	}
 }
 
 #our-approach {
