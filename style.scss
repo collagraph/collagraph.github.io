@@ -164,8 +164,12 @@ a {
 	color: #eee;
 }
 
+.contact-form {
+	background-color: lighten($contrast, 38%);
+}
+
 .discrete {
-	color: $discrete;	
+	color: $discrete;
 }
 
 
