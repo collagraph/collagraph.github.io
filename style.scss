@@ -99,6 +99,18 @@ ul {
 .details {
 	letter-spacing: 1px;
 	font-size: 1rem;
+	/* Image replace */
+	li {
+		margin: 0 0 .5rem;
+	}
+	i {
+		text-indent: -9999em;
+		display: inline-block;
+		font-style: normal;
+		width: 1.7rem;
+		margin: 0 .75rem 0 0;
+		background-color: grey;
+	}
 }
 
 a {
@@ -131,6 +143,7 @@ a {
 }
 
 
+
 /* Layout 
 -------------------------------------------------------------------------------*/
 
@@ -150,6 +163,7 @@ body {
   height: 1px; width: 1px;
   margin: -1px; padding: 0; border: 0;
 }
+
 
 /* Media queries!
 -------------------------------------------------------------------------------*/
