@@ -38,13 +38,15 @@
 
 </section>
 
-<section id="about-us">
+<!--
+<section id="about-us" class="about-us main">
 	<h2>Who we are</h2>
 	
 	<h3>Robert Irish</h3>
 	
 	<h3>Luke Bacon</h3>
 </section>
+-->
 
 <form id="contact" class="contact-form main" >
 <!--
