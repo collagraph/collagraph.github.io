@@ -5,6 +5,7 @@
 	<h1 class="logo">Collagraph</h1>
 
 	<p>Clear design for the web, based in Sydney, Australia.</p>
+	<p class="distinct">Clear&nbsp;design&nbsp;for&nbsp;the&nbsp;web, based&nbsp;in&nbsp;Sydney,&nbsp;Australia.</p>
 	
 </header>
 	
