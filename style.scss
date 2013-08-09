@@ -47,8 +47,9 @@ base	1.125em		18px
 -------------------------------------------------------------------------------*/
 
 body {
-	font-family: "ff-meta-serif-web-pro", georgia;
-	font-size: 1.125em;
+	font-family: "ff-meta-serif-web-pro", georgia, serif;
+	font-size: 1.125rem;
+	line-height: 1.7;	
 }
 
 .logo, h3 {
