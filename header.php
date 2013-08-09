@@ -8,5 +8,5 @@
 	
 <ul>
 	<li>Email: info@collagrph.com.au</li>
-	<li>Phone Luke: +61 406566693</li>
+	<li>Phone: +61 406566693</li>
 </ul>
