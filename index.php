@@ -47,7 +47,17 @@
 	<h3>Luke Bacon</h3>
 </section>
 
-<form>
+<form class="contact-form" id="contact">
+		<legend></legend>
+		
+		<label for="contact-name">Your name</label>
+		<input type="text" required id="contact-name" name="contact-name" />
+
+		<label for="email">Your name</label>
+		<input type="email" required id="contact-email" name="contact-email" />
+		
+		<label for="org">Organisation/Company</label>
+		<input type="text" id="contact-org" name="contact-org" />
 		
 </form>
 
