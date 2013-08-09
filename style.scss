@@ -53,18 +53,21 @@ body {
 }
 
 .logo, h3 {
-	font-family: "ff-meta-web-pro", "open sans" ;
 	font-family: "ff-meta-web-pro", "open sans", sans-serif;
 }
 
+.logo {
+	text-align: center;
 }
 
 	img.logo {
-		margin: 2rem auto 1rem;
-		max-width: 10rem;
+		display: block;
+		margin: 2rem auto 0;
+		width: 10rem;
 	}
 	
 	h1.logo {
+		margin-bottom: 4rem;
 		font-size: 2rem;
 	}
 
