@@ -101,6 +101,10 @@ ul {
 	margin-top: 1rem
 }
 
+.discrete {
+	font-size: .875rem;
+}
+
 .details {
 	letter-spacing: 1px;
 	font-size: 1rem;
@@ -134,7 +138,7 @@ $background: #fafafa;
 
 $primary: blue;
 
-$discrete: #aaa;
+$discrete: #888;
 
 $contrast: #9b8f8f;
 
@@ -151,6 +155,11 @@ a {
 	color: white;
 	background-color: $contrast;
 }
+
+.discrete {
+	color: $discrete;	
+}
+
 
 
 /* Layout 
