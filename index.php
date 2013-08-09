@@ -49,21 +49,21 @@
 -->
 
 <form id="contact" class="contact-form main" >
-<!--
 		<legend></legend>
 		
-			<label for="contact-name">Your name</label>
+			<label for="contact-name">Your name <span class="discrete">(required)</span></label>
 			<input type="text" required id="contact-name" name="contact-name" />
 
-		<label for="email">Your name</label>
-		<input type="email" required id="contact-email" name="contact-email" />
+			<label for="contact-email">Email address <span class="discrete">(required)</span></label>
+			<input type="email" required id="contact-email" name="contact-email" />
 		
-		<label for="org">Organisation/Company</label>
-		<input type="text" id="contact-org" name="contact-org" />
+			<label for="contact-org">Organisation/Company</label>
+			<input type="text" id="contact-org" name="contact-org" />
 		
-		<label for="contact-pref"></label>
-		
--->
+			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
+			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
+			
+	
 </form>
 
 <?php require_once('footer.php'); ?>
