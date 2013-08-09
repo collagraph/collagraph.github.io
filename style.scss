@@ -62,8 +62,6 @@ p {
 	}
 }
 
-
-
 img.logo {
 	display: block;
 }
@@ -76,11 +74,18 @@ h1.logo {
 .distinct {
 	font-size: 1.5rem;
 }
-	
+
+#our-approach {
+	margin-top: 4rem;
+	padding-top: 2rem;
+	background: #fff url('images/bg.png') center center no-repeat;
+	background-size: cover;
+}
+
 h2 {
+	margin-top: 2rem;
 	font-size: 1.25rem;
 	text-transform: uppercase;
-	margin: 4rem 0 0;
 }
 
 h3 {
