@@ -67,38 +67,17 @@ img.logo {
 }
 
 h1.logo {
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	font-size: 2rem;
+	font-weight: 400;
 }
 	
 .distinct {
 	font-size: 1.5rem;
 }
 
-#our-approach {
-	margin-top: 4rem;
-	padding-top: 2rem;
-	background: #fff url('images/bg.png') center center no-repeat;
-	background-size: cover;
-}
-
-h2 {
-	margin-top: 2rem;
-	font-size: 1.25rem;
-	text-transform: uppercase;
-}
-
-h3 {
-	font-size: 1.375rem;
-	margin: 1.125rem 0 0;
-}
-
-p {
-	margin-top: 1rem;
-}
-
-ul {
-	margin-top: 1rem
+.lead .p-adr {
+	display: block;
 }
 
 .discrete {
@@ -106,8 +85,9 @@ ul {
 }
 
 .details {
-	letter-spacing: 1px;
+	margin-top: 2rem;
 	font-size: 1rem;
+	letter-spacing: 1px;
 	/* Image replace */
 	li {
 		margin: 0 0 .5rem;
@@ -122,13 +102,37 @@ ul {
 	}
 }
 
+#our-approach, #our-work {
+	padding: 2rem 1rem 4rem;
+}
+
+	#our-approach {
+		margin-top: 4rem;
+	}
+
+h2 {
+	margin-top: 2rem;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 1.375rem;
+	margin: 1.125rem 0 0;
+}
+
 a {
 	text-decoration: none;
 }
 
-.lead .p-adr {
-	display: block;
+p {
+	margin-top: 1rem;
 }
+
+ul {
+	margin-top: 1rem;
+}
+
 /* Colours 
 -------------------------------------------------------------------------------*/
 
@@ -151,9 +155,13 @@ a {
 	color: $primary;
 }
 
-.our-work {
-	color: white;
-	background-color: $contrast;
+#our-approach {
+	background-color: #999191;
+}
+
+#our-work {
+	background-color: #4d4949;
+	color: #eee;
 }
 
 .discrete {
@@ -180,7 +188,7 @@ input {
 
 .site-header,
 .main {
-	padding: 0 1rem 1rem;
+	padding: 2rem 1rem 1rem;
 }
 
 
