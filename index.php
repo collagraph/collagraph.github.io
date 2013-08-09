@@ -48,10 +48,11 @@
 </section>
 
 <form class="contact-form" id="contact">
+<!--
 		<legend></legend>
 		
-		<label for="contact-name">Your name</label>
-		<input type="text" required id="contact-name" name="contact-name" />
+			<label for="contact-name">Your name</label>
+			<input type="text" required id="contact-name" name="contact-name" />
 
 		<label for="email">Your name</label>
 		<input type="email" required id="contact-email" name="contact-email" />
@@ -59,6 +60,9 @@
 		<label for="org">Organisation/Company</label>
 		<input type="text" id="contact-org" name="contact-org" />
 		
+		<label for="contact-pref"></label>
+		
+-->
 </form>
 
 <?php require_once('footer.php'); ?>
