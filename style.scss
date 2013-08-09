@@ -53,10 +53,16 @@ body {
 	line-height: 1.7;
 }
 
-/* serif elements */
+/* serif elements	 */
 p {
 	font-family: "ff-meta-serif-web-pro", georgia;
+	/* overrides */
+	&.lead {
+		font-family: "ff-meta-web-pro", "open sans", sans-serif ;		
+	}
 }
+
+
 
 img.logo {
 	display: block;
