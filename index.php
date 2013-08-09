@@ -34,8 +34,6 @@
 	<h3>The Plan</h3>
 	
 	<h3>Investigate.org.au</h3>
-
-
 </section>
 
 <!--
@@ -47,23 +45,40 @@
 	<h3>Luke Bacon</h3>
 </section>
 -->
-
 <form id="contact" class="contact-form main" >
-		<legend></legend>
-		
+		<h2>Contact</h2>
+		<p>Let us know about your project</p>
+	
+		<fieldset>
 			<label for="contact-name">Your name <span class="discrete">(required)</span></label>
 			<input type="text" required id="contact-name" name="contact-name" />
-
+		</fieldset>
+		
+		<fieldset>
 			<label for="contact-email">Email address <span class="discrete">(required)</span></label>
 			<input type="email" required id="contact-email" name="contact-email" />
-		
+		</fieldset>
+
+		<fieldset>	
 			<label for="contact-org">Organisation/Company</label>
 			<input type="text" id="contact-org" name="contact-org" />
+		</fieldset>
 		
+		<fieldset>
 			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
 			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
-			
-	
+		</fieldset>
+
+		<fieldset>		
+			<label for="dealine-q">Does the project have a deadline?</label>
+			<input type="checkbox" name="deadline-q"/>
+		</fieldset>
+
+		<fieldset>
+			<label for="budget-q">Do you have a rough budget for us?</label>
+			<input type="checkbox" name="budget-q"/>
+		</fieldset>
+		
 </form>
 
 <?php require_once('footer.php'); ?>
