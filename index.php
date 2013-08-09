@@ -70,13 +70,21 @@
 		</fieldset>
 
 		<fieldset class="form-additional">		
-			<label for="dealine-q">Does the project have a deadline?</label>
+			<label for="dealine-q">Does your project have a deadline?</label>
 			<input type="checkbox" name="deadline-q"/>
+			<div id="more-deadline">
+				<label for="deadline">When is the project deadline?</label>
+				<input name="deadline" type="text"/>
+			</div>
 		</fieldset>
 
 		<fieldset class="form-additional">
 			<label for="budget-q">Do you have a rough budget for us?</label>
 			<input type="checkbox" name="budget-q"/>
+			<div id="more-budget">
+				<label for="budget">About how much is the budget?</label>
+				<input name="budget" type="text"/>
+			</div>
 		</fieldset>
 		
 </form>
