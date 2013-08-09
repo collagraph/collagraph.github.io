@@ -11,4 +11,7 @@
 		<li>Phone: <a href="tel:+61406566693">+61 406 566 693</a></li>
 	</ul>
 	
-</header>
+<ul>
+	<li>Email: <a href="mailto:info@collagraph.com.au">info@collagraph.com.au</a></li>
+	<li>Phone: <a href="tel:+61406566693">+61 406 566 693</a></li>
+</ul>
