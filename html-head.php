@@ -32,9 +32,12 @@
     <script src="<?php echo $site_url; ?>/js/html5shiv.min.js"></script>
     <![endif]-->
 
-    <!-- Include fonts.com fonts -->
-    <script type="text/javascript" src="http://fast.fonts.com/jsapi/25dac2d1-675d-4583-9b89-d40679d2eeca.js"></script>
-    <script src="<?php echo $site_url; ?>/js/modernizr.min.js"></script>
+	<!-- Typekit Fonts, FF Meta Web Pro and Meta Serif -->
+	<script type="text/javascript" src="//use.typekit.net/htu4sax.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	
+	<script src="<?php echo $site_url; ?>/js/modernizr.min.js"></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
