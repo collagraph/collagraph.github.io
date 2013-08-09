@@ -12,7 +12,7 @@
 
 <!-- What we do -->
 
-<section id="our-approach">
+<section id="our-approach" class="our-approach main">
 	<h2>Our approach</h2>
 	
 	<h3>Designed for you</h3>
@@ -28,7 +28,7 @@
 	<p>One site that looks and works great no matter how your users view it.</p>
 </section>
 
-<section id="our-work">
+<section id="our-work" class="our-work main">
 	<h2>Our work</h2>
 
 	<h3>The Plan</h3>
@@ -47,7 +47,7 @@
 	<h3>Luke Bacon</h3>
 </section>
 
-<form class="contact-form" id="contact">
+<form id="contact" class="contact-form main" >
 <!--
 		<legend></legend>
 		
