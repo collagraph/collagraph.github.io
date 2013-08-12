@@ -228,9 +228,9 @@ a {
 		border-top: 2rem solid #ddd;
 		background-color: #ccc;
 		+ .principle {
-			border-color: #c3b195;
+			border-color: #bbb;
 			@include rem-fallback(padding-bottom, $scale-4);
-			background-color: #fce39a;
+			background-color: #aaa;
 		}
 	}
 }
