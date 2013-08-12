@@ -272,8 +272,16 @@ input {
 	display: block;
 }
 
-input {
+input, textarea {
+	@include rem-fallback(margin, $scale-n4, 0);
+	@include rem-fallback( padding, $scale-n3, $scale-n2);
 	width: 100%;
+	border-radius: none;
+	@include rem-fallback( border-width, $scale-n5);
+	border-style: solid;
+	border-color: $grey-5;
+	font-family: $sans-stack;
+	letter-spacing: $scale-n5;
 }
 
 label {
