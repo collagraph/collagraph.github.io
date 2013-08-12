@@ -261,18 +261,22 @@ fieldset {
 	fieldset:not(#foo) > label + input[type="checkbox"] {
 	    opacity: 0;
 	}
-	fieldset:not(#foo) > label {
+	fieldset:not(#foo) > .checkbox-unchecked {
 	    margin: 0;
 	    clear: none;
 	    padding-right: 1.5rem;
-	    background: url('images/off-ii.png') right 0.425em no-repeat;
+	    background: url('images/off.png') right 0.35rem no-repeat;
 	}
-	fieldset:not(#foo) > label.checkbox-checked {
-		background-image: url('images/check-ii.png');
+	fieldset:not(#foo) > .checkbox-checked {
+	    background-image: url('images/check.png');
 	}
 label,
 input {
 	display: block;
+}
+
+input {
+	width: 100%;
 }
 
 label {
