@@ -22,17 +22,17 @@
 		
 		<p>A website designed from the ground up to achieve <em>your</em> goals. We make sure you, and your users, are&nbsp;happy.</p>
 	
-	</div>
+	</div><!--
 	
-	<div class="principle">
+	--><div class="principle">
 	
 		<h3>Content strategy</h3>
 		
 		<p>Well organised information puts you in control. We help you to develop strong web content that&#8217;s clear and&nbsp;effective.</p>
 	
-	</div>
+	</div><!--
 	
-	<div class="principle">
+	--><div class="principle">
 	
 		<h3>Mobile, Tablet, Desktop, ?</h3>
 		

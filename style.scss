@@ -360,7 +360,67 @@ label {
 /* Media queries!
 -------------------------------------------------------------------------------*/
 
-/* 63.999em */
-@media screen and (max-width: 64em) {
+/* 64em */
+@media screen and (min-width: 64em) {
 
+/* Type
+-------------------------------------------------------------------------------*/
+
+body {
+	font-family: "ff-meta-web-pro", "open sans", sans-serif ;
+	@include rem-fallback(font-size, $scale-0);
+	@include rem-fallback(line-height, $scale-2);
+}
+
+/* serif elements	 */
+p {
+	font-family: "ff-meta-serif-web-pro", georgia;
+	/* overrides */
+	&.lead {
+		font-family: "ff-meta-web-pro", "open sans", sans-serif ;		
+	}
+}
+
+img.logo {
+	max-width: 11.111%;
+}
+
+h1.logo {
+	@include rem-fallback(margin, $scale-0, 0, $scale-3);
+	@include rem-fallback(font-size, $scale-3);
+	font-weight: 400;
+}
+	
+.distinct {
+	@include rem-fallback(font-size, $scale-2);
+	@include rem-fallback(line-height, $scale-3);
+}
+	
+
+	/* 64em layout 
+	-------------------------------------------------------------------------------*/
+	
+	.site-header {	
+		padding: #{$scale-3}rem 5%;
+	}
+	
+	.principle {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		width: 33.333%;
+		border-right: #{$scale-2}rem solid #ddd;
+		padding-left: 5%;
+		padding-right: 5%;
+		+ .principle {
+			border-top: 0;
+			border-left: #{$scale-2}rem solid #ddd;
+			border-right-color: #bbb;
+			+ .principle {
+				border-left-color: #bbb;
+				border-right-color: #aaa;
+			}
+		}
+	}
+	
 }
