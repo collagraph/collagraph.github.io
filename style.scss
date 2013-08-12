@@ -89,18 +89,21 @@ $scale-4	: 3.234;		/* 4	3.234rem	51.750px	*/
 /* Type
 -------------------------------------------------------------------------------*/
 
+$sans-stack:  "ff-meta-web-pro", "open sans", sans-serif ;
+$serif-stack:  "ff-meta-serif-web-pro", georgia;
+
 body {
-	font-family: "ff-meta-web-pro", "open sans", sans-serif ;
+	font-family: $sans-stack;
 	@include rem-fallback(font-size, $scale-0);
 	@include rem-fallback(line-height, $scale-2);
 }
 
 /* serif elements	 */
 p {
-	font-family: "ff-meta-serif-web-pro", georgia;
+	font-family: $serif-stack;
 	/* overrides */
 	&.lead {
-		font-family: "ff-meta-web-pro", "open sans", sans-serif ;		
+		font-family: $sans-stack;
 	}
 }
 
