@@ -74,6 +74,8 @@ textarea:-moz-placeholder {color:#888;}
 	23px @ 1:1.5	
 */
 
+$scale-n5	: 0.0625;		/* 1px	0.0625rem	1px			*/
+$scale-n4	: 0.284;		/* n4	0.284rem	4.543px		*/
 $scale-n3	: 0.472;		/* n3	0.472rem	7.55px		*/
 $scale-n2	: 0.708;		/* n2	0.708rem	11.333px	*/
 $scale-n1	: 0.958;		/* n1	0.958rem	15.333px	*/
@@ -87,18 +89,21 @@ $scale-4	: 3.234;		/* 4	3.234rem	51.750px	*/
 /* Type
 -------------------------------------------------------------------------------*/
 
+$sans-stack:  "ff-meta-web-pro", "open sans", sans-serif ;
+$serif-stack:  "ff-meta-serif-web-pro", georgia;
+
 body {
-	font-family: "ff-meta-web-pro", "open sans", sans-serif ;
+	font-family: $sans-stack;
 	@include rem-fallback(font-size, $scale-0);
 	@include rem-fallback(line-height, $scale-2);
 }
 
 /* serif elements	 */
 p {
-	font-family: "ff-meta-serif-web-pro", georgia;
+	font-family: $serif-stack;
 	/* overrides */
 	&.lead {
-		font-family: "ff-meta-web-pro", "open sans", sans-serif ;		
+		font-family: $sans-stack;
 	}
 }
 
@@ -152,9 +157,10 @@ h1.logo {
 }
 
 h2 {
-	@include rem-fallback(margin-top, $scale-3);
+	@include rem-fallback(padding-top, $scale-3);
 	@include rem-fallback(font-size, $scale-0);
 	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 h3 {
@@ -189,6 +195,12 @@ $discrete: #888;
 
 $contrast: #9b8f8f;
 
+$grey-1: #eee;
+$grey-2: #ddd;
+$grey-3: #ccc;
+$grey-4: #bbb;
+$grey-5: #aaa;
+
 body {
 	color: $text-base;
 	background-color: $background;
@@ -206,30 +218,16 @@ a {
 }
 
 #our-approach {
-	background-color: #eee;
-	&.main {
-		@include rem-fallback(padding, $scale-0, 0, 0, 0);
-	}
-	h2 {
-		@include rem-fallback(padding, 0, $scale-0);
-	}
+	background-color: $grey-1;
 }
 
 .principle {
-	margin: 0;
-	@include rem-fallback(padding, 0, $scale-0, $scale-1);
-	h3 {
-		margin-top: 0;
-		@include rem-fallback(padding-top, $scale-1)
-	}
 	+ .principle {
-		margin-top: 0;
-		border-top: 2rem solid #ddd;
-		background-color: #ccc;
+		border-color: $grey-2;
+		background-color: $grey-3;
 		+ .principle {
-			border-color: #bbb;
-			@include rem-fallback(padding-bottom, $scale-4);
-			background-color: #aaa;
+			border-color: $grey-4;
+			background-color: $grey-5;
 		}
 	}
 }
@@ -274,8 +272,16 @@ input {
 	display: block;
 }
 
-input {
+input, textarea {
+	@include rem-fallback(margin, $scale-n4, 0);
+	@include rem-fallback( padding, $scale-n3, $scale-n2);
 	width: 100%;
+	border-radius: none;
+	@include rem-fallback( border-width, $scale-n5);
+	border-style: solid;
+	border-color: $grey-5;
+	font-family: $sans-stack;
+	letter-spacing: $scale-n5;
 }
 
 label {
@@ -305,6 +311,32 @@ label {
 .site-header,
 .main {
 	@include rem-fallback(padding, $scale-3, $scale-0, $scale-0);
+}
+
+#our-approach {
+	&.main {
+		padding: 0;
+	}
+	h2 {
+		@include rem-fallback(padding, $scale-3, $scale-0, 0);
+	}
+}
+
+.principle {
+	margin: 0;
+	@include rem-fallback(padding, 0, $scale-0, $scale-1);
+	h3 {
+		margin-top: 0;
+		@include rem-fallback(padding-top, $scale-2)
+	}
+	+ .principle {
+		margin-top: 0;
+		border-top-width: 2rem;
+		border-top-style: solid;
+		+ .principle {
+			@include rem-fallback(padding-bottom, $scale-3);
+		}
+	}
 }
 
 
