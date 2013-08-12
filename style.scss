@@ -155,7 +155,6 @@ h2 {
 	@include rem-fallback(margin-top, $scale-3);
 	@include rem-fallback(font-size, $scale-0);
 	text-transform: uppercase;
-	display: none;
 }
 
 h3 {
@@ -221,7 +220,7 @@ a {
 	@include rem-fallback(padding, 0, $scale-0, $scale-1);
 	h3 {
 		margin-top: 0;
-		@include rem-fallback(padding-top, $scale-n1)
+		@include rem-fallback(padding-top, $scale-1)
 	}
 	+ .principle {
 		margin-top: 0;
