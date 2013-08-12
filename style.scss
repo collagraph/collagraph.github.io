@@ -97,19 +97,22 @@ h1.logo {
 		display: inline-block;
 		font-style: normal;
 		width: 1.7rem;
-		margin: 0 .75rem 0 0;
-		background-color: #999191;
+		margin: 0;
+		background: transparent left center no-repeat;
+		&.icon-e {
+			background-image: url('images/email-icon.png');
+			background-size: 1em auto;
+		}
+		&.icon-ph {
+			background-image: url('images/phone-icon.png');
+			background-size: auto 1em;
+		}
 	}
 }
 
 #our-approach {
 	margin-top: 4rem;
 }
-
-	#our-approach h2 {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
 
 h2 {
 	margin-top: 2rem;
@@ -126,11 +129,7 @@ a {
 	text-decoration: none;
 }
 
-p {
-	margin-top: 1rem;
-}
-
-ul {
+p, ul, figure {
 	margin-top: 1rem;
 }
 
@@ -165,8 +164,11 @@ a {
 
 #our-approach {
 	background-color: #cec6c9;
+	&.main {
+		padding: 1em 0 0;
+	}
 	h2 {
-		padding: 2rem 1rem 1rem;
+		padding: 0 1rem;
 	}
 }
 
@@ -190,7 +192,7 @@ a {
 }
 
 #our-work {
-	background-color: #4d4949;
+	background-color: #2d2929;
 	color: #eee;
 }
 

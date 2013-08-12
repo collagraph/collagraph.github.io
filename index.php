@@ -12,7 +12,7 @@
 
 <!-- What we do -->
 
-<section id="our-approach" class="our-approach">
+<section id="our-approach" class="our-approach main">
 
 	<h2>Our approach</h2>
 	
@@ -46,9 +46,13 @@
 
 	<h2>Our work</h2>
 
-	<h3>The Plan</h3>
+	<!--<h3>The Plan</h3>-->
 	
 	<h3>Investigate.org.au</h3>
+	
+	<figure>
+		<img src="images/investigate-multi-device.png" alt="Investigate.org.au website displayed across a range of desktop, tablet and mobile devices" />
+	</figure>
 
 </section>
 
