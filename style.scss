@@ -217,6 +217,11 @@ a {
 	}
 }
 
+input, textarea {
+	border-color: $grey-5;
+	background-color: white;
+}
+
 #our-approach {
 	background-color: $grey-1;
 }
@@ -279,7 +284,6 @@ input, textarea {
 	border-radius: none;
 	@include rem-fallback( border-width, $scale-n5);
 	border-style: solid;
-	border-color: $grey-5;
 	font-family: $sans-stack;
 	letter-spacing: $scale-n5;
 }
