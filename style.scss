@@ -313,6 +313,32 @@ label {
 	@include rem-fallback(padding, $scale-3, $scale-0, $scale-0);
 }
 
+#our-approach {
+	&.main {
+		padding: 0;
+	}
+	h2 {
+		@include rem-fallback(padding, $scale-3, $scale-0, 0);
+	}
+}
+
+.principle {
+	margin: 0;
+	@include rem-fallback(padding, 0, $scale-0, $scale-1);
+	h3 {
+		margin-top: 0;
+		@include rem-fallback(padding-top, $scale-2)
+	}
+	+ .principle {
+		margin-top: 0;
+		border-top-width: 2rem;
+		border-top-style: solid;
+		+ .principle {
+			@include rem-fallback(padding-bottom, $scale-3);
+		}
+	}
+}
+
 
 /* Tools
 -------------------------------------------------------------------------------*/
