@@ -157,9 +157,10 @@ h1.logo {
 }
 
 h2 {
-	@include rem-fallback(margin-top, $scale-3);
+	@include rem-fallback(padding-top, $scale-3);
 	@include rem-fallback(font-size, $scale-0);
 	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 h3 {
