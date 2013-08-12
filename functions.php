@@ -1,3 +1,3 @@
-<?php $site_url = 'http://collergraph.com.au'; ?>
+<?php $site_url = 'http://collagraph.dev'; ?>
 
 <?php $site_description = ''; ?>
