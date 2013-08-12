@@ -34,23 +34,63 @@ textarea:-moz-placeholder {color:#888;}
 
 
 /* Type-scale 
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
 
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
 
-base	1.125rem		18px
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
 
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
 
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
 
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
+}
+
+/* Modular Scale
+	http://modularscale.com/scale/?px1=17&px2=23&ra1=1.5&ra2=0
+	---------------------
+	17px @ 1:1.5	
+	23px @ 1:1.5	
 */
+
+$scale-n3	: 0.472;		/* n3	0.472rem	7.55px		*/
+$scale-n2	: 0.708;		/* n2	0.708rem	11.333px	*/
+$scale-n1	: 0.958;		/* n1	0.958rem	15.333px	*/
+$scale-0	: 1.0625;		/* base	1.0625rem	17px		*/
+$scale-1	: 1.4375;		/* 1	1.4375rem	23px		*/
+$scale-2 	: 1.594;		/* LH	1.594rem	25.500px	*/
+$scale-3	: 2.156;		/* 3	2.156rem	34.500px	*/
+$scale-4	: 3.234;		/* 4	3.234rem	51.750px	*/
+
 
 /* Type
 -------------------------------------------------------------------------------*/
 
 body {
 	font-family: "ff-meta-web-pro", "open sans", sans-serif ;
-	font-size: 18px;
-	font-size: 1.125rem;
-	line-height: 1.7;
+	@include rem-fallback(font-size, $scale-0);
+	@include rem-fallback(line-height, $scale-2);
 }
 
 /* serif elements	 */
@@ -67,30 +107,27 @@ img.logo {
 }
 
 h1.logo {
-	margin-bottom: 2rem;
-	font-size: 2rem;
+	@include rem-fallback(margin, 0, 0, $scale-3);
+	@include rem-fallback(font-size, $scale-3);
 	font-weight: 400;
 }
 	
 .distinct {
-	font-size: 1.5rem;
-}
-
-.lead .p-adr {
-	display: block;
+	@include rem-fallback(font-size, $scale-2);
+	@include rem-fallback(line-height, $scale-3);
 }
 
 .discrete {
-	font-size: .875rem;
+	@include rem-fallback(font-size, $scale-n1);
 }
 
 .details {
-	margin-top: 2rem;
-	font-size: 1rem;
+	@include rem-fallback(margin-top, $scale-2);
+	@include rem-fallback(font-size, $scale-n1);
 	letter-spacing: 1px;
 	/* Image replace */
 	li {
-		margin: 0 0 .5rem;
+		@include rem-fallback(margin, 0, 0, $scale-n2)
 	}
 	i {
 		text-indent: -9999em;
@@ -111,18 +148,20 @@ h1.logo {
 }
 
 #our-approach {
-	margin-top: 4rem;
+		@include rem-fallback(margin-top, $scale-4);
 }
 
 h2 {
-	margin-top: 2rem;
-	font-size: 1.25rem;
+	@include rem-fallback(margin-top, $scale-3);
+	@include rem-fallback(font-size, $scale-0);
 	text-transform: uppercase;
+	display: none;
 }
 
 h3 {
-	font-size: 1.375rem;
-	margin: 1.125rem 0 0;
+	@include rem-fallback(font-size, $scale-1);
+	@include rem-fallback(margin, $scale-1, 0, 0, 0);
+	font-weight: normal;
 }
 
 a {
@@ -130,8 +169,13 @@ a {
 }
 
 p, ul, figure {
-	margin-top: 1rem;
+	@include rem-fallback(margin, $scale-0, 0, 0);
 }
+
+.lead .p-adr {
+	display: block;
+}
+
 
 /* Colours 
 -------------------------------------------------------------------------------*/
@@ -165,28 +209,28 @@ a {
 #our-approach {
 	background-color: #eee;
 	&.main {
-		padding: 1em 0 0;
+		@include rem-fallback(padding, $scale-0, 0, 0, 0);
 	}
 	h2 {
-		padding: 0 1rem;
+		@include rem-fallback(padding, 0, $scale-0);
 	}
 }
 
 .principle {
 	margin: 0;
-	padding: 0 1em 1em;
+	@include rem-fallback(padding, 0, $scale-0, $scale-1);
 	h3 {
 		margin-top: 0;
-		padding-top: 1rem;
+		@include rem-fallback(padding-top, $scale-n1)
 	}
 	+ .principle {
 		margin-top: 0;
 		border-top: 2rem solid #ddd;
 		background-color: #ccc;
 		+ .principle {
-			border-color: #bbb;
-			padding-bottom: 3rem;
-			background-color: #aaa;
+			border-color: #c3b195;
+			@include rem-fallback(padding-bottom, $scale-4);
+			background-color: #fce39a;
 		}
 	}
 }
@@ -232,12 +276,12 @@ input {
 }
 
 label {
-	margin: 1rem 0 0;
+	@include rem-fallback(margin, $scale-0, 0, 0);
 }
 
 .textarea {
-	max-width: 100%;
-	margin-bottom: 1.25rem;	
+	width: 100%;
+	@include rem-fallback(margin-bottom, $scale-n1);
 }
 
 .form-additional {
@@ -257,7 +301,7 @@ label {
 
 .site-header,
 .main {
-	padding: 2rem 1rem 1rem;
+	@include rem-fallback(padding, $scale-3, $scale-0, $scale-0);
 }
 
 
