@@ -1,15 +1,25 @@
 // Remap jQuery to $
 (function($){
 
-    // Resize photo to match excerpt paragraph in height
-    function resizeDiv(){
-        varHeight = $('.post-head').outerHeight() / 16;
-        varFigcaptionHeight = $('.photo figcaption').outerHeight() / 16;
-        $('.photo').css({'height': varHeight-varFigcaptionHeight+'em'});
-        $('.photo figcaption').css({'position': 'absolute', 'bottom': -1*(varFigcaptionHeight+0.47)+'em'});
-    }
+	$('fieldset:not(#foo) #budget-q').click(function() {
+		if($('#budget-q').is(':checked')) {
+			$('#budget-c').addClass('checkbox-checked');
+		} else {
+			$('#budget-c').removeClass('checkbox-checked');
+		}
+	});
+		
+	$('fieldset:not(#foo) #deadline-q').click(function() {
+		if($('#deadline-q').is(':checked')) {
+			$('#deadline-c').addClass('checkbox-checked');
+		} else {
+			$('#deadline-c').removeClass('checkbox-checked');
+		}
+	});
 
     $(document).ready(function() {
+    
+    
 
         // Add incremental anchors to pages and create next page links
         enquire.register("screen and (min-width: 64em)", {
