@@ -194,6 +194,12 @@ $discrete: #888;
 
 $contrast: #9b8f8f;
 
+$grey-1: #eee;
+$grey-2: #ddd;
+$grey-3: #ccc;
+$grey-4: #bbb;
+$grey-5: #aaa;
+
 body {
 	color: $text-base;
 	background-color: $background;
@@ -211,30 +217,16 @@ a {
 }
 
 #our-approach {
-	background-color: #eee;
-	&.main {
-		@include rem-fallback(padding, $scale-0, 0, 0, 0);
-	}
-	h2 {
-		@include rem-fallback(padding, 0, $scale-0);
-	}
+	background-color: $grey-1;
 }
 
 .principle {
-	margin: 0;
-	@include rem-fallback(padding, 0, $scale-0, $scale-1);
-	h3 {
-		margin-top: 0;
-		@include rem-fallback(padding-top, $scale-1)
-	}
 	+ .principle {
-		margin-top: 0;
-		border-top: 2rem solid #ddd;
-		background-color: #ccc;
+		border-color: $grey-2;
+		background-color: $grey-3;
 		+ .principle {
-			border-color: #bbb;
-			@include rem-fallback(padding-bottom, $scale-4);
-			background-color: #aaa;
+			border-color: $grey-4;
+			background-color: $grey-5;
 		}
 	}
 }
