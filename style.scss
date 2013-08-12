@@ -140,7 +140,7 @@ $text-base: #333;
 
 $background: #fafafa;
 
-$primary: blue;
+$primary: #666;
 
 $discrete: #888;
 
@@ -163,7 +163,7 @@ a {
 }
 
 #our-approach {
-	background-color: #cec6c9;
+	background-color: #eee;
 	&.main {
 		padding: 1em 0 0;
 	}
@@ -181,12 +181,12 @@ a {
 	}
 	+ .principle {
 		margin-top: 0;
-		border-top: 2rem solid #beb0ac;
-		background-color: #ada1a4;
+		border-top: 2rem solid #ddd;
+		background-color: #ccc;
 		+ .principle {
-			border-color: #c3b195;
+			border-color: #bbb;
 			padding-bottom: 3rem;
-			background-color: #fce39a;
+			background-color: #aaa;
 		}
 	}
 }
@@ -208,9 +208,24 @@ a {
 /* Forms 
 -------------------------------------------------------------------------------*/
 
+/* Toggled State */
+
 fieldset {
 	display: block;
 }
+	/* Restyle checkboxes for supported browsers */
+	fieldset:not(#foo) > label + input[type="checkbox"] {
+	    opacity: 0;
+	}
+	fieldset:not(#foo) > label {
+	    margin: 0;
+	    clear: none;
+	    padding-right: 1.5rem;
+	    background: url('images/off-ii.png') right 0.425em no-repeat;
+	}
+	fieldset:not(#foo) > label.checkbox-checked {
+		background-image: url('images/check-ii.png');
+	}
 label,
 input {
 	display: block;
@@ -236,7 +251,6 @@ label {
 		overflow: visible;
 	}
 }
-
 
 /* Layout 
 -------------------------------------------------------------------------------*/
