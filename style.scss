@@ -107,7 +107,7 @@ img.logo {
 }
 
 h1.logo {
-	@include rem-fallback(margin, 0, 0, $scale-3);
+	@include rem-fallback(margin, $scale-0, 0, $scale-3);
 	@include rem-fallback(font-size, $scale-3);
 	font-weight: 400;
 }
