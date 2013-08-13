@@ -240,7 +240,8 @@ fieldset {
 	fieldset:not(#foo) > label + input[type="checkbox"] {
 	    opacity: 0;
 	}
-	fieldset:not(#foo) > .checkbox-unchecked {
+	
+	fieldset:not(#foo) > .checkbox {
 	    margin: 0;
 	    clear: none;
 	    padding-right: 1.5rem;
@@ -263,6 +264,7 @@ input, textarea {
 	border-style: solid;
 	font-family: $sans-stack;
 	letter-spacing: $scale-n5;
+	vertical-align: middle;
 }
 
 label {
@@ -282,6 +284,14 @@ label {
 		display: inline-block;
 		width: 2rem;
 		overflow: visible;
+	}
+	div {
+		opacity: 0;
+		display: none;
+	}
+	.display-more {
+		opacity: 1;
+		display: block;
 	}
 }
 
