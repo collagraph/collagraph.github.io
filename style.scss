@@ -302,6 +302,7 @@ label {
 	opacity: 1;
 }
 
+/* no-js, don't show addition form fields .. keep it simple. */
 .no-js .form-additional {
 	display: none;
 }
