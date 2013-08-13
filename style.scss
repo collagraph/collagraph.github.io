@@ -223,6 +223,10 @@ input, textarea {
 	background-color: lighten($contrast, 38%);
 }
 
+.checkbox-checked {
+	color: lighten($text-base, 30%);
+}
+
 .discrete {
 	color: $discrete;
 }
