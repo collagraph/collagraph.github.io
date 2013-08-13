@@ -42,7 +42,7 @@
 	
 </section>
 
-<section id="our-work" class="our-work main">
+<section id="our-work" class="our-work main clearfix">
 
 	<h2>Our work</h2>
 
