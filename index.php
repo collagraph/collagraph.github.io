@@ -83,7 +83,16 @@
 			<label for="contact-org">Organisation/Company</label>
 			<input type="text" id="contact-org" name="contact-org" />
 		</fieldset>
-		
+		<fieldset class="checkbox-list">
+			<legend>Service required:</legend>
+			<label for="service-webdesign" class="checkbox">Web design</label>
+			<input id="service-webdesign" name="service-webdesign" type="checkbox">
+			<label for="service-consulting" class="checkbox">Consulting</label>
+			<input id="service-consulting" name="service-consulting" type="checkbox">
+			<label for="service-general" class="checkbox">General information design</label>
+			<input id="service-general" name="service-general" type="checkbox">
+		</fieldset>
+		</fieldset>
 		<fieldset>
 			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
 			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
