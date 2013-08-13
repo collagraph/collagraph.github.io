@@ -15,6 +15,7 @@
 		if($('#deadline-q').is(':checked')) {
 			$('#deadline-c').addClass('checkbox-checked');
 			$('#more-deadline').addClass('display-more').removeClass('display-hide');
+			$('#deadline').focus();
 		} else {
 			$('#deadline-c').removeClass('checkbox-checked');
 			$('#more-deadline').removeClass('display-more').addClass('display-hide');
