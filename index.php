@@ -106,7 +106,11 @@
 				<input id="budget" name="budget" type="text"/>
 			</div>
 		</fieldset>
-		<input type="button" value="Send" class="button" >
+		<div>
+			<input type="button" value="Send" class="button" >
+			<p class="msg alert required-alert">Please make sure to fill out all the required fields.</p>
+			<p class="msg alert email-alert">Please make sure you've entered your email correctly.</p>
+			<p class="msg success">Thanks for getting in touch. We'll be in contact shortly.</p>
 </form>
 
 <?php require_once('footer.php'); ?>
