@@ -152,6 +152,16 @@ p, ul, figure {
 	display: block;
 }
 
+.slide-link {
+	display: block;
+	@include rem-fallback(padding, $scale-n2, 0);
+	&:hover {
+		cursor: pointer;
+	}
+	&.current {
+		background-color: #ddd;
+	}
+}
 
 /* Colours 
 -------------------------------------------------------------------------------*/
