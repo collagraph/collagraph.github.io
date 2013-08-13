@@ -198,24 +198,26 @@ input, textarea {
 }
 
 #our-approach {
-	background-color: $grey-1;
+	background-color: transparent /* $grey-1; */
 }
 
 .principle {
 	+ .principle {
-		border-color: $grey-2;
-		background-color: $grey-3;
+		border-color: transparent ; /* $grey-2 */
+		background-color: transparent ; /* $grey-3; */
 		+ .principle {
-			border-color: $grey-4;
-			background-color: $grey-5;
+			border-color: transparent ; /* $grey-4; */
+			background-color: transparent ; /* $grey-5; */
 		}
 	}
 }
 
+/*
 #our-work {
 	background-color: #2d2929;
 	color: #eee;
 }
+*/
 
 .contact-form {
 	background-color: lighten($contrast, 38%);
