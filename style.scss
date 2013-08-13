@@ -308,9 +308,12 @@ label {
 	input[type="checkbox"] {
 		display: inline-block;
 		width: 2rem;
-		vertical-align: middle;
 		overflow: visible;
 	}
+}
+
+.no-js .form-additional {
+	display: none;
 }
 
 /* Layout 
