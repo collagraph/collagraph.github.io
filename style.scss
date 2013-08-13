@@ -340,6 +340,9 @@ label {
 	}
 }
 
+form.main.contact-form {
+	@include rem-fallback( padding-bottom, $scale-4);
+}
 
 /* Tools
 -------------------------------------------------------------------------------*/
