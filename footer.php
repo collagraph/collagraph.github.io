@@ -5,6 +5,7 @@
     <![endif]-->
 
     <script src="<?php echo $site_url; ?>/js/enquire.min.js"></script>
+    <script src="<?php echo $site_url; ?>/js/flexslider.min.js"></script>	
     <script src="<?php echo $site_url; ?>/js/functions.js"></script>
 
     <!-- Asynchronous google analytics; this is the official snippet.

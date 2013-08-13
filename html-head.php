@@ -40,7 +40,8 @@
 	<script src="<?php echo $site_url; ?>/js/modernizr.js"></script>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+   	<link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
 
     <!-- SEO -->
     <link rel="canonical" href="<?php echo $site_url . '/' . $page_slug; ?>" />
