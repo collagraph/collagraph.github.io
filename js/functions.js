@@ -4,16 +4,20 @@
 	$('fieldset:not(#foo) #budget-q').click(function() {
 		if($('#budget-q').is(':checked')) {
 			$('#budget-c').addClass('checkbox-checked');
+			$('#more-budget').addClass('display-more');
 		} else {
 			$('#budget-c').removeClass('checkbox-checked');
+			$('#more-budget').removeClass('display-more');
 		}
 	});
 		
 	$('fieldset:not(#foo) #deadline-q').click(function() {
 		if($('#deadline-q').is(':checked')) {
 			$('#deadline-c').addClass('checkbox-checked');
+			$('#more-deadline').addClass('display-more');
 		} else {
 			$('#deadline-c').removeClass('checkbox-checked');
+			$('#more-deadline').removeClass('display-more');
 		}
 	});
 
