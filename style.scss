@@ -247,7 +247,6 @@ fieldset {
 	
 	fieldset:not(#foo) > .checkbox {
 	    margin: 0;
-	    clear: none;
 		@include rem-fallback( padding-right, $scale-2);
 	    background: url('images/off.png') right 0.35rem no-repeat;
 	    -webkit-transition: color .3s ease;
@@ -274,24 +273,52 @@ input, textarea {
 	vertical-align: middle;
 }
 
+input.button {
+	@include rem-fallback( margin-top, $scale-3);
+	text-transform: uppercase;
+	letter-spacing: 1px;	
+}
+
 label {
 	@include rem-fallback(margin, $scale-0, 0, 0);
 }
+legend {
+	font-family: $serif-stack;
+	@include rem-fallback(margin, $scale-0, 0, $scale-0);	
+}
+
 
 .textarea {
 	width: 100%;
 }
 
-.form-additional {
-	@include rem-fallback(padding-top, $scale-1);
-	label {
+.checkbox {
 		display: inline-block;
 	}
-	input[type="checkbox"] {
+.checkbox + input[type="checkbox"] {
 		display: inline-block;
 		width: 2rem;
 		overflow: visible;
+}
+
+.checkbox-list {
+	clear: both;
+	float: none;
+	.checkbox {
+		display: block;
+		float: left;
+		clear: left;
+		width: 70%;
 	}
+	.checkbox + input[type="checkbox"] {
+		display: block;
+		float: left;
+		clear: right;
+	}
+}
+
+.form-additional {
+	@include rem-fallback(padding-top, $scale-1);
 	div {
 		-webkit-transition: opacity .3s ease; 
 		-moz-transition: all .3s ease;
