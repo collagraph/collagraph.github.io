@@ -37,7 +37,7 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	
-	<script src="<?php echo $site_url; ?>/js/modernizr.min.js"></script>
+	<script src="<?php echo $site_url; ?>/js/modernizr.js"></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
