@@ -37,36 +37,6 @@ textarea:-moz-placeholder {color:#888;}
 /* Type-scale 
 -------------------------------------------------------------------------------*/
 
-@function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
-}
-
-@mixin rem-fallback($property, $values...) {
-  $max: length($values);
-  $pxValues: '';
-  $remValues: '';
-
-  @for $i from 1 through $max {
-    $value: strip-unit(nth($values, $i));
-    $pxValues: #{$pxValues + $value*16}px;
-
-    @if $i < $max {
-      $pxValues: #{$pxValues + " "};
-    }
-  } 
-
-  @for $i from 1 through $max {
-    $value: strip-unit(nth($values, $i));
-    $remValues: #{$remValues + $value}rem;
-
-    @if $i < $max {
-      $remValues: #{$remValues + " "};
-    }
-  } 
-  
-  #{$property}: $pxValues; 
-  #{$property}: $remValues; 
-}
 
 /* Modular Scale
 	http://modularscale.com/scale/?px1=17&px2=23&ra1=1.5&ra2=0
