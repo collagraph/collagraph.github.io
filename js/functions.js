@@ -20,9 +20,44 @@
 			$('#more-deadline').removeClass('display-more');
 		}
 	});
+	
+	$('.slide-1').click(function(){
+		var slidePath=$(this).closest('article').attr('id');
+		var slideURL='images/work/'+slidePath+'/slide-1.jpg';
+		$('#'+slidePath+' .photo img').attr('src',slideURL);
+		$('#'+slidePath+' .slide-link').removeClass('current');
+		$(this).addClass('current');
+	});
+	
+	$('.slide-2').click(function(){
+		var slidePath=$(this).closest('article').attr('id');
+		var slideURL='images/work/'+slidePath+'/slide-2.jpg';
+		$('#'+slidePath+' .photo img').attr('src',slideURL);
+		$('#'+slidePath+' .slide-link').removeClass('current');
+		$(this).addClass('current');
+	});
+	
+	$('.slide-3').click(function(){
+		var slidePath=$(this).closest('article').attr('id');
+		var slideURL='images/work/'+slidePath+'/slide-3.jpg';
+		$('#'+slidePath+' .photo img').attr('src',slideURL);
+		$('#'+slidePath+' .slide-link').removeClass('current');
+		$(this).addClass('current');
+	});
 
     $(document).ready(function() {
     
+    
+		// Initiate FlexSlider for #our-work section
+		$(".flexslider")
+		.flexslider({
+			animation: "slide",
+			slideshow: false,
+			useCSS: true,
+			animationLoop: false,
+			smoothHeight: true,
+			controlNav: false
+		});
     
 
         // Add incremental anchors to pages and create next page links
