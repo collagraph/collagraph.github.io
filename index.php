@@ -12,7 +12,7 @@
 
 <!-- What we do -->
 
-<section id="our-approach" class="our-approach main">
+<section id="our-approach" class="our-approach main clearfix">
 
 	<h2>Our approach</h2>
 	
@@ -46,14 +46,90 @@
 
 	<h2>Our work</h2>
 
-	<!--<h3>The Plan</h3>-->
+	<div class="flexslider">
+		
+		<ul class="slides">
+		
+			<li>
+			
+				<article id="investigate-org-au" class="hentry">
+			
+					<figure class="photo">
+						<img src="images/work/investigate-org-au/slide-1.jpg" alt="Investigate.org.au website displayed across a range of desktop, tablet and mobile devices" />
+					</figure>
+				
+					<h3 class="entry-title">Investigate.org.au</h3>
+						
+					<div class="entry-summary">
+						
+						<p>This is a sample paragraph written in regards to working on Investigate.org.au. It outlines the main considerations taken into account prior to commencement of the project, as well as the relationship between those initial goals and the final design outcomes.</p>
+						
+						<ul>
+							<li><a class="slide-link slide-1 current">Small</a></li>
+							<li><a class="slide-link slide-2">Medium</a></li>
+							<li><a class="slide-link slide-3">Large</a></li>
+						</ul>
+						
+					</div>
+					
+				</article>
+		
+			</li>
+		    <li>
+		    
+			    <article id="sustainable-communities-plan" class="hentry">
+				
+					<figure class="photo">
+						<img src="images/work/sustainable-communities-plan/slide-1.jpg" alt="The Sustainable Communities Plan website displayed across a range of desktop, tablet and mobile devices" />
+					</figure>
+				
+					<h3 class="entry-title">The Sustainable Communities Plan</h3>
+						
+					<div class="entry-summary">
+						
+						<p>This is a sample paragraph written in regards to working on theplan.sustainablehouse.com.au. It outlines the main considerations taken into account prior to commencement of the project, as well as the relationship between those initial goals and the final design outcomes.</p>
+						
+						<ul>
+							<li><a class="slide-link slide-1 current">Small</a></li>
+							<li><a class="slide-link slide-2">Medium</a></li>
+							<li><a class="slide-link slide-3">Large</a></li>
+						</ul>
+						
+					</div>
+					
+			    </article>
+			
+			</li>
+		    <li>
+			
+				<article id="acoss-national-conference" class="hentry">
+				
+					<figure class="photo">
+						<img src="images/work/sustainable-communities-plan/slide-1.jpg" alt="The ACOSS National Conference website displayed across a range of desktop, tablet and mobile devices" />
+					</figure>
+				
+					<h3 class="entry-title">ACOSS National Conference 2013</h3>
+						
+					<div class="entry-summary">
+						
+						<p>This is a sample paragraph written in regards to working on conference.acoss.org.au. It outlines the main considerations taken into account prior to commencement of the project, as well as the relationship between those initial goals and the final design outcomes.</p>
+						
+						<ul>
+							<li><a class="slide-link slide-1 current">Small</a></li>
+							<li><a class="slide-link slide-2">Medium</a></li>
+							<li><a class="slide-link slide-3">Large</a></li>
+						</ul>
+						
+					</div>
+				
+				</article>	
+						
+			</li>
+			
+		</ul>
+		
+	</div>
 	
-	<h3>Investigate.org.au</h3>
-	
-	<figure>
-		<img src="images/investigate-multi-device.png" alt="Investigate.org.au website displayed across a range of desktop, tablet and mobile devices" />
-	</figure>
-
 </section>
 
 <!--
@@ -65,7 +141,7 @@
 	<h3>Luke Bacon</h3>
 </section>
 -->
-<form id="contact" class="contact-form main" >
+<form id="contact" class="contact-form main clearfix">
 		<h2>Contact</h2>
 		<p>Let us know about your project</p>
 	
