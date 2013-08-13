@@ -248,8 +248,11 @@ fieldset {
 	fieldset:not(#foo) > .checkbox {
 	    margin: 0;
 	    clear: none;
-	    padding-right: 1.5rem;
+		@include rem-fallback( padding-right, $scale-2);
 	    background: url('images/off.png') right 0.35rem no-repeat;
+	    -webkit-transition: color .3s ease;
+		-moz-transition: color .3s ease;
+		transition: color .3s ease;
 	}
 	fieldset:not(#foo) > .checkbox-checked {
 	    background-image: url('images/check.png');
@@ -277,10 +280,10 @@ label {
 
 .textarea {
 	width: 100%;
-	@include rem-fallback(margin-bottom, $scale-n1);
 }
 
 .form-additional {
+	@include rem-fallback(padding-top, $scale-1);
 	label {
 		display: inline-block;
 	}
@@ -290,20 +293,22 @@ label {
 		overflow: visible;
 	}
 	div {
-		-webkit-transition: opacity .2s ease; 
-		-moz-transition: all .2s ease;
-		transition: all .2s ease;
+		-webkit-transition: opacity .3s ease; 
+		-moz-transition: all .3s ease;
+		transition: all .3s ease;
 	}
 }
 
 .display-hide {
 	display: none;
 	opacity: 0;
+	height: 0;
 }
 
 .display-more {
 	display: block;
 	opacity: 1;
+	height: auto;
 }
 
 /* no-js, don't show addition form fields .. keep it simple. */

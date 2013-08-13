@@ -94,7 +94,7 @@
 			<input type="checkbox" name="deadline-q" id="deadline-q"/>
 			<div id="more-deadline" class="display-hide">
 				<label for="deadline">When is the project deadline?</label>
-				<input name="deadline" type="text"/>
+				<input id="deadline" name="deadline" type="text"/>
 			</div>
 		</fieldset>
 
@@ -103,10 +103,10 @@
 			<input type="checkbox" name="budget-q" id="budget-q"/>
 			<div id="more-budget" class="display-hide">
 				<label for="budget">About how much is the budget?</label>
-				<input name="budget" type="text"/>
+				<input id="budget" name="budget" type="text"/>
 			</div>
 		</fieldset>
-		
+		<input type="button" value="Send" class="button" >
 </form>
 
 <?php require_once('footer.php'); ?>
