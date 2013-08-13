@@ -207,28 +207,6 @@ input, textarea {
 	}
 }
 
-#our-approach {
-	background-color: transparent /* $grey-1; */
-}
-
-.principle {
-	+ .principle {
-		border-color: transparent ; /* $grey-2 */
-		background-color: transparent ; /* $grey-3; */
-		+ .principle {
-			border-color: transparent ; /* $grey-4; */
-			background-color: transparent ; /* $grey-5; */
-		}
-	}
-}
-
-/*
-#our-work {
-	background-color: #2d2929;
-	color: #eee;
-}
-*/
-
 .contact-form {
 	background-color: lighten($contrast, 38%);
 }
@@ -270,7 +248,7 @@ input, textarea {
 	@include rem-fallback( padding, $scale-n3, $scale-n3);
 	width: 100%;
 	border-radius: none;
-	@include rem-fallback( border-width, $scale-n5);
+	@include rem-fallback(border-width, $scale-n5);
 	border-style: solid;
 	font-family: $sans-stack;
 	letter-spacing: $scale-n5;
@@ -317,26 +295,14 @@ label {
 	@include rem-fallback(padding, $scale-3, $scale-0, $scale-0);
 }
 
-#our-approach {
-	&.main {
-		padding: 0;
-	}
-	h2 {
-		@include rem-fallback(padding, $scale-3, $scale-0, 0);
-	}
-}
-
 .principle {
 	margin: 0;
-	@include rem-fallback(padding, 0, $scale-0, $scale-1);
 	h3 {
 		margin-top: 0;
 		@include rem-fallback(padding-top, $scale-2)
 	}
 	+ .principle {
 		margin-top: 0;
-		border-top-width: 2rem;
-		border-top-style: solid;
 		+ .principle {
 			@include rem-fallback(padding-bottom, $scale-3);
 		}
@@ -382,15 +348,9 @@ label {
 	}
 	
 	
-	/* Colours 
+	/* 64em Colours 
 	-------------------------------------------------------------------------------*/
 	
-	.principle {
-		border-color: transparent ; /* $grey-2; */
-		+ .principle {
-			border-right-color: transparent ; /* $grey-4; */
-		}
-	}
 
 	/* 64em Layout 
 	-------------------------------------------------------------------------------*/
@@ -399,21 +359,43 @@ label {
 		padding: #{$scale-3}rem 5%;
 	}
 	
+	.main {
+		@include rem-fallback(margin-top, $scale-4);
+		padding: 0;
+	}
+	
+	h2 {
+		margin-left: 5%;
+		margin-bottom: #{$scale-3}rem;
+	}
+	
 	.principle {
 		display: inline-block;
+		margin-left: 5%;
+		width: 26.666%;
 		vertical-align: top;
-		margin: 0;
-		width: 33.333%;
-		border-right: #{$scale-2}rem solid trasparent;
-		padding-left: 5%;
-		padding-right: 5%;
-		+ .principle {
-			border-top: 0;
-			border-left: #{$scale-2}rem solid trasparent;
-			+ .principle {
-				border-right: none;
-			}
+		+ .principle + .principle {
+			margin-right: 5%;
 		}
 	}
+	
+	.our-work .hentry {
+		.photo {
+			float: left;
+			clear: left;
+			width: 63.333%;
+			img {
+				width: 100%;
+			}
+		}
+		.entry-title, .entry-summary {
+			float: right;
+			clear: right;
+			margin-left: 5%;
+			margin-right: 5%;
+			width: 26.666%;
+		}
+	}
+	
 	
 }
