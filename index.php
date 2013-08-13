@@ -92,7 +92,7 @@
 		<fieldset class="form-additional">		
 			<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
 			<input type="checkbox" name="deadline-q" id="deadline-q"/>
-			<div id="more-deadline">
+			<div id="more-deadline" class="display-hide">
 				<label for="deadline">When is the project deadline?</label>
 				<input name="deadline" type="text"/>
 			</div>
@@ -101,7 +101,7 @@
 		<fieldset class="form-additional">
 			<label for="budget-q" id="budget-c" class="checkbox">Do you have a rough budget for us?</label>
 			<input type="checkbox" name="budget-q" id="budget-q"/>
-			<div id="more-budget">
+			<div id="more-budget" class="display-hide">
 				<label for="budget">About how much is the budget?</label>
 				<input name="budget" type="text"/>
 			</div>
