@@ -1,12 +1,12 @@
 <!doctype html>
 
-<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if lt IE 7 ]><html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9 ie-lt10 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
 
-    <head id="robert-irish">
+    <head id="collagraph">
 
         <meta charset="UTF-8">
 
@@ -31,6 +31,8 @@
         <!-- Robots -->
         <meta name="robots" content="follow,index">
 
+        <link rel="canonical" href="{{ site.url }}" />
+
         <!-- Twitter -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="{{ site.twitter }}">
@@ -41,22 +43,14 @@
             <meta name="twitter:description" content="{{ site.description }}">
         {% endif %}
         <meta name="twitter:creator" content="{{ site.creator }}">
-        {% if page.image %}
-            <meta name="twitter:image:src" content="{{ site.url }}{{ page.image }}">
-        {% else %}
-            <meta name="twitter:image:src" content="{{ site.url }}/img/social.jpg">
-        {% endif %}
-        <meta name="twitter:domain" content="{{ site.url }}{{ page.url }}">
+        <meta name="twitter:image:src" content="{{ site.url }}/assets/social.jpg">
+        <meta name="twitter:domain" content="{{ site.url }}{% if page.url %}{{ page.url }}{% endif %}">
 
         <!-- Facebook -->
         <meta property="og:type" content="article">
-        <meta property="og:url"	content="{{ site.url }}{{ page.url }}">
+        <meta property="og:url"	content="{{ site.url }}{% if page.url %}{{ page.url }}{% endif %}">
         <meta property="og:site_name" content="{{ site.title }}">
-        {% if page.image %}
-            <meta property="og:image" content="{{ site.url }}{{ page.image }}">
-        {% else %}
-            <meta property="og:image" content="{{ site.url }}/img/social.jpg">
-        {% endif %}
+        <meta property="og:image" content="{{ site.url }}/assets/social.jpg">
         <meta property="og:title" content="{{ page.title }}">
         {% if page.description %}
             <meta property="og:description" content="{{ page.description }}">
@@ -68,17 +62,25 @@
         <!--[if lt IE 9]>
         <script src="{{ site.url }}/js/html5shiv.min.js"></script>
         <![endif]-->
-        <!-- tell iphones not to interpret numbers as phone numbers -->
-		<meta name="format-detection" content="telephone=no">
+
+        <!-- Typekit Fonts FF Meta and FF Meta Serif -->
+        <script type="text/javascript" src="//use.typekit.net/htu4sax.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
         <!-- Modernizr -->
     	<script type="text/javascript" src="{{ site.url }}/js/modernizr.min.js"></script>
 
         <!-- Stylesheets -->
         <link type="text/css" rel="stylesheet" href="{{ site.url }}/css/style.css" media="screen" />
+        <link type="text/css" rel="stylesheet" href="{{ site.url }}/css/flexslider.css" media="screen" />
 
         <!-- jQuery -->
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=3.5.2"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape('%3Cscript type="text/javascript" src="{{ site.url }}/js/jquery-1.10.2.min.js"%3E%3C/script%3E'));
+        }
+        </script>
 
 	</head>
 
