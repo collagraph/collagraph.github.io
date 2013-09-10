@@ -19,7 +19,7 @@ twitter: @_collagraph
 
 .chromeframe {position: absolute; top: 0;}
 
-/* @scale */
+/* @scale -------------------------------------------------------------- */
 
 /*
 	17px @ 1:1.5
@@ -39,7 +39,7 @@ $scale-4	: 3.234;		/* 4	3.234rem	51.750px	*/
 
 /* end @scale */
 
-/* @type */
+/* @type -------------------------------------------------------------- */
 
 $sans-stack:  "ff-meta-web-pro", "open sans", sans-serif ;
 $serif-stack:  "ff-meta-serif-web-pro", georgia;
@@ -146,7 +146,7 @@ p, ul, figure {
 
 /* end @type */
 
-/* @colours */
+/* @colours -------------------------------------------------------------- */
 
 $text-base: #333;
 
@@ -163,6 +163,9 @@ $grey-2: #ddd;
 $grey-3: #ccc;
 $grey-4: #bbb;
 $grey-5: #aaa;
+
+$alert: #ca722a;
+$success: #7c8e1e;
 
 /* off-black text */
 body, select, input, textarea {color: #444;}
@@ -218,9 +221,12 @@ input, textarea {
 	color: $discrete;
 }
 
+.alert {}
+.success {}
+
 /* end @colours */
 
-/* @forms */
+/* @forms -------------------------------------------------------------- */
 
 /* toggled state */
 
@@ -330,7 +336,7 @@ legend {
 	display: none;
 }
 
-/* @layout */
+/* @layout -------------------------------------------------------------- */
 
 .site-header,
 .main {
@@ -368,7 +374,7 @@ form.main.contact-form {
 
 /* @mq */
 
-/* 64em */
+/* 64em --------------------------------------------------------------  */
 @media screen and (min-width: 64em) {
 
 	/* @type 64em */
