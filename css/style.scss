@@ -144,6 +144,13 @@ p, ul, figure {
 	}
 }
 
+.msg {
+	@include rem-fallback(margin, $scale-0, 0, 0);
+	display: block;
+	@include rem-fallback(padding, $scale-n4, $scale-n3, $scale-n3);
+	font-weight: normal;
+}
+
 /* end @type */
 
 /* @colours -------------------------------------------------------------- */
@@ -164,7 +171,7 @@ $grey-3: #ccc;
 $grey-4: #bbb;
 $grey-5: #aaa;
 
-$alert: #ca722a;
+$alert: #e78c52;
 $success: #7c8e1e;
 
 /* off-black text */
@@ -221,8 +228,15 @@ input, textarea {
 	color: $discrete;
 }
 
-.alert {}
-.success {}
+.alert {
+	background-color: $alert;
+}
+.success {
+	background-color: $success;
+}
+.invalid {
+	border-color: $alert;
+}
 
 /* end @colours */
 
@@ -264,6 +278,9 @@ input, textarea {
 	font-family: $sans-stack;
 	letter-spacing: $scale-n5;
 	vertical-align: middle;
+}
+.invalid {
+	@include rem-fallback(border-width, $scale-n4);
 }
 
 input.button {
