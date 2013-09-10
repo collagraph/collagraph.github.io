@@ -1,0 +1,24 @@
+---
+layout: default
+title: Home
+---
+
+<h2 class="visuallyhidden">{{ page.title }}</h3>
+
+<!-- @recent-posts -->
+<ol id="recent-posts" class="post-list">
+    {% assign post = site.posts.first %}
+    <li class="hentry">
+        {% if post.image %}
+            <figure class="photo">
+                <img src="{{ site.url }}{{ post.image }}" {% if page.image-caption %}alt="{{ post.image-caption }}"{% endif %} />
+            </figure>
+        {% endif %}
+        <time datetime="{{ post.date | date: %c }}">{{ post.date | date: "%d %b %y" }}</time>
+        <h3 class="entry-title"><a href="{{ post.url }}" title="Permalink to {{ post.title }}">{{ post.title }}</a></h3>
+        <p class="entry-summary">{{ post.excerpt }} <a href="{{ post.url }}" title="Permalink to {{ post.title }}">[…]</a></p>
+    </li>
+</ol>
+<!-- end @recent-posts -->
+
+{% include rss.html %}

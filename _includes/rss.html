@@ -1,0 +1,34 @@
+<!-- @rss -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('feeds', '1');</script>
+
+<div id="rss"></div>
+
+<script type="text/javascript">
+var feedContainer=document.getElementById('rss');
+var feedURL='https://feeds.pinboard.in/rss/u:robertirish/t:blogit';
+var feedLimit=4;
+var feedOutput='<ol class="post-list">';
+function feedSetup(){
+    var feedpointer=new google.feeds.Feed(feedURL);
+    feedpointer.setNumEntries(feedLimit);
+    feedpointer.load(displayFeed);
+}
+function displayFeed(result){
+if (!result.error){
+    var e=result.feed.entries;
+    for (var i=0; i<e.length; i++)
+        feedOutput+='<li class="hentry"><h4 class="entry-title">' + e[i].title + '</h4><p><a href="' + e[i].link + '" title="Link to '+ e[i].title +'">' + e[i].link + '</a></p><p class="entry-summary">' + e[i].content + '</p>';
+        feedOutput+='</ol>';
+        feedContainer.innerHTML=feedOutput;
+}
+else
+    alert('Error fetching RSS');
+}
+</script>
+<script>
+$(document).ready(function(){
+    feedSetup();
+});
+</script>
+<!-- end @rss -->
