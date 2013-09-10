@@ -133,14 +133,19 @@ p, ul, figure {
 	display: block;
 }
 
+.image-changer li {
+	display: inline-block;
+}
 .slide-link {
-	display: block;
-	@include rem-fallback(padding, $scale-n2, 0);
+	display: inline-block;
+	@include rem-fallback(margin-right, $scale-0);
+		border-bottom: 1px solid transparent;
 	&:hover {
 		cursor: pointer;
+		border-bottom-color: #ccc;
 	}
 	&.current {
-		background-color: #ddd;
+		border-bottom-color: #888;
 	}
 }
 
@@ -172,7 +177,7 @@ $grey-4: #bbb;
 $grey-5: #aaa;
 
 $alert: #e78c52;
-$success: #7c8e1e;
+$success: #9aab44;
 
 /* off-black text */
 body, select, input, textarea {color: #444;}
@@ -204,6 +209,13 @@ a {
 	}
 	&:active {
 
+	}
+}
+
+.flexslider {
+	.next, .previous {
+		color: $grey-1;
+		background-color: $primary;
 	}
 }
 
@@ -390,6 +402,26 @@ fieldset.checkbox-list:not(#foo) {
 	}
 }
 
+.flexslider {
+	.next, .previous {
+		display: inline-block;
+		@include rem-fallback(min-width, 10);
+		@include rem-fallback(margin-top, $scale-0);
+		@include rem-fallback(padding, $scale-n2, $scale-0);
+		text-align: center;
+	}
+	.next {
+		float: right;
+		clear: right;
+		@include rem-fallback(margin-left, $scale-n4);
+	}
+	.previous {
+		float: left;
+		clear: left;
+		@include rem-fallback(margin-right, $scale-n4);
+	}
+}
+
 form.main.contact-form {
 	@include rem-fallback( padding-bottom, $scale-4);
 }
@@ -465,11 +497,14 @@ form.main.contact-form {
 				width: 100%;
 			}
 		}
-		.entry-title, .entry-summary {
+		.image-changer, .entry-title, .entry-summary {
 			float: right;
 			clear: right;
 			padding-left: 5.555%;
 			width: 35.184%;
+		}
+		.image-changer {
+			@include rem-fallback(margin-top, $scale-0);
 		}
 	}
 

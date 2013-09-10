@@ -16,7 +16,7 @@
 			$('#service-consulting-c').removeClass('checkbox-checked');
 		}
 	});
-	
+
 	$('fieldset:not(#foo) #service-general-q').click(function() {
 		if($('#service-general-q').is(':checked')) {
 			$('#service-general-c').addClass('checkbox-checked');
@@ -82,8 +82,9 @@
 			useCSS: true,
 			animationLoop: false,
 			smoothHeight: false,
+            directionNav: false,
 			controlNav: false
-		});
+		}).flexsliderManualDirectionControls();
 
         // Smooth scrolling
         $('.scroll').click(function(event){
