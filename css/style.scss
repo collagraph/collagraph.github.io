@@ -1,6 +1,11 @@
 /*
-collagraph.com.au stylesheet
-Version 1.0
+collagraph.com.au stylesheet v1.0
+
+by Luke Bacon and Robert Irish
+
+web: http://collagraph.com.au
+email: info@collagraph.com.au
+twitter: @_collagraph
 */
 
 @import "reset";
@@ -9,39 +14,14 @@ Version 1.0
 
 @import "mixins";
 
-/* Natural box layout */
+/* natural box layout */
 * {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 .chromeframe {position: absolute; top: 0;}
 
-/* Off-black text */
-body, select, input, textarea {color: #444;}
+/* @scale */
 
-/* Remove text-shadow from section */
-::-moz-selection{background: #ddd; color: #222; text-shadow: none;}
-::selection {background: #ddd; color: #222; text-shadow: none;}
-
-/*  Set touch-screen highlight colour */
-a:link {-webkit-tap-highlight-color: #ddd;}
-
-ins {background-color: #ddd; color: #222; text-decoration: none;}
-mark {background-color: #ddd; color: #222; font-style: italic; font-weight: bold;}
-
-/* Mozilla dosen't style place holders by default */
-input:-moz-placeholder {color:#888;}
-textarea:-moz-placeholder {color:#888;}
-
-/* Webfonts
--------------------------------------------------------------------------------*/
-
-
-/* Type-scale
--------------------------------------------------------------------------------*/
-
-
-/* Modular Scale
-	http://modularscale.com/scale/?px1=17&px2=23&ra1=1.5&ra2=0
-	---------------------
+/*
 	17px @ 1:1.5
 	23px @ 1:1.5
 */
@@ -57,9 +37,9 @@ $scale-2 	: 1.594;		/* LH	1.594rem	25.500px	*/
 $scale-3	: 2.156;		/* 3	2.156rem	34.500px	*/
 $scale-4	: 3.234;		/* 4	3.234rem	51.750px	*/
 
+/* end @scale */
 
-/* Type
--------------------------------------------------------------------------------*/
+/* @type */
 
 $sans-stack:  "ff-meta-web-pro", "open sans", sans-serif ;
 $serif-stack:  "ff-meta-serif-web-pro", georgia;
@@ -164,8 +144,9 @@ p, ul, figure {
 	}
 }
 
-/* Colours
--------------------------------------------------------------------------------*/
+/* end @type */
+
+/* @colours */
 
 $text-base: #333;
 
@@ -182,6 +163,23 @@ $grey-2: #ddd;
 $grey-3: #ccc;
 $grey-4: #bbb;
 $grey-5: #aaa;
+
+/* off-black text */
+body, select, input, textarea {color: #444;}
+
+/* remove text-shadow from section */
+::-moz-selection{background: #ddd; color: #222; text-shadow: none;}
+::selection {background: #ddd; color: #222; text-shadow: none;}
+
+/*  set touch-screen highlight colour */
+a:link {-webkit-tap-highlight-color: #ddd;}
+
+ins {background-color: #ddd; color: #222; text-decoration: none;}
+mark {background-color: #ddd; color: #222; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder {color:#888;}
+textarea:-moz-placeholder {color:#888;}
 
 body {
 	color: $text-base;
@@ -220,16 +218,16 @@ input, textarea {
 	color: $discrete;
 }
 
+/* end @colours */
 
-/* Forms
--------------------------------------------------------------------------------*/
+/* @forms */
 
-/* Toggled State */
+/* toggled state */
 
 fieldset {
 	display: block;
 }
-	/* Restyle checkboxes for supported browsers */
+	/* restyle checkboxes for supported browsers */
 	fieldset:not(#foo) > label + input[type="checkbox"] {
 	    opacity: 0;
 	}
@@ -237,13 +235,13 @@ fieldset {
 	fieldset:not(#foo) > .checkbox {
 	    margin: 0;
 		@include rem-fallback( padding-right, $scale-2);
-	    background: url('images/off.png') right 0.35rem no-repeat;
+	    background: url('/assets/off.png') right 0.35rem no-repeat;
 	    -webkit-transition: color .3s ease;
 		-moz-transition: color .3s ease;
 		transition: color .3s ease;
 	}
 	fieldset:not(#foo) > .checkbox-checked {
-	    background-image: url('images/check.png');
+	    background-image: url('/assets/check.png');
 	}
 label,
 input {
@@ -327,13 +325,12 @@ legend {
 	height: auto;
 }
 
-/* no-js, don't show addition form fields .. keep it simple. */
+/* .no-js, don't show addition form fields... keep it simple. */
 .no-js .form-additional {
 	display: none;
 }
 
-/* Layout
--------------------------------------------------------------------------------*/
+/* @layout */
 
 .site-header,
 .main {
@@ -358,10 +355,8 @@ form.main.contact-form {
 	@include rem-fallback( padding-bottom, $scale-4);
 }
 
-/* Tools
--------------------------------------------------------------------------------*/
+/* tools */
 
-/* Hide visually but show in screen-readers etc. */
 .visuallyhidden {
   position: absolute;
   overflow: hidden;
@@ -371,14 +366,12 @@ form.main.contact-form {
 }
 
 
-/* Media queries!
--------------------------------------------------------------------------------*/
+/* @mq */
 
 /* 64em */
 @media screen and (min-width: 64em) {
 
-	/* Type
-	-------------------------------------------------------------------------------*/
+	/* @type 64em */
 
 	img.logo {
 		max-width: 11.111%;
@@ -395,13 +388,9 @@ form.main.contact-form {
 		@include rem-fallback(line-height, $scale-3);
 	}
 
+	/* end @type 64em */
 
-	/* 64em Colours
-	-------------------------------------------------------------------------------*/
-
-
-	/* 64em Layout
-	-------------------------------------------------------------------------------*/
+	/* @layout 64em */
 
 	.site-header {
 		padding: #{$scale-3}rem 5%;
@@ -444,5 +433,7 @@ form.main.contact-form {
 			width: 26.666%;
 		}
 	}
+
+	/* end @layout 64em */
 
 }
