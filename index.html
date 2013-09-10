@@ -3,22 +3,40 @@ layout: default
 title: Home
 ---
 
-<h2 class="visuallyhidden">{{ page.title }}</h3>
+{% include header.html %}
 
-<!-- @recent-posts -->
-<ol id="recent-posts" class="post-list">
-    {% assign post = site.posts.first %}
-    <li class="hentry">
-        {% if post.image %}
-            <figure class="photo">
-                <img src="{{ site.url }}{{ post.image }}" {% if page.image-caption %}alt="{{ post.image-caption }}"{% endif %} />
-            </figure>
-        {% endif %}
-        <time datetime="{{ post.date | date: %c }}">{{ post.date | date: "%d %b %y" }}</time>
-        <h3 class="entry-title"><a href="{{ post.url }}" title="Permalink to {{ post.title }}">{{ post.title }}</a></h3>
-        <p class="entry-summary">{{ post.excerpt }} <a href="{{ post.url }}" title="Permalink to {{ post.title }}">[…]</a></p>
-    </li>
-</ol>
-<!-- end @recent-posts -->
+<!-- @our-approach -->
+<section id="our-approach" class="our-approach main clearfix">
 
-{% include rss.html %}
+	<h2>Our approach</h2>
+	
+	<div class="principle">
+	
+		<h3>Designed for you</h3>
+		
+		<p>A website designed from the ground up to achieve <em>your</em> goals. We make sure you, and your users, are&nbsp;happy.</p>
+	
+	</div><!--
+	
+	--><div class="principle">
+	
+		<h3>Content strategy</h3>
+		
+		<p>Well organised information puts you in control. We help you to develop strong web content that&#8217;s clear and&nbsp;effective.</p>
+	
+	</div><!--
+	
+	--><div class="principle">
+	
+		<h3>Mobile, Tablet, Desktop, ?</h3>
+		
+		<p>One site that looks and works great, no matter how your users view&nbsp;it.</p>
+	
+	</div>
+	
+</section>
+<!-- end @our-approach -->
+
+{% include portfolio.html %}
+
+{% include form-contact.html %}
