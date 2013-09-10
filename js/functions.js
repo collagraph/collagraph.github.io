@@ -1,6 +1,31 @@
 // Remap jQuery to $
 (function($){
 
+	$('fieldset:not(#foo) #service-webdesign-q').click(function() {
+		if($('#service-webdesign-q').is(':checked')) {
+			$('#service-webdesign-c').addClass('checkbox-checked');
+		} else {
+			$('#service-webdesign-c').removeClass('checkbox-checked');
+		}
+	});
+
+	$('fieldset:not(#foo) #service-consulting-q').click(function() {
+		if($('#service-consulting-q').is(':checked')) {
+			$('#service-consulting-c').addClass('checkbox-checked');
+		} else {
+			$('#service-consulting-c').removeClass('checkbox-checked');
+		}
+	});
+	
+	$('fieldset:not(#foo) #service-general-q').click(function() {
+		if($('#service-general-q').is(':checked')) {
+			$('#service-general-c').addClass('checkbox-checked');
+		} else {
+			$('#service-general-c').removeClass('checkbox-checked');
+		}
+	});
+
+
 	$('fieldset:not(#foo) #budget-q').click(function() {
 		if($('#budget-q').is(':checked')) {
 			$('#budget-c').addClass('checkbox-checked');
