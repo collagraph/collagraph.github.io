@@ -183,6 +183,9 @@ $grey-3: #ccc;
 $grey-4: #bbb;
 $grey-5: #aaa;
 
+$alert: red;
+$success: green;
+
 body {
 	color: $text-base;
 	background-color: $background;
@@ -218,6 +221,13 @@ input, textarea {
 
 .discrete {
 	color: $discrete;
+}
+
+.alert {
+	background-color: $alert;
+}
+.success {
+	background-color: $success;
 }
 
 
