@@ -159,7 +159,16 @@
 			<label for="contact-org">Organisation/Company</label>
 			<input type="text" id="contact-org" name="contact-org" />
 		</fieldset>
-		
+		<fieldset class="checkbox-list">
+			<legend>Service required:</legend>
+			<label for="service-webdesign" class="checkbox">Web design</label>
+			<input id="service-webdesign" name="service-webdesign" type="checkbox">
+			<label for="service-consulting" class="checkbox">Consulting</label>
+			<input id="service-consulting" name="service-consulting" type="checkbox">
+			<label for="service-general" class="checkbox">General information design</label>
+			<input id="service-general" name="service-general" type="checkbox">
+		</fieldset>
+		</fieldset>
 		<fieldset>
 			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
 			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
@@ -182,7 +191,11 @@
 				<input id="budget" name="budget" type="text"/>
 			</div>
 		</fieldset>
-		<input type="button" value="Send" class="button" >
+		<div>
+			<input type="button" value="Send" class="button" >
+			<p class="msg alert required-alert">Please make sure to fill out all the required fields.</p>
+			<p class="msg alert email-alert">Please make sure you've entered your email correctly.</p>
+			<p class="msg success">Thanks for getting in touch. We'll be in contact shortly.</p>
 </form>
 
 <?php require_once('footer.php'); ?>
