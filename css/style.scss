@@ -22,6 +22,8 @@ twitter: @_collagraph
 /* @scale -------------------------------------------------------------- */
 
 /*
+	http://modularscale.com/scale/?px1=17&px2=23&ra1=1.5&ra2=0
+
 	17px @ 1:1.5
 	23px @ 1:1.5
 */
@@ -36,6 +38,8 @@ $scale-1	: 1.4375;		/* 1	1.4375rem	23px		*/
 $scale-2 	: 1.594;		/* LH	1.594rem	25.500px	*/
 $scale-3	: 2.156;		/* 3	2.156rem	34.500px	*/
 $scale-4	: 3.234;		/* 4	3.234rem	51.750px	*/
+$scale-9	: 12.103;		/* 9	12.103rem	193.642px	*/
+$scale-10	: 16.374;		/* 10	16.374rem	261.986px	*/
 
 /* end @scale */
 
@@ -216,7 +220,12 @@ input, textarea {
 	background-color: lighten($contrast, 38%);
 }
 
-.checkbox-checked {
+.checkbox-list {
+	.checkbox-checked {
+		color: darken($text-base, 30%);
+	}
+}
+.form-addition .checkbox-checked {
 	color: lighten($text-base, 30%);
 }
 
@@ -246,10 +255,11 @@ fieldset {
 	/* restyle checkboxes for supported browsers */
 	fieldset:not(#foo) > label + input[type="checkbox"] {
 	    opacity: 0;
+	    height: 0;
+	    margin: 0;
 	}
 
 	fieldset:not(#foo) > .checkbox {
-	    margin: 0;
 		@include rem-fallback( padding-right, $scale-2);
 	    background: url('/assets/off.png') right 0.35rem no-repeat;
 	    -webkit-transition: color .3s ease;
@@ -268,19 +278,20 @@ input, textarea {
 	@include rem-fallback(margin, $scale-n4, 0);
 	@include rem-fallback( padding, $scale-n3, $scale-n3);
 	width: 100%;
-	border-radius: none;
+	border-radius: 0;
 	@include rem-fallback(border-width, $scale-n5);
 	border-style: solid;
 	font-family: $sans-stack;
 	letter-spacing: $scale-n5;
 	vertical-align: middle;
+	-webkit-appearance: none;
 }
 .invalid {
 	@include rem-fallback(border-width, $scale-n4);
 }
 
 input.button {
-	@include rem-fallback( margin-top, $scale-3);
+	@include rem-fallback( margin-top, $scale-2);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -300,6 +311,7 @@ legend {
 
 .checkbox {
 		display: inline-block;
+	    margin: 0;
 	}
 .checkbox + input[type="checkbox"] {
 		display: inline-block;
@@ -310,11 +322,14 @@ legend {
 .checkbox-list {
 	clear: both;
 	float: none;
+	@include rem-fallback( margin-top, $scale-1);
 	.checkbox {
+		@include rem-fallback( margin, $scale-n3, 0, 0);
 		display: block;
 		float: left;
 		clear: left;
-		width: 70%;
+		@include rem-fallback( padding, $scale-n3, 0);
+		@include rem-fallback( width, $scale-10);		
 	}
 	.checkbox + input[type="checkbox"] {
 		display: block;
@@ -322,6 +337,18 @@ legend {
 		clear: right;
 	}
 }
+
+fieldset.checkbox-list:not(#foo) {
+	.checkbox {
+		background: url('/assets/off.png') right center no-repeat;
+	}
+	.checkbox-checked {
+	    background-image: url('/assets/check.png');
+	    font-weight: bold;
+	    
+	}
+}
+
 
 .form-additional {
 	@include rem-fallback(padding-top, $scale-1);
