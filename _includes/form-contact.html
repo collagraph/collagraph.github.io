@@ -1,0 +1,58 @@
+<!-- @form-contact -->
+<form id="contact" class="contact-form main clearfix">
+		<h2>Contact</h2>
+		<p>Let us know about your project</p>
+	
+		<fieldset>
+			<label for="contact-name">Your name <span class="discrete">(required)</span></label>
+			<input type="text" required id="contact-name" name="contact-name" />
+		</fieldset>
+		
+		<fieldset>
+			<label for="contact-email">Email address <span class="discrete">(required)</span></label>
+			<input type="email" required id="contact-email" name="contact-email" />
+		</fieldset>
+
+		<fieldset>	
+			<label for="contact-org">Organisation/Company</label>
+			<input type="text" id="contact-org" name="contact-org" />
+		</fieldset>
+		<fieldset class="checkbox-list">
+			<legend>Service required:</legend>
+			<label for="service-webdesign" class="checkbox">Web design</label>
+			<input id="service-webdesign" name="service-webdesign" type="checkbox">
+			<label for="service-consulting" class="checkbox">Consulting</label>
+			<input id="service-consulting" name="service-consulting" type="checkbox">
+			<label for="service-general" class="checkbox">General information design</label>
+			<input id="service-general" name="service-general" type="checkbox">
+		</fieldset>
+		</fieldset>
+		<fieldset>
+			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
+			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
+		</fieldset>
+
+		<fieldset class="form-additional">		
+			<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
+			<input type="checkbox" name="deadline-q" id="deadline-q"/>
+			<div id="more-deadline" class="display-hide">
+				<label for="deadline">When is the project deadline?</label>
+				<input id="deadline" name="deadline" type="text"/>
+			</div>
+		</fieldset>
+
+		<fieldset class="form-additional">
+			<label for="budget-q" id="budget-c" class="checkbox">Do you have a rough budget for us?</label>
+			<input type="checkbox" name="budget-q" id="budget-q"/>
+			<div id="more-budget" class="display-hide">
+				<label for="budget">About how much is the budget?</label>
+				<input id="budget" name="budget" type="text"/>
+			</div>
+		</fieldset>
+		<div>
+			<input type="button" value="Send" class="button" >
+			<p class="msg alert required-alert">Please make sure to fill out all the required fields.</p>
+			<p class="msg alert email-alert">Please make sure you've entered your email correctly.</p>
+			<p class="msg success">Thanks for getting in touch. We'll be in contact shortly.</p>
+</form>
+<!-- end @form-contact -->
