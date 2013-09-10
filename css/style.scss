@@ -258,7 +258,6 @@ fieldset {
 	    height: 0;
 	    margin: 0;
 	}
-
 	fieldset:not(#foo) > .checkbox {
 		@include rem-fallback( padding-right, $scale-2);
 	    background: url('/assets/off.png') right 0.35rem no-repeat;
@@ -303,22 +302,18 @@ legend {
 	font-family: $serif-stack;
 	@include rem-fallback(margin, $scale-0, 0, $scale-0);
 }
-
-
 .textarea {
 	width: 100%;
 }
-
 .checkbox {
-		display: inline-block;
-	    margin: 0;
-	}
-.checkbox + input[type="checkbox"] {
-		display: inline-block;
-		width: 2rem;
-		overflow: visible;
+	display: inline-block;
+    margin: 0;
 }
-
+.checkbox + input[type="checkbox"] {
+	display: inline-block;
+	width: 2rem;
+	overflow: visible;
+}
 .checkbox-list {
 	clear: both;
 	float: none;
@@ -329,7 +324,7 @@ legend {
 		float: left;
 		clear: left;
 		@include rem-fallback( padding, $scale-n3, 0);
-		@include rem-fallback( width, $scale-10);		
+		@include rem-fallback( width, $scale-10);
 	}
 	.checkbox + input[type="checkbox"] {
 		display: block;
@@ -337,7 +332,6 @@ legend {
 		clear: right;
 	}
 }
-
 fieldset.checkbox-list:not(#foo) {
 	.checkbox {
 		background: url('/assets/off.png') right center no-repeat;
@@ -345,11 +339,8 @@ fieldset.checkbox-list:not(#foo) {
 	.checkbox-checked {
 	    background-image: url('/assets/check.png');
 	    font-weight: bold;
-	    
 	}
 }
-
-
 .form-additional {
 	@include rem-fallback(padding-top, $scale-1);
 	div {
@@ -358,13 +349,11 @@ fieldset.checkbox-list:not(#foo) {
 		transition: all .3s ease;
 	}
 }
-
 .display-hide {
 	display: none;
 	opacity: 0;
 	height: 0;
 }
-
 .display-more {
 	display: block;
 	opacity: 1;
@@ -487,3 +476,26 @@ form.main.contact-form {
 	/* end @layout 64em */
 
 }
+
+/* @retina */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+	/* @forms retina */
+
+	fieldset.checkbox-list:not(#foo) {
+		.checkbox {
+			background-image: url('/assets/off-retina.png');
+			background-size: 50% auto;
+		}
+		.checkbox-checked {
+		    background-image: url('/assets/check-retina.png');
+		    background-size: 50% auto;
+		}
+	}
+
+	/* end @forms retina */
+
+}
+
+/* end @retina */
