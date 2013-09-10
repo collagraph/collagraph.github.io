@@ -259,6 +259,8 @@ fieldset {
 	/* restyle checkboxes for supported browsers */
 	fieldset:not(#foo) > label + input[type="checkbox"] {
 	    opacity: 0;
+	    height: 0;
+	    margin: 0;
 	}
 
 	fieldset:not(#foo) > .checkbox {
@@ -293,7 +295,7 @@ input, textarea {
 }
 
 input.button {
-	@include rem-fallback( margin-top, $scale-3);
+	@include rem-fallback( margin-top, $scale-2);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -330,7 +332,7 @@ legend {
 		display: block;
 		float: left;
 		clear: left;
-		@include rem-fallback( padding, $scale-n1, 0);
+		@include rem-fallback( padding, $scale-n3, 0);
 		@include rem-fallback( width, $scale-10);		
 	}
 	.checkbox + input[type="checkbox"] {
