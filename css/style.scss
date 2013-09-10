@@ -104,10 +104,6 @@ h1.logo {
 	}
 }
 
-#our-approach {
-		@include rem-fallback(margin-top, $scale-4);
-}
-
 h2 {
 	@include rem-fallback(padding-top, $scale-3);
 	@include rem-fallback(font-size, $scale-0);
@@ -360,6 +356,10 @@ legend {
 	@include rem-fallback(padding, $scale-3, $scale-0, $scale-0);
 }
 
+#our-approach {
+		@include rem-fallback(margin-top, $scale-4);
+}
+
 .principle {
 	margin: 0;
 	h3 {
@@ -388,6 +388,7 @@ form.main.contact-form {
   margin: -1px; padding: 0; border: 0;
 }
 
+/* end @layout */
 
 /* @mq */
 
@@ -415,8 +416,11 @@ form.main.contact-form {
 
 	/* @layout 64em */
 
-	.site-header {
-		padding: #{$scale-3}rem 5%;
+	.site-header,
+	.flexslider {
+		@include rem-fallback(padding-top, $scale-3);
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 
 	.main {
@@ -431,19 +435,16 @@ form.main.contact-form {
 
 	.principle {
 		display: inline-block;
-		margin-left: 5%;
-		width: 26.666%;
+		padding-left: 5%;
+		width: 31.666%;
 		vertical-align: top;
-		+ .principle + .principle {
-			margin-right: 5%;
-		}
 	}
 
 	.our-work .hentry {
 		.photo {
 			float: left;
 			clear: left;
-			width: 63.333%;
+			width: 64.813%;
 			img {
 				width: 100%;
 			}
@@ -451,9 +452,8 @@ form.main.contact-form {
 		.entry-title, .entry-summary {
 			float: right;
 			clear: right;
-			margin-left: 5%;
-			margin-right: 5%;
-			width: 26.666%;
+			padding-left: 5.555%;
+			width: 35.184%;
 		}
 	}
 
