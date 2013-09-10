@@ -34,15 +34,15 @@ textarea:-moz-placeholder {color:#888;}
 -------------------------------------------------------------------------------*/
 
 
-/* Type-scale 
+/* Type-scale
 -------------------------------------------------------------------------------*/
 
 
 /* Modular Scale
 	http://modularscale.com/scale/?px1=17&px2=23&ra1=1.5&ra2=0
 	---------------------
-	17px @ 1:1.5	
-	23px @ 1:1.5	
+	17px @ 1:1.5
+	23px @ 1:1.5
 */
 
 $scale-n5	: 0.0625;		/* 1px	0.0625rem	1px			*/
@@ -87,7 +87,7 @@ h1.logo {
 	@include rem-fallback(font-size, $scale-3);
 	font-weight: 400;
 }
-	
+
 .distinct {
 	@include rem-fallback(font-size, $scale-2);
 	@include rem-fallback(line-height, $scale-3);
@@ -163,7 +163,7 @@ p, ul, figure {
 	}
 }
 
-/* Colours 
+/* Colours
 -------------------------------------------------------------------------------*/
 
 $text-base: #333;
@@ -194,7 +194,7 @@ a {
 		color: darken($primary, 20%);
 	}
 	&:active {
-		
+
 	}
 }
 
@@ -220,7 +220,7 @@ input, textarea {
 }
 
 
-/* Forms 
+/* Forms
 -------------------------------------------------------------------------------*/
 
 /* Toggled State */
@@ -232,7 +232,7 @@ fieldset {
 	fieldset:not(#foo) > label + input[type="checkbox"] {
 	    opacity: 0;
 	}
-	
+
 	fieldset:not(#foo) > .checkbox {
 	    margin: 0;
 	    clear: none;
@@ -281,7 +281,7 @@ label {
 		overflow: visible;
 	}
 	div {
-		-webkit-transition: opacity .3s ease; 
+		-webkit-transition: opacity .3s ease;
 		-moz-transition: all .3s ease;
 		transition: all .3s ease;
 	}
@@ -304,7 +304,7 @@ label {
 	display: none;
 }
 
-/* Layout 
+/* Layout
 -------------------------------------------------------------------------------*/
 
 .site-header,
@@ -348,47 +348,47 @@ form.main.contact-form {
 
 /* 64em */
 @media screen and (min-width: 64em) {
-	
+
 	/* Type
 	-------------------------------------------------------------------------------*/
-	
+
 	img.logo {
 		max-width: 11.111%;
 	}
-	
+
 	h1.logo {
 		@include rem-fallback(margin, $scale-0, 0, $scale-3);
 		@include rem-fallback(font-size, $scale-3);
 		font-weight: 400;
 	}
-		
+
 	.distinct {
 		@include rem-fallback(font-size, $scale-2);
 		@include rem-fallback(line-height, $scale-3);
 	}
-	
-	
-	/* 64em Colours 
-	-------------------------------------------------------------------------------*/
-	
 
-	/* 64em Layout 
+
+	/* 64em Colours
 	-------------------------------------------------------------------------------*/
-	
-	.site-header {	
+
+
+	/* 64em Layout
+	-------------------------------------------------------------------------------*/
+
+	.site-header {
 		padding: #{$scale-3}rem 5%;
 	}
-	
+
 	.main {
 		@include rem-fallback(margin-top, $scale-4);
 		padding: 0;
 	}
-	
+
 	h2 {
 		margin-left: 5%;
 		margin-bottom: #{$scale-3}rem;
 	}
-	
+
 	.principle {
 		display: inline-block;
 		margin-left: 5%;
@@ -398,7 +398,7 @@ form.main.contact-form {
 			margin-right: 5%;
 		}
 	}
-	
+
 	.our-work .hentry {
 		.photo {
 			float: left;
@@ -416,6 +416,5 @@ form.main.contact-form {
 			width: 26.666%;
 		}
 	}
-	
-	
+
 }
