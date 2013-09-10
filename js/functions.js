@@ -1,27 +1,27 @@
 // Remap jQuery to $
 (function($){
 
-	$('fieldset:not(#foo) #service-webdesign-q').click(function() {
-		if($('#service-webdesign-q').is(':checked')) {
-			$('#service-webdesign-c').addClass('checkbox-checked');
+	$('fieldset:not(#foo) #Field7').click(function() {
+		if($('#Field7').is(':checked')) {
+			$('#title7').addClass('checkbox-checked');
 		} else {
-			$('#service-webdesign-c').removeClass('checkbox-checked');
+			$('#title7').removeClass('checkbox-checked');
 		}
 	});
 
-	$('fieldset:not(#foo) #service-consulting-q').click(function() {
-		if($('#service-consulting-q').is(':checked')) {
-			$('#service-consulting-c').addClass('checkbox-checked');
+	$('fieldset:not(#foo) #Field8').click(function() {
+		if($('#Field8').is(':checked')) {
+			$('#title8').addClass('checkbox-checked');
 		} else {
-			$('#service-consulting-c').removeClass('checkbox-checked');
+			$('#title8').removeClass('checkbox-checked');
 		}
 	});
 	
-	$('fieldset:not(#foo) #service-general-q').click(function() {
-		if($('#service-general-q').is(':checked')) {
-			$('#service-general-c').addClass('checkbox-checked');
+	$('fieldset:not(#foo) #Field9').click(function() {
+		if($('#Field9').is(':checked')) {
+			$('#title9').addClass('checkbox-checked');
 		} else {
-			$('#service-general-c').removeClass('checkbox-checked');
+			$('#title9').removeClass('checkbox-checked');
 		}
 	});
 
