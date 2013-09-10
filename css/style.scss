@@ -302,7 +302,7 @@ input, textarea {
 }
 
 input.button {
-	@include rem-fallback( margin-top, $scale-2);
+	@include rem-fallback( margin-top, $scale-3);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }

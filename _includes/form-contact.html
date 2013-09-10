@@ -1,48 +1,49 @@
 <!-- @form-contact -->
-<form id="contact" class="contact-form main clearfix">
+<form id="contact" class="contact-form main clearfix" enctype="multipart/form-data" method="post" novalidate action="https://collagraph.wufoo.com/forms/z7x4m1/#public">
 		<h2>Contact</h2>
 		<p>Let us know about your project</p>
 	
 		<fieldset>
-			<label for="contact-name">Your name <span class="discrete">(required)</span></label>
-			<input type="text" required id="contact-name" name="contact-name" />
+			<label id="title1" for="Field1">Your name <span class="discrete">(required)</span></label>
+			<input class="field" id="Field1" name="Field1" type="text" required="" name="contact-name" tabindex="1" onkeyup="" maxlength="255" />
 		</fieldset>
 		
 		<fieldset>
-			<label for="contact-email">Email address <span class="discrete">(required)</span></label>
-			<input type="email" required id="contact-email" name="contact-email" />
+			<label id="title2" for="Field2">Email address <span class="discrete">(required)</span></label>
+			<input class="field" id="Field2" name="Field2" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
 		</fieldset>
 
 		<fieldset>
-			<label for="contact-tel">Phone number</label>
-			<input type="tel" id="contact-tel" name="contact-tel" />
+			<label id="title3" for="Field3">Phone number</label>
+			<input class="field" id="Field3" name="Field3" tabindex="3" type="tel" maxlength="20" value="" />
 		</fieldset>
 
 		<fieldset>	
-			<label for="contact-org">Organisation/Company</label>
-			<input type="text" id="contact-org" name="contact-org" />
+			<label id="title6" for="Field6">Organisation/Company</label>
+			<input class="field" id="Field6" name="Field6" type="text" value="" maxlength="255" tabindex="4" onkeyup="" />
 		</fieldset>
+		
 		<fieldset class="checkbox-list">
 			<legend>Service required:</legend>
-			<label id="service-webdesign-c" for="service-webdesign-q" class="checkbox">Web design</label>
-			<input id="service-webdesign-q" name="service-webdesign-q" type="checkbox">
-			<label id="service-consulting-c" for="service-consulting-q" class="checkbox">Communications strategy</label>
-			<input id="service-consulting-q" name="service-consulting-q" type="checkbox">
-			<label id="service-general-c" for="service-general-q" class="checkbox">General information design</label>
-			<input id="service-general-q" name="service-general-q" type="checkbox">
+			<label id="title7" for="Field7" class="checkbox">Web design</label>
+				<input id="Field7" name="Field7" type="checkbox" class="field checkbox" value="Web design" tabindex="5">
+			<label id="title8" for="Field8" class="checkbox">Communications strategy</label>
+				<input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Communications strategy" tabindex="6">
+			<label id="title9" for="Field9" class="checkbox">General information design</label>
+				<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="General information design" tabindex="7">
 		</fieldset>
-		</fieldset>
+		
 		<fieldset>
-			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
-			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
+			<label id="title107" for="Field107">How can we help? <span class="discrete">(required)</span></label>
+			<textarea id="Field107" name="Field107" class="textarea field" spellcheck="true" rows="10" cols="50" tabindex="8" onkeyup="" required  ></textarea>
 		</fieldset>
 
 		<fieldset class="form-additional">		
 			<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
-			<input type="checkbox" name="deadline-q" id="deadline-q"/>
+			<input class="field" type="checkbox" name="deadline-q" id="deadline-q"/>
 			<div id="more-deadline" class="display-hide">
-				<label for="deadline">When is the project deadline?</label>
-				<input id="deadline" name="deadline" type="text"/>
+				<label id="title208" for="Field208">When is the project deadline?</label>
+				<input class="field" id="Field208" name="Field208" type="text" value="" maxlength="255" tabindex="9" onkeyup=""/>
 			</div>
 		</fieldset>
 
@@ -50,12 +51,17 @@
 			<label for="budget-q" id="budget-c" class="checkbox">Do you have a rough budget for us?</label>
 			<input type="checkbox" name="budget-q" id="budget-q"/>
 			<div id="more-budget" class="display-hide">
-				<label for="budget">About how much is the budget?</label>
-				<input id="budget" name="budget" type="text"/>
+				<label id="title209" for="Field209">About how much is the budget?</label>
+				<input class="field" id="Field209" name="Field209" type="text" value="" maxlength="255" tabindex="10" onkeyup="" />
 			</div>
 		</fieldset>
+		<div class="visuallyhidden">
+			<label for="comment">Do Not Fill This Out</label>
+			<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+			<input type="hidden" id="idstamp" name="idstamp" value="eSXjQjWyVzpKLCH4frUQxXPjLJk8djyc54btnJB8rAc=" />
+		</div>
 		<div>
-			<input type="button" value="Send" class="button" >
+			<input id="saveForm" name="saveForm" class="button" type="submit" value="Submit" >
 			<strong class="msg alert" id="required-alert">Please make sure to fill out all the required&nbsp;fields.</strong>
 			<strong class="msg alert" id="email-alert">Please make sure you've entered your email&nbsp;correctly.</strong>
 			<strong class="msg success" id="contact-success">Thanks for getting in touch. We'll be in contact&nbsp;shortly.</strong>
