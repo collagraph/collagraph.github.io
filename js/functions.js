@@ -1,59 +1,34 @@
 // Remap jQuery to $
 (function($){
 
-	$('#Field7').addClass('visuallyhidden');
-	$('#Field8').addClass('visuallyhidden');
-	$('#Field9').addClass('visuallyhidden');
-	$('#deadline-q').addClass('visuallyhidden');
-	$('#budget-q').addClass('visuallyhidden');
+    /* Smooth scrolling -------------------------------------------------------------- */
 
-	$('fieldset:not(#foo) #Field7').click(function() {
-		if($('#Field7').is(':checked')) {
-			$('#title7').addClass('checkbox-checked');
-		} else {
-			$('#title7').removeClass('checkbox-checked');
-		}
-	});
+    $(document).ready(function() {
 
-	$('fieldset:not(#foo) #Field8').click(function() {
-		if($('#Field8').is(':checked')) {
-			$('#title8').addClass('checkbox-checked');
-		} else {
-			$('#title8').removeClass('checkbox-checked');
-		}
-	});
-	
-	$('fieldset:not(#foo) #Field9').click(function() {
-		if($('#Field9').is(':checked')) {
-			$('#title9').addClass('checkbox-checked');
-		} else {
-			$('#title9').removeClass('checkbox-checked');
-		}
-	});
+        $('.scroll').click(function(event){
+            $('html, body').animate({scrollTop:$(this.hash).offset().top}, 300);
+        });
 
+    });
 
-	$('fieldset:not(#foo) #budget-q').click(function() {
-		if($('#budget-q').is(':checked')) {
-			$('#budget-c').addClass('checkbox-checked');
-			$('#more-budget').addClass('display-more').removeClass('display-hide');
-		} else {
-			$('#budget-c').removeClass('checkbox-checked');
-			$('#more-budget').removeClass('display-more').addClass('display-hide');
-		}
-	});
+    /* Flexslider -------------------------------------------------------------- */
 
-	$('fieldset:not(#foo) #deadline-q').click(function() {
-		if($('#deadline-q').is(':checked')) {
-			$('#deadline-c').addClass('checkbox-checked');
-			$('#more-deadline').addClass('display-more').removeClass('display-hide');
-			$('#deadline').focus();
-		} else {
-			$('#deadline-c').removeClass('checkbox-checked');
-			$('#more-deadline').removeClass('display-more').addClass('display-hide');
-		}
-	});
+    $(document).ready(function(){
 
-    // flexslider slide changer
+        $(".flexslider");
+
+        .flexslider({
+            animation: "slide",
+            slideshow: false,
+            useCSS: true,
+            animationLoop: false,
+            smoothHeight: false,
+            directionNav: false,
+            controlNav: false
+        }).flexsliderManualDirectionControls();
+
+    });
+
 	$('.slide-1').click(function(){
 		var slidePath=$(this).closest('article').attr('id');
 		var slideURL='/assets/work/'+slidePath+'/slide-1.jpg';
@@ -78,73 +53,84 @@
 		$(this).addClass('current');
 	});
 
-    $(document).ready(function() {
+    /* Forms -------------------------------------------------------------- */
 
-		// Flexslider
-		$(".flexslider")
-		.flexslider({
-			animation: "slide",
-			slideshow: false,
-			useCSS: true,
-			animationLoop: false,
-			smoothHeight: false,
-            directionNav: false,
-			controlNav: false
-		}).flexsliderManualDirectionControls();
+    $('#Field7').addClass('visuallyhidden');
+    $('#Field8').addClass('visuallyhidden');
+    $('#Field9').addClass('visuallyhidden');
+    $('#deadline-q').addClass('visuallyhidden');
+    $('#budget-q').addClass('visuallyhidden');
 
-        // Smooth scrolling
-        $('.scroll').click(function(event){
-            $('html, body').animate({scrollTop:$(this.hash).offset().top}, 300);
-        });
+    $('fieldset:not(#foo) #Field7').click(function() {
+        if($('#Field7').is(':checked')) {
+            $('#title7').addClass('checkbox-checked');
+        } else {
+            $('#title7').removeClass('checkbox-checked');
+        }
+    });
+
+    $('fieldset:not(#foo) #Field8').click(function() {
+        if($('#Field8').is(':checked')) {
+            $('#title8').addClass('checkbox-checked');
+        } else {
+            $('#title8').removeClass('checkbox-checked');
+        }
+    });
+
+    $('fieldset:not(#foo) #Field9').click(function() {
+        if($('#Field9').is(':checked')) {
+            $('#title9').addClass('checkbox-checked');
+        } else {
+            $('#title9').removeClass('checkbox-checked');
+        }
+    });
+
+    $('fieldset:not(#foo) #budget-q').click(function() {
+        if($('#budget-q').is(':checked')) {
+            $('#budget-c').addClass('checkbox-checked');
+            $('#more-budget').addClass('display-more').removeClass('display-hide');
+        } else {
+            $('#budget-c').removeClass('checkbox-checked');
+            $('#more-budget').removeClass('display-more').addClass('display-hide');
+        }
+    });
+
+    $('fieldset:not(#foo) #deadline-q').click(function() {
+        if($('#deadline-q').is(':checked')) {
+            $('#deadline-c').addClass('checkbox-checked');
+            $('#more-deadline').addClass('display-more').removeClass('display-hide');
+            $('#deadline').focus();
+        } else {
+            $('#deadline-c').removeClass('checkbox-checked');
+            $('#more-deadline').removeClass('display-more').addClass('display-hide');
+        }
+    });
+
+    /* Form validation -------------------------------------------------------------- */
+
+    $(document).ready(function(){
+
+        // Ajax form http://malsup.com/jquery/form/
+        $('#contact').validate();
+
+        // Form validation http://jqueryvalidation.org/documentation/
+        var options = {
+            target: '#contact-success', // target element(s) to be updated with server response
+            beforeSubmit: showRequest,  // pre-submit callback
+            error: showResponse // success callback
+        }
+        $('#contact').ajaxForm(options);
 
     });
 
-    // $(window).load(function() {
+    // Pre-submit callback
+    function showRequest(formData, jqForm, options) {
+        return true;
+    }
 
-    //     // Hide img object on larger screens
-    //     enquire.register("screen and (min-width: 64em)", {
-    //         match : function() {
-    //             resizeDiv();
-    //             $('.photo').css({'background-position': 'center center'});
-    //             $('.photo img').addClass('visuallyhidden');
-    //         },
-    //         unmatch : function() {
-    //             $('.photo').css({'height': 'auto'});
-    //             $('.photo img').removeClass('visuallyhidden');
-    //         }
-    //     });
-
-    // });
-
-    // $(window).resize(function() {
-
-    //     // Hide img object on larger screens
-    //     enquire.register("screen and (min-width: 64em)", {
-    //         match : function() {
-    //             resizeDiv();
-    //             $('.photo').css({'background-position': 'center center'});
-    //             $('.photo img').addClass('visuallyhidden');
-    //         },
-    //         unmatch : function() {
-    //             $('.photo').css({'height': 'auto'});
-    //             $('.photo img').removeClass('visuallyhidden');
-    //         }
-    //     });
-
-    // });
-    
-    // Form Validation http://jqueryvalidation.org/documentation/
-	$(document).ready(function() { 
-				
-		$('#contact').validate();
-	});
-	
-    // Ajax Form http://malsup.com/jquery/form/
-	$(document).ready(function() {
-     $('#contact').ajaxForm(function() { 
-            target: '#contact-success'	        
-        }); 
-    }); 
-
+    // Post-submit callback
+    function showResponse(responseText, statusText, xhr, $form)  {
+        $('#contact-success').removeClass('display-hide');
+    }
 
 })(window.jQuery);
