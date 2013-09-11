@@ -4,17 +4,14 @@
     /* Smooth scrolling -------------------------------------------------------------- */
 
     $(document).ready(function() {
-
         $('.scroll').click(function(event){
             $('html, body').animate({scrollTop:$(this.hash).offset().top}, 300);
         });
-
     });
 
     /* Flexslider -------------------------------------------------------------- */
 
     $(document).ready(function(){
-
         $(".flexslider").flexslider({
             animation: "slide",
             slideshow: false,
@@ -24,7 +21,6 @@
             directionNav: false,
             controlNav: false
         }).flexsliderManualDirectionControls();
-
     });
 
 	$('.slide-1').click(function(){
@@ -107,7 +103,6 @@
     /* Form validation -------------------------------------------------------------- */
 
     $(document).ready(function(){
-
         // Ajax form http://malsup.com/jquery/form/
         $('#contact').validate();
 
@@ -118,7 +113,6 @@
             error: showResponse // success callback
         }
         $('#contact').ajaxForm(options);
-
     });
 
     // Pre-submit callback
