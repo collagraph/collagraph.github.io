@@ -1,6 +1,12 @@
 // Remap jQuery to $
 (function($){
 
+	$('#Field7').addClass('visuallyhidden');
+	$('#Field8').addClass('visuallyhidden');
+	$('#Field9').addClass('visuallyhidden');
+	$('#deadline-q').addClass('visuallyhidden');
+	$('#budget-q').addClass('visuallyhidden');
+
 	$('fieldset:not(#foo) #Field7').click(function() {
 		if($('#Field7').is(':checked')) {
 			$('#title7').addClass('checkbox-checked');
@@ -126,5 +132,19 @@
     //     });
 
     // });
+    
+    // Form Validation http://jqueryvalidation.org/documentation/
+	$(document).ready(function() { 
+				
+		$('#contact').validate();
+	});
+	
+    // Ajax Form http://malsup.com/jquery/form/
+	$(document).ready(function() {
+     $('#contact').ajaxForm(function() { 
+            target: '#contact-success'	        
+        }); 
+    }); 
+
 
 })(window.jQuery);
