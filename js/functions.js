@@ -15,9 +15,7 @@
 
     $(document).ready(function(){
 
-        $(".flexslider");
-
-        .flexslider({
+        $(".flexslider").flexslider({
             animation: "slide",
             slideshow: false,
             useCSS: true,
