@@ -124,11 +124,11 @@ h1.logo {
 		margin: 0;
 		background: transparent left center no-repeat;
 		&.icon-e {
-			background-image: url('assets/email-icon.png');
+			background-image: url('/assets/email-icon.png');
 			background-size: 1em auto;
 		}
 		&.icon-ph {
-			background-image: url('assets/phone-icon.png');
+			background-image: url('/assets/phone-icon.png');
 			background-size: auto 1em;
 		}
 	}
@@ -494,7 +494,7 @@ form.main.contact-form {
 	img.logo {
 		@include rem-fallback(margin-top, $scale-6);
 		@include rem-fallback(margin-left, $scale-n7);
-		@include rem-fallback(max-width, 9.4);
+		@include rem-fallback(max-width, 8.6);
 	}
 
 	h1.logo {
