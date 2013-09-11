@@ -321,9 +321,6 @@ button {
 input,
 textarea,
 button {
-	@include rem-fallback(margin, $scale-n4, 0);
-	@include rem-fallback( padding, $scale-n3, $scale-n3);
-input, textarea {
 	@include rem-fallback(margin, $scale-n7, 0);
 	@include rem-fallback( padding, $scale-n7, $scale-n7);
 	width: 100%;
