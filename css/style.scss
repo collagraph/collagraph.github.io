@@ -175,6 +175,7 @@ p, ul, figure {
 	}
 }
 
+label.invalid,
 .msg {
 	@include rem-fallback(margin, $scale-0, 0, 0);
 	display: block;
@@ -245,7 +246,9 @@ a {
 	}
 }
 
-input, textarea {
+input,
+textarea,
+button {
 	color: darken($text-base, 30%);
 	border-color: $grey-5;
 	background-color: white;
@@ -271,13 +274,14 @@ input, textarea {
 	color: $discrete;
 }
 
-.alert {
+label.invalid {
 	background-color: $alert;
 }
 .success {
 	background-color: $success;
 }
-.invalid {
+input.invalid,
+textarea.invalid {
 	border-color: $alert;
 }
 
@@ -295,6 +299,7 @@ fieldset {
 	    opacity: 0;
 	    height: 0;
 	    margin: 0;
+	    border-width: 0 !important;
 	}
 	fieldset:not(#foo) > .checkbox {
 		@include rem-fallback( padding-right, $scale-2);
@@ -307,10 +312,17 @@ fieldset {
 	    background-image: url('/assets/check.png');
 	}
 label,
-input {
+input,
+textarea,
+button {
 	display: block;
 }
 
+input,
+textarea,
+button {
+	@include rem-fallback(margin, $scale-n4, 0);
+	@include rem-fallback( padding, $scale-n3, $scale-n3);
 input, textarea {
 	@include rem-fallback(margin, $scale-n7, 0);
 	@include rem-fallback( padding, $scale-n7, $scale-n7);
@@ -319,18 +331,29 @@ input, textarea {
 	@include rem-fallback(border-width, $scale-n13);
 	border-style: solid;
 	font-family: $sans-stack;
+	@include rem-fallback( font-size, $scale-0);
+	letter-spacing: $scale-n5;
 	letter-spacing: $scale-n13;
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
+/*
 .invalid {
 	@include rem-fallback(border-width, $scale-n7);
 }
+*/
 
-input.button {
+.button {
 	@include rem-fallback( margin-top, $scale-3);
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	&:hover,
+	&:focus {
+		background: green;
+	}
+	&:active {
+		background: blue;
+	}
 }
 
 label {
@@ -388,14 +411,14 @@ fieldset.checkbox-list:not(#foo) {
 	}
 }
 .display-hide {
-	display: none;
 	opacity: 0;
 	height: 0;
+	display: none;
 }
 .display-more {
-	display: block;
 	opacity: 1;
 	height: auto;
+	display: block;
 }
 
 /* .no-js, don't show addition form fields... keep it simple. */
