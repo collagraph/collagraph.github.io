@@ -282,6 +282,9 @@ button {
 label.invalid {
 	background-color: $alert;
 }
+.processing {
+	background-color: $grey-2;
+}
 .success {
 	background-color: $success;
 }
@@ -339,11 +342,6 @@ button {
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
-/*
-.invalid {
-	@include rem-fallback(border-width, $scale-n7);
-}
-*/
 
 .button {
 	@include rem-fallback(margin-top, $scale-3);
@@ -408,8 +406,8 @@ fieldset.checkbox-list:not(#foo) {
 	@include rem-fallback(padding-top, $scale-1);
 	div {
 		-webkit-transition: opacity .3s ease;
-		-moz-transition: all .3s ease;
-		transition: all .3s ease;
+		-moz-transition: opacity .3s ease;
+		transition: opacity .3s ease;
 	}
 }
 .display-hide {
@@ -421,6 +419,11 @@ fieldset.checkbox-list:not(#foo) {
 	opacity: 1;
 	height: auto;
 	display: block;
+}
+#contact-processing,
+#contact-success {
+	@include rem-fallback(margin-top, $scale-3);
+	display: none;
 }
 
 /* .no-js, don't show addition form fields... keep it simple. */

@@ -117,12 +117,16 @@
 
     // Pre-submit callback
     function showRequest(formData, jqForm, options) {
+        $('#saveForm').css('display', 'none');
+        $('#contact-processing').css('display', 'block');
         return true;
     }
 
     // Post-submit callback
-    function showResponse(responseText, statusText, xhr, $form)  {
-        $('#contact-success').removeClass('display-hide');
+    function showResponse(responseText, statusText, xhr, $form) {
+        $('#contact-processing').fadeOut(600, function() {
+            $('#contact-success').fadeIn(600);
+        });
     }
 
 })(window.jQuery);

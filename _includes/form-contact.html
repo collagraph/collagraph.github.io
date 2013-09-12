@@ -2,12 +2,12 @@
 <form id="contact" class="contact-form main clearfix" enctype="multipart/form-data" method="post" novalidate action="https://collagraph.wufoo.com/forms/z7x4m1/#public">
 		<h2>Contact</h2>
 		<p>Let us know about your project</p>
-	
+
 		<fieldset>
 			<label id="title1" for="Field1">Your name <span class="discrete">(required)</span></label>
 			<input class="field" id="Field1" name="Field1" type="text" required="" name="contact-name" tabindex="1" onkeyup="" maxlength="255" />
 		</fieldset>
-		
+
 		<fieldset>
 			<label id="title2" for="Field2">Email address <span class="discrete">(required)</span></label>
 			<input class="field" id="Field2" name="Field2" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
@@ -18,11 +18,11 @@
 			<input class="field" id="Field3" name="Field3" tabindex="3" type="tel" maxlength="20" value="" />
 		</fieldset>
 
-		<fieldset>	
+		<fieldset>
 			<label id="title6" for="Field6">Organisation/Company</label>
 			<input class="field" id="Field6" name="Field6" type="text" value="" maxlength="255" tabindex="4" onkeyup="" />
 		</fieldset>
-		
+
 		<fieldset class="checkbox-list">
 			<legend>Service required:</legend>
 			<label id="title7" for="Field7" class="checkbox">Web design</label>
@@ -32,13 +32,13 @@
 			<label id="title9" for="Field9" class="checkbox">General information design</label>
 				<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="General information design" tabindex="7">
 		</fieldset>
-		
+
 		<fieldset>
 			<label id="title107" for="Field107">How can we help? <span class="discrete">(required)</span></label>
 			<textarea id="Field107" name="Field107" class="textarea field" spellcheck="true" rows="10" cols="50" tabindex="8" onkeyup="" required  ></textarea>
 		</fieldset>
 
-		<fieldset class="form-additional">		
+		<fieldset class="form-additional">
 			<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
 			<input class="field" type="checkbox" name="deadline-q" id="deadline-q" tabindex="9"/>
 			<div id="more-deadline" class="display-hide">
@@ -61,8 +61,9 @@
 			<input type="hidden" id="idstamp" name="idstamp" value="eSXjQjWyVzpKLCH4frUQxXPjLJk8djyc54btnJB8rAc=" />
 		</div>
 		<div>
-			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="11" >Send</button>
-			<strong class="msg success display-hide" id="contact-success">Thanks for getting in touch. We'll be in contact&nbsp;shortly.</strong>
+			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="11" >Submit</button>
+			<p class="msg processing" id="contact-processing">Processing...</p>
+			<p class="msg success" id="contact-success">Thanks for getting in touch. We'll be in contact shortly.</p>
 		</div>
 </form>
 <!-- end @form-contact -->
