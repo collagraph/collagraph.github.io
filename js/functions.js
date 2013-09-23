@@ -116,36 +116,33 @@
 
     // });
 
-    // $(window).resize(function() {
+    /* Form validation -------------------------------------------------------------- */
 
-    //     // Hide img object on larger screens
-    //     enquire.register("screen and (min-width: 64em)", {
-    //         match : function() {
-    //             resizeDiv();
-    //             $('.photo').css({'background-position': 'center center'});
-    //             $('.photo img').addClass('visuallyhidden');
-    //         },
-    //         unmatch : function() {
-    //             $('.photo').css({'height': 'auto'});
-    //             $('.photo img').removeClass('visuallyhidden');
-    //         }
-    //     });
+    $(document).ready(function(){
+        // Ajax form http://malsup.com/jquery/form/
+        $('#contact').validate();
 
-    // });
-    
-    // Form Validation http://jqueryvalidation.org/documentation/
-	$(document).ready(function() { 
-				
-		$('#contact').validate();
-	});
-	
-    // Ajax Form http://malsup.com/jquery/form/
-	$(document).ready(function() {
-     $('#contact').ajaxForm(function() {
-     		url: 'http://getsimpleform.com/messages/ajax?form_api_token=d683d58f62e4cb8a410787d71d1e1694'
-            target: '#contact-success'	        
-        }); 
-    }); 
+        // Form validation http://jqueryvalidation.org/documentation/
+        var options = {
+            target: '#contact-success', // target element(s) to be updated with server response
+            beforeSubmit: showRequest,  // pre-submit callback
+            error: showResponse // success callback
+        }
+        $('#contact').ajaxForm(options);
+    });
 
+    // Pre-submit callback
+    function showRequest(formData, jqForm, options) {
+        $('#saveForm').css('display', 'none');
+        $('#contact-processing').css('display', 'block');
+        return true;
+    }
+
+    // Post-submit callback
+    function showResponse(responseText, statusText, xhr, $form) {
+        $('#contact-processing').fadeOut(600, function() {
+            $('#contact-success').fadeIn(600);
+        });
+    }
 
 })(window.jQuery);

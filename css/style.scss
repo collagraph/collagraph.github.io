@@ -28,18 +28,40 @@ twitter: @_collagraph
 	23px @ 1:1.5
 */
 
-$scale-n5	: 0.0625;		/* 1px	0.0625rem	1px			*/
-$scale-n4	: 0.284;		/* n4	0.284rem	4.543px		*/
-$scale-n3	: 0.472;		/* n3	0.472rem	7.55px		*/
-$scale-n2	: 0.708;		/* n2	0.708rem	11.333px	*/
-$scale-n1	: 0.958;		/* n1	0.958rem	15.333px	*/
-$scale-0	: 1.0625;		/* base	1.0625rem	17px		*/
-$scale-1	: 1.4375;		/* 1	1.4375rem	23px		*/
-$scale-2 	: 1.594;		/* LH	1.594rem	25.500px	*/
-$scale-3	: 2.156;		/* 3	2.156rem	34.500px	*/
-$scale-4	: 3.234;		/* 4	3.234rem	51.750px	*/
-$scale-9	: 12.103;		/* 9	12.103rem	193.642px	*/
-$scale-10	: 16.374;		/* 10	16.374rem	261.986px	*/
+$scale-20: 61.27; /* 980.315px */
+$scale-19: 55.263; /* 884.204px */
+$scale-18: 40.846; /* 653.543px */
+$scale-17: 36.842; /* 589.469px */
+$scale-16: 27.231; /* 435.695px */
+$scale-15: 24.561; /* 392.979px */
+$scale-14: 18.154; /* 290.463px */
+$scale-13: 16.374; /* 261.986px */
+$scale-12: 12.103; /* 193.642px */
+$scale-11: 10.916; /* 174.657px */
+$scale-10: 8.086; /* 129.095px */
+$scale-9: 7.277; /* 116.438px */
+$scale-8: 5.379; /* 86.063px */
+$scale-7: 4.852; /* 77.625px */
+$scale-6: 3.586; /* 57.375px */
+$scale-5: 3.234; /* 51.750px */
+$scale-4: 2.391; /* 38.250px */
+$scale-3: 2.156; /* 34.500px */
+$scale-2: 1.594; /* 25.500px */
+$scale-1: 1.438; /* 23.000px */
+$scale-0: 1.063; /* 17.000px */
+$scale-n1: 0.958; /* 15.333px */
+$scale-n2: 0.708; /* 11.333px */
+$scale-n3: 0.639; /* 10.222px */
+$scale-n4: 0.472; /* 7.555px */
+$scale-n5: 0.426; /* 6.815px */
+$scale-n6: 0.315; /* 5.037px */
+$scale-n7: 0.284; /* 4.543px */
+$scale-n8: 0.21; /* 3.358px */
+$scale-n9: 0.189; /* 3.029px */
+$scale-n10: 0.14; /* 2.239px */
+$scale-n11: 0.126; /* 2.019px */
+$scale-n12: 0.093; /* 1.493px */
+$scale-n13: 0.084; /* 1.346px */
 
 /* end @scale */
 
@@ -51,7 +73,7 @@ $serif-stack:  "ff-meta-serif-web-pro", georgia;
 body {
 	font-family: $sans-stack;
 	@include rem-fallback(font-size, $scale-0);
-	@include rem-fallback(line-height, $scale-2);
+	line-height: 1.4;
 }
 
 /* serif elements	 */
@@ -63,13 +85,17 @@ p {
 	}
 }
 
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
 img.logo {
 	display: block;
 }
 
 h1.logo {
 	@include rem-fallback(margin, $scale-0, 0, $scale-3);
-	@include rem-fallback(font-size, $scale-3);
+	@include rem-fallback(font-size, $scale-5);
 	font-weight: 400;
 }
 
@@ -98,11 +124,11 @@ h1.logo {
 		margin: 0;
 		background: transparent left center no-repeat;
 		&.icon-e {
-			background-image: url('images/email-icon.png');
+			background-image: url('/assets/email-icon.png');
 			background-size: 1em auto;
 		}
 		&.icon-ph {
-			background-image: url('images/phone-icon.png');
+			background-image: url('/assets/phone-icon.png');
 			background-size: auto 1em;
 		}
 	}
@@ -116,8 +142,8 @@ h2 {
 }
 
 h3 {
-	@include rem-fallback(font-size, $scale-1);
-	@include rem-fallback(margin, $scale-1, 0, 0, 0);
+	@include rem-fallback(font-size, $scale-3);
+	@include rem-fallback(margin-top, $scale-1);
 	font-weight: normal;
 }
 
@@ -153,7 +179,7 @@ label.invalid,
 .msg {
 	@include rem-fallback(margin, $scale-0, 0, 0);
 	display: block;
-	@include rem-fallback(padding, $scale-n4, $scale-n3, $scale-n3);
+	@include rem-fallback(padding, $scale-n7, $scale-n7, $scale-n7);
 	font-weight: normal;
 }
 
@@ -161,9 +187,9 @@ label.invalid,
 
 /* @colours -------------------------------------------------------------- */
 
-$text-base: #333;
+$text-base: #222;
 
-$background: #fafafa;
+$background: #f8f8f8;
 
 $primary: #666;
 
@@ -171,7 +197,8 @@ $discrete: #888;
 
 $contrast: #9b8f8f;
 
-$grey-1: #eee;
+$grey-0: #fff;
+$grey-1: #f4f4f4;
 $grey-2: #ddd;
 $grey-3: #ccc;
 $grey-4: #bbb;
@@ -181,7 +208,7 @@ $alert: #e78c52;
 $success: #9aab44;
 
 /* off-black text */
-body, select, input, textarea {color: #444;}
+body, select, input, textarea {color: #222;}
 
 /* remove text-shadow from section */
 ::-moz-selection{background: #ddd; color: #222; text-shadow: none;}
@@ -213,6 +240,10 @@ a {
 	}
 }
 
+#our-work {
+	background-color: $grey-0;
+}
+
 .flexslider {
 	.next, .previous {
 		color: $grey-1;
@@ -232,7 +263,7 @@ button {
 }
 
 .contact-form {
-	background-color: lighten($contrast, 38%);
+	background-color: $grey-1;
 }
 
 .checkbox-list {
@@ -250,6 +281,9 @@ button {
 
 label.invalid {
 	background-color: $alert;
+}
+.processing {
+	background-color: $grey-2;
 }
 .success {
 	background-color: $success;
@@ -276,7 +310,7 @@ fieldset {
 	    border-width: 0 !important;
 	}
 	fieldset:not(#foo) > .checkbox {
-		@include rem-fallback( padding-right, $scale-2);
+		@include rem-fallback(padding-right, $scale-2);
 	    background: url('/assets/off.png') right 0.35rem no-repeat;
 	    -webkit-transition: color .3s ease;
 		-moz-transition: color .3s ease;
@@ -295,26 +329,22 @@ button {
 input,
 textarea,
 button {
-	@include rem-fallback(margin, $scale-n4, 0);
-	@include rem-fallback( padding, $scale-n3, $scale-n3);
+	@include rem-fallback(margin, $scale-n7, 0);
+	@include rem-fallback(padding, $scale-n7, $scale-n7);
 	width: 100%;
 	border-radius: 0;
-	@include rem-fallback(border-width, $scale-n5);
+	@include rem-fallback(border-width, $scale-n13);
 	border-style: solid;
 	font-family: $sans-stack;
-	@include rem-fallback( font-size, $scale-0);
+	@include rem-fallback(font-size, $scale-0);
 	letter-spacing: $scale-n5;
+	letter-spacing: $scale-n13;
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
-/*
-.invalid {
-	@include rem-fallback(border-width, $scale-n4);
-}
-*/
 
 .button {
-	@include rem-fallback( margin-top, $scale-3);
+	@include rem-fallback(margin-top, $scale-3);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	&:hover,
@@ -348,14 +378,14 @@ legend {
 .checkbox-list {
 	clear: both;
 	float: none;
-	@include rem-fallback( margin-top, $scale-1);
+	@include rem-fallback(margin-top, $scale-1);
 	.checkbox {
-		@include rem-fallback( margin, $scale-n3, 0, 0);
+		@include rem-fallback(margin, $scale-n7, 0, 0);
 		display: block;
 		float: left;
 		clear: left;
-		@include rem-fallback( padding, $scale-n3, 0);
-		@include rem-fallback( width, $scale-10);
+		@include rem-fallback(padding, $scale-n7, 0);
+		@include rem-fallback(width, $scale-13);
 	}
 	.checkbox + input[type="checkbox"] {
 		display: block;
@@ -376,8 +406,8 @@ fieldset.checkbox-list:not(#foo) {
 	@include rem-fallback(padding-top, $scale-1);
 	div {
 		-webkit-transition: opacity .3s ease;
-		-moz-transition: all .3s ease;
-		transition: all .3s ease;
+		-moz-transition: opacity .3s ease;
+		transition: opacity .3s ease;
 	}
 }
 .display-hide {
@@ -390,6 +420,11 @@ fieldset.checkbox-list:not(#foo) {
 	height: auto;
 	display: block;
 }
+#contact-processing,
+#contact-success {
+	@include rem-fallback(margin-top, $scale-3);
+	display: none;
+}
 
 /* .no-js, don't show addition form fields... keep it simple. */
 .no-js .form-additional {
@@ -400,11 +435,11 @@ fieldset.checkbox-list:not(#foo) {
 
 .site-header,
 .main {
-	@include rem-fallback(padding, $scale-3, $scale-0, $scale-0);
+	@include rem-fallback(padding, $scale-3, $scale-0);
 }
 
 #our-approach {
-		@include rem-fallback(margin-top, $scale-4);
+		@include rem-fallback(margin-top, $scale-5);
 }
 
 .principle {
@@ -432,17 +467,17 @@ fieldset.checkbox-list:not(#foo) {
 	.next {
 		float: right;
 		clear: right;
-		@include rem-fallback(margin-left, $scale-n4);
+		@include rem-fallback(margin-left, $scale-n7);
 	}
 	.previous {
 		float: left;
 		clear: left;
-		@include rem-fallback(margin-right, $scale-n4);
+		@include rem-fallback(margin-right, $scale-n7);
 	}
 }
 
 form.main.contact-form {
-	@include rem-fallback( padding-bottom, $scale-4);
+	@include rem-fallback(padding-bottom, $scale-5);
 }
 
 /* tools */
@@ -465,18 +500,24 @@ form.main.contact-form {
 	/* @type 64em */
 
 	img.logo {
-		max-width: 11.111%;
+		@include rem-fallback(margin-top, $scale-6);
+		@include rem-fallback(margin-left, $scale-n7);
+		@include rem-fallback(max-width, 8.6);
 	}
 
 	h1.logo {
-		@include rem-fallback(margin, $scale-0, 0, $scale-3);
-		@include rem-fallback(font-size, $scale-3);
+		@include rem-fallback(margin, $scale-n1, 0, $scale-n1, -$scale-n7);
+		@include rem-fallback(font-size, $scale-6);
 		font-weight: 400;
 	}
 
 	.distinct {
 		@include rem-fallback(font-size, $scale-2);
 		@include rem-fallback(line-height, $scale-3);
+	}
+
+	.principle {
+		@include rem-fallback(font-size, $scale-1);
 	}
 
 	/* end @type 64em */
@@ -491,13 +532,12 @@ form.main.contact-form {
 	}
 
 	.main {
-		@include rem-fallback(margin-top, $scale-4);
-		padding: 0;
+		@include rem-fallback(padding, $scale-6, 0, $scale-7);
 	}
 
 	h2 {
 		margin-left: 5%;
-		margin-bottom: #{$scale-3}rem;
+		@include rem-fallback(margin-bottom, $scale-3);
 	}
 
 	.principle {
