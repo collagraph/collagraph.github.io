@@ -361,7 +361,7 @@ label {
 }
 legend {
 	font-family: $serif-stack;
-	@include rem-fallback(margin, $scale-0, 0, $scale-0);
+	@include rem-fallback(margin, $scale-0, 0, 0);
 }
 .textarea {
 	width: 100%;
@@ -378,7 +378,10 @@ legend {
 .checkbox-list {
 	clear: both;
 	float: none;
-	@include rem-fallback(margin-top, $scale-1);
+	@include rem-fallback(margin, $scale-0, 0);
+	label:first-of-type {
+		@include rem-fallback(margin-top, $scale-n4);
+	}
 	.checkbox {
 		@include rem-fallback(margin, $scale-n7, 0, 0);
 		display: block;
@@ -421,7 +424,8 @@ fieldset.checkbox-list:not(#foo) {
 	display: block;
 }
 #contact-processing,
-#contact-success {
+#contact-success,
+#contact-alert {
 	@include rem-fallback(margin-top, $scale-3);
 	display: none;
 }
