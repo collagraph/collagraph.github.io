@@ -1,33 +1,33 @@
 // Remap jQuery to $
 (function($){
 
-	$('#Field7').addClass('visuallyhidden');
-	$('#Field8').addClass('visuallyhidden');
-	$('#Field9').addClass('visuallyhidden');
+	$('#ServiceReq1').addClass('visuallyhidden');
+	$('#ServiceReq2').addClass('visuallyhidden');
+	$('#ServiceReq3').addClass('visuallyhidden');
 	$('#deadline-q').addClass('visuallyhidden');
 	$('#budget-q').addClass('visuallyhidden');
 
-	$('fieldset:not(#foo) #Field7').click(function() {
-		if($('#Field7').is(':checked')) {
-			$('#title7').addClass('checkbox-checked');
+	$('fieldset:not(#foo) #ServiceReq1').click(function() {
+		if($('#ServiceReq1').is(':checked')) {
+			$('#titleServiceReq1').addClass('checkbox-checked');
 		} else {
-			$('#title7').removeClass('checkbox-checked');
+			$('#titleServiceReq1').removeClass('checkbox-checked');
 		}
 	});
 
-	$('fieldset:not(#foo) #Field8').click(function() {
-		if($('#Field8').is(':checked')) {
-			$('#title8').addClass('checkbox-checked');
+	$('fieldset:not(#foo) #ServiceReq2').click(function() {
+		if($('#ServiceReq2').is(':checked')) {
+			$('#titleServiceReq2').addClass('checkbox-checked');
 		} else {
-			$('#title8').removeClass('checkbox-checked');
+			$('#titleServiceReq2').removeClass('checkbox-checked');
 		}
 	});
 	
-	$('fieldset:not(#foo) #Field9').click(function() {
-		if($('#Field9').is(':checked')) {
-			$('#title9').addClass('checkbox-checked');
+	$('fieldset:not(#foo) #ServiceReq3').click(function() {
+		if($('#ServiceReq3').is(':checked')) {
+			$('#titleServiceReq3').addClass('checkbox-checked');
 		} else {
-			$('#title9').removeClass('checkbox-checked');
+			$('#titleServiceReq3').removeClass('checkbox-checked');
 		}
 	});
 
@@ -141,7 +141,8 @@
 	
     // Ajax Form http://malsup.com/jquery/form/
 	$(document).ready(function() {
-     $('#contact').ajaxForm(function() { 
+     $('#contact').ajaxForm(function() {
+     		url: 'http://getsimpleform.com/messages/ajax?form_api_token=d683d58f62e4cb8a410787d71d1e1694'
             target: '#contact-success'	        
         }); 
     }); 

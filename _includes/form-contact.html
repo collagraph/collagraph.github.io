@@ -1,49 +1,49 @@
 <!-- @form-contact -->
-<form id="contact" class="contact-form main clearfix" enctype="multipart/form-data" method="post" novalidate action="https://collagraph.wufoo.com/forms/z7x4m1/#public">
+<form id="contact" class="contact-form main clearfix" novalidate action="http://getsimpleform.com/messages?form_api_token=d683d58f62e4cb8a410787d71d1e1694" method="post">
 		<h2>Contact</h2>
 		<p>Let us know about your project</p>
 	
 		<fieldset>
-			<label id="title1" for="Field1">Your name <span class="discrete">(required)</span></label>
-			<input class="field" id="Field1" name="Field1" type="text" required="" name="contact-name" tabindex="1" onkeyup="" maxlength="255" />
+			<label id="titleName" for="Name">Your name <span class="discrete">(required)</span></label>
+			<input class="field" id="Name" name="Name" type="text" required="" tabindex="1" onkeyup="" maxlength="255" />
 		</fieldset>
 		
-		<fieldset>
-			<label id="title2" for="Field2">Email address <span class="discrete">(required)</span></label>
+		<fieldset>	
+			<label id="titleEmail" for="Email">Email address <span class="discrete">(required)</span></label>
 			<input class="field" id="Field2" name="Field2" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
 		</fieldset>
 
 		<fieldset>
-			<label id="title3" for="Field3">Phone number</label>
-			<input class="field" id="Field3" name="Field3" tabindex="3" type="tel" maxlength="20" value="" />
+			<label id="titlePhone" for="Phone">Phone number</label>
+			<input class="field" id="Phone" name="Phone" tabindex="3" type="tel" maxlength="20" value="" />
 		</fieldset>
 
 		<fieldset>	
-			<label id="title6" for="Field6">Organisation/Company</label>
-			<input class="field" id="Field6" name="Field6" type="text" value="" maxlength="255" tabindex="4" onkeyup="" />
+			<label id="titleOrg" for="Org">Organisation/Company</label>
+			<input class="field" id="Org" name="Org" type="text" value="" maxlength="255" tabindex="4" onkeyup="" />
 		</fieldset>
 		
 		<fieldset class="checkbox-list">
 			<legend>Service required:</legend>
-			<label id="title7" for="Field7" class="checkbox">Web design</label>
-				<input id="Field7" name="Field7" type="checkbox" class="field checkbox" value="Web design" tabindex="5">
-			<label id="title8" for="Field8" class="checkbox">Communications strategy</label>
-				<input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Communications strategy" tabindex="6">
-			<label id="title9" for="Field9" class="checkbox">General information design</label>
-				<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="General information design" tabindex="7">
+			<label id="titleServiceReq1" for="ServiceReq1" class="checkbox">Web design</label>
+				<input id="ServiceReq1" name="ServiceReq1" type="checkbox" class="field checkbox" value="Web design" tabindex="5">
+			<label id="titleServiceReq2" for="ServiceReq2" class="checkbox">Communications strategy</label>
+				<input id="ServiceReq2" name="ServiceReq2" type="checkbox" class="field checkbox" value="Communications strategy" tabindex="6">
+			<label id="titleServiceReq3" for="ServiceReq3" class="checkbox">General information design</label>
+				<input id="ServiceReq3" name="ServiceReq3" type="checkbox" class="field checkbox" value="General information design" tabindex="7">
 		</fieldset>
 		
 		<fieldset>
-			<label id="title107" for="Field107">How can we help? <span class="discrete">(required)</span></label>
-			<textarea id="Field107" name="Field107" class="textarea field" spellcheck="true" rows="10" cols="50" tabindex="8" onkeyup="" required  ></textarea>
+			<label id="titleMessage" for="Message">How can we help? <span class="discrete">(required)</span></label>
+			<textarea id="Message" name="Message" class="textarea field" spellcheck="true" rows="10" cols="50" tabindex="8" onkeyup="" required  ></textarea>
 		</fieldset>
 
 		<fieldset class="form-additional">		
 			<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
 			<input class="field" type="checkbox" name="deadline-q" id="deadline-q" tabindex="9"/>
 			<div id="more-deadline" class="display-hide">
-				<label id="title208" for="Field208">When is the project deadline?</label>
-				<input class="field" id="Field208" name="Field208" type="text" value="" maxlength="255" tabindex="9" onkeyup=""/>
+				<label id="titleDeadline" for="Deadline">When is the project deadline?</label>
+				<input class="field" id="Deadline" name="Deadline" type="text" value="" maxlength="255" tabindex="9" onkeyup=""/>
 			</div>
 		</fieldset>
 
@@ -51,15 +51,10 @@
 			<label for="budget-q" id="budget-c" class="checkbox" >Do you have a rough budget for us?</label>
 			<input type="checkbox" name="budget-q" id="budget-q" tabindex="10" />
 			<div id="more-budget" class="display-hide">
-				<label id="title209" for="Field209">About how much is the budget?</label>
-				<input class="field" id="Field209" name="Field209" type="text" value="" maxlength="255" tabindex="10" onkeyup="" />
+				<label id="titleBudget" for="Budget">About how much is the budget?</label>
+				<input class="field" id="Budget" name="Budget" type="text" value="" maxlength="255" tabindex="10" onkeyup="" />
 			</div>
 		</fieldset>
-		<div class="visuallyhidden">
-			<label for="comment">Do Not Fill This Out</label>
-			<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-			<input type="hidden" id="idstamp" name="idstamp" value="eSXjQjWyVzpKLCH4frUQxXPjLJk8djyc54btnJB8rAc=" />
-		</div>
 		<div>
 			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="11" >Send</button>
 			<strong class="msg success display-hide" id="contact-success">Thanks for getting in touch. We'll be in contact&nbsp;shortly.</strong>
