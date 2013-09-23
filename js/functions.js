@@ -117,16 +117,22 @@
     // });
 
     /* Form validation -------------------------------------------------------------- */
-
+    // Form validation http://jqueryvalidation.org/documentation/
     $(document).ready(function(){
-        // Ajax form http://malsup.com/jquery/form/
         $('#contact').validate();
-
-        // Form validation http://jqueryvalidation.org/documentation/
+        // add html5 required into form and remove here if validate loads. Progressive enhancement for those with js.
+	});
+	
+    // Ajax form http://malsup.com/jquery/form/
+    $(document).ready(function(){
         var options = {
+            dataType: 'jsonp',
+			url: 'http://getsimpleform.com/messages/ajax?form_api_token=d683d58f62e4cb8a410787d71d1e1694',
             target: '#contact-success', // target element(s) to be updated with server response
             beforeSubmit: showRequest,  // pre-submit callback
-            error: showResponse // success callback
+            success: showResponse,
+            error: showAlert, // success callback
+            timeout:   3000 
         }
         $('#contact').ajaxForm(options);
     });
@@ -140,8 +146,15 @@
 
     // Post-submit callback
     function showResponse(responseText, statusText, xhr, $form) {
-        $('#contact-processing').fadeOut(600, function() {
+	        $('#contact-processing').fadeOut(600, function() {
             $('#contact-success').fadeIn(600);
+        });
+    }
+    
+     // Post-submit callback
+    function showAlert(responseText, statusText, xhr, $form) {
+	        $('#contact-processing').fadeOut(600, function() {
+            $('#contact-alert').fadeIn(600);
         });
     }
 
