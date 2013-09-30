@@ -206,6 +206,7 @@ $grey-5: #aaa;
 
 $alert: #e78c52;
 $success: #9aab44;
+$submit: #3678b6;
 
 /* off-black text */
 body, select, input, textarea {color: #222;}
@@ -304,10 +305,11 @@ fieldset {
 }
 	/* restyle checkboxes for supported browsers */
 	fieldset:not(#foo) > label + input[type="checkbox"] {
-	    opacity: 0;
-	    height: 0;
-	    margin: 0;
-	    border-width: 0 !important;
+		position: absolute;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		height: 1px; width: 1px;
+		margin: -1px; padding: 0; border: 0;
 	}
 	fieldset:not(#foo) > .checkbox {
 		@include rem-fallback(padding-right, $scale-2);
@@ -352,14 +354,17 @@ input, textarea {
 }
 
 .button {
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	@include rem-fallback(padding, $scale-n4);
+	border: none;
+	@include rem-fallback(letter-spacing, $scale-n13);
+	color: $grey-0;
+	background-color: $submit;
 	&:hover,
 	&:focus {
-		background: green;
+		background-color: darken($submit, 5%);
 	}
 	&:active {
-		background: blue;
+		background: darken($submit, 10%);
 	}
 }
 
@@ -678,11 +683,7 @@ form.main.contact-form {
 		}
 		.button-container {
 			clear: right;
-			@include rem-fallback(margin-top, $scale-4);
-			border-style: solid;
-			@include rem-fallback(border-top-width, $scale-n13);
-			border-top-color: $grey-3;
-			@include rem-fallback(padding-top, $scale-3);
+			@include rem-fallback(padding-top, $scale-6);
 		}
 		.button {
 			float: right;
