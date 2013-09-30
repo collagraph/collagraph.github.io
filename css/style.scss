@@ -540,11 +540,12 @@ form.main.contact-form {
 
 	/* @layout 64em */
 
-	.site-header,
+	.site-header {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
 	.flexslider {
 		@include rem-fallback(padding-top, $scale-3);
-		padding-left: 5%;
-		padding-right: 5%;
 		figure {
 			margin-top: 0;
 		}
@@ -555,7 +556,7 @@ form.main.contact-form {
 	}
 
 	h2 {
-		margin-left: 5%;
+		margin-left: 5%/90%*100%;
 		@include rem-fallback(margin-bottom, $scale-3);
 	}
 
@@ -598,6 +599,14 @@ form.main.contact-form {
 		.image-changer {
 			@include rem-fallback(margin-top, $scale-0);
 		}
+	}
+
+	#contact {
+		h2 {
+			margin-left: 0;
+		}
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 
 	/* end @layout 64em */
