@@ -551,11 +551,15 @@ form.main.contact-form {
 		@include rem-fallback(margin-bottom, $scale-3);
 	}
 
-	.principle {
-		display: inline-block;
+	.our-approach {
 		padding-left: 5%;
-		width: 31.666%;
-		vertical-align: top;
+		padding-right: 5%;
+		.principle {
+			display: inline-block;
+			padding-left: 5%/90%*100%;
+			width: 28.333%/90%*100%;
+			vertical-align: top;
+		}
 	}
 
 	.our-work .hentry {
