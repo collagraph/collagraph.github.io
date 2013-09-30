@@ -571,11 +571,13 @@ form.main.contact-form {
 				width: 100%;
 			}
 		}
-		.image-changer, .entry-title, .entry-summary {
-			float: right;
-			clear: right;
-			padding-left: 5.555%;
-			width: 35.184%;
+		.project-info {
+			position: absolute;
+			left: 61.667%;
+			height: 9999px;
+			padding-left: 5%;
+			padding-right: 5%;
+			width: 33.333%;
 		}
 		.image-changer {
 			@include rem-fallback(margin-top, $scale-0);
