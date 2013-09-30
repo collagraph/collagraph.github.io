@@ -1,65 +1,67 @@
 <!-- @form-contact -->
 <form id="contact" class="contact-form main clearfix" novalidate action="http://getsimpleform.com/messages?form_api_token=d683d58f62e4cb8a410787d71d1e1694" method="post">
 		<h2>Contact</h2>
-		<p>Let us know about your project</p>
-	
-		<fieldset>
-			<label id="titleName" for="Name">Your name <span class="discrete">(required)</span></label>
-			<input class="field" id="Name" name="Name" type="text" required="" tabindex="1" onkeyup="" maxlength="255" />
-		</fieldset>
-		
-		<fieldset>	
-			<label id="titleEmail" for="Email">Email address <span class="discrete">(required)</span></label>
-			<input class="field" id="Email" name="Email" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
+
+		<p class="lede">Interested in hiring us?</p>
+		<p class="sub-lede">Fill out the form below, and we'll get back to you promptly.</p>
+
+		<div class="short-input">
+			<fieldset>
+				<label id="titleName" for="Name">Your name <span class="discrete">(required)</span></label>
+				<input class="field" id="Name" name="Name" type="text" required="" tabindex="1" onkeyup="" maxlength="255" />
+			</fieldset>
+
+			<fieldset>
+				<label id="titleEmail" for="Email">Email address <span class="discrete">(required)</span></label>
+				<input class="field" id="Email" name="Email" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
+			</fieldset>
+
+			<fieldset>
+				<label id="titleOrg" for="Org">Organisation/company</label>
+				<input class="field" id="Org" name="Org" type="text" value="" maxlength="255" tabindex="4" onkeyup="" />
+			</fieldset>
+		</div>
+
+		<fieldset class="long-input">
+			<label id="titleMessage" for="Message">Tell us about your project <span class="discrete">(required)</span></label>
+			<textarea id="Message" name="Message" class="textarea field" spellcheck="true" rows="8" tabindex="5" onkeyup="" required  ></textarea>
 		</fieldset>
 
-		<fieldset>
-			<label id="titlePhone" for="Phone">Phone number</label>
-			<input class="field" id="Phone" name="Phone" tabindex="3" type="tel" maxlength="20" value="" />
-		</fieldset>
+		<div class="additional-questions clearfix">
+			<fieldset class="form-additional short-input">
+				<label for="phone-q" id="phone-c" class="checkbox">Would you prefer to be contacted by phone?</label>
+				<input class="field" type="checkbox" name="phone-q" id="phone-q" tabindex="6"/>
+				<div id="more-phone" class="display-hide">
+					<label class="visuallyhidden" id="titlePhone" for="Phone">When is the project deadline?</label>
+					<input class="field" id="Phone" name="Phone" type="text" value="" maxlength="255" tabindex="6" onkeyup="" placeholder="e.g. +61 406 566 693"/>
+				</div>
+			</fieldset>
 
-		<fieldset>	
-			<label id="titleOrg" for="Org">Organisation/Company</label>
-			<input class="field" id="Org" name="Org" type="text" value="" maxlength="255" tabindex="4" onkeyup="" />
-		</fieldset>
-		
-		<fieldset class="checkbox-list">
-			<legend>Service required:</legend>
-			<label id="titleServiceReq1" for="ServiceReq1" class="checkbox">Web design</label>
-				<input id="ServiceReq1" name="ServiceReq1" type="checkbox" class="field checkbox" value="Web design" tabindex="5">
-			<label id="titleServiceReq2" for="ServiceReq2" class="checkbox">Communications strategy</label>
-				<input id="ServiceReq2" name="ServiceReq2" type="checkbox" class="field checkbox" value="Communications strategy" tabindex="6">
-			<label id="titleServiceReq3" for="ServiceReq3" class="checkbox">General information design</label>
-				<input id="ServiceReq3" name="ServiceReq3" type="checkbox" class="field checkbox" value="General information design" tabindex="7">
-		</fieldset>
-		
-		<fieldset>
-			<label id="titleMessage" for="Message">How can we help? <span class="discrete">(required)</span></label>
-			<textarea id="Message" name="Message" class="textarea field" spellcheck="true" rows="10" cols="50" tabindex="8" onkeyup="" required  ></textarea>
-		</fieldset>
+			<fieldset class="form-additional short-input">
+				<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
+				<input class="field" type="checkbox" name="deadline-q" id="deadline-q" tabindex="7"/>
+				<div id="more-deadline" class="display-hide">
+					<label class="visuallyhidden" id="titleDeadline" for="Deadline">When is the project deadline?</label>
+					<input class="field" id="Deadline" name="Deadline" type="text" value="" maxlength="255" tabindex="7" onkeyup="" placeholder="e.g. the end of November 2014"/>
+				</div>
+			</fieldset>
 
-		<fieldset class="form-additional">		
-			<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
-			<input class="field" type="checkbox" name="deadline-q" id="deadline-q" tabindex="9"/>
-			<div id="more-deadline" class="display-hide">
-				<label id="titleDeadline" for="Deadline">When is the project deadline?</label>
-				<input class="field" id="Deadline" name="Deadline" type="text" value="" maxlength="255" tabindex="9" onkeyup=""/>
-			</div>
-		</fieldset>
+			<fieldset class="form-additional short-input">
+				<label for="budget-q" id="budget-c" class="checkbox" >Would you like to provide a budget estimate?</label>
+				<input type="checkbox" name="budget-q" id="budget-q" tabindex="8" />
+				<div id="more-budget" class="display-hide">
+					<label class="visuallyhidden" id="titleBudget" for="Budget">About how much is the budget?</label>
+					<input class="field" id="Budget" name="Budget" type="text" value="" maxlength="255" tabindex="8" onkeyup="" placeholder="e.g. between $x and $y"/>
+				</div>
+			</fieldset>
+		</div>
 
-		<fieldset class="form-additional">
-			<label for="budget-q" id="budget-c" class="checkbox" >Do you have a rough budget for us?</label>
-			<input type="checkbox" name="budget-q" id="budget-q" tabindex="10" />
-			<div id="more-budget" class="display-hide">
-				<label id="titleBudget" for="Budget">About how much is the budget?</label>
-				<input class="field" id="Budget" name="Budget" type="text" value="" maxlength="255" tabindex="10" onkeyup="" />
-			</div>
-		</fieldset>
-		<div>
-			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="11" >Send</button>
+		<div class="button-container">
+			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="9" >Send</button>
+
 			<p class="msg processing" id="contact-processing">Processing...</p>
 			<p class="msg success" id="contact-success">Thanks for getting in touch. We'll be in contact shortly.</p>
-			<p class="msg alert" id="contact-alert">Whoops, something's gone wrong with our form (that's embarrassing). Please contact us via email at <a href="info@collagraph.com.au" title="email Collagraph web designer.">info@collagraph.com.au</a>. Sorry for the inconvenience.</p>
+			<p class="msg alert" id="contact-alert">Sorry, something's gone wrong with our form. Please contact us via email at <a href="info@collagraph.com.au" title="Email a Collagraph partner">info@collagraph.com.au</a>. Sorry for the inconvenience.</p>
 		</div>
 </form>
 <!-- end @form-contact -->
