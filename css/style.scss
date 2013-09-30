@@ -311,7 +311,7 @@ fieldset {
 	}
 	fieldset:not(#foo) > .checkbox {
 		@include rem-fallback(padding-right, $scale-2);
-	    background: url('/assets/off.png') right 0.35rem no-repeat;
+	    background: url('/assets/off.png') right 0.65rem no-repeat;
 	    -webkit-transition: color .3s ease;
 		-moz-transition: color .3s ease;
 		transition: color .3s ease;
@@ -343,8 +343,15 @@ button {
 	-webkit-appearance: none;
 }
 
+input, textarea {
+	@include rem-fallback(padding, $scale-n2);
+}
+
+.button-container {
+	@include rem-fallback(padding-top, $scale-2);
+}
+
 .button {
-	@include rem-fallback(margin-top, $scale-3);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	&:hover,
@@ -388,7 +395,7 @@ legend {
 		float: left;
 		clear: left;
 		@include rem-fallback(padding, $scale-n7, 0);
-		@include rem-fallback(width, $scale-13);
+		@include rem-fallback(width, 20);
 	}
 	.checkbox + input[type="checkbox"] {
 		display: block;
@@ -486,6 +493,9 @@ fieldset.checkbox-list:not(#foo) {
 
 form.main.contact-form {
 	@include rem-fallback(padding-bottom, $scale-5);
+	fieldset {
+		margin: 0;
+	}
 }
 
 /* tools */
@@ -519,6 +529,14 @@ form.main.contact-form {
 		font-weight: 400;
 	}
 
+	.lede {
+		@include rem-fallback(font-size, $scale-6);
+	}
+
+	.sub-lede {
+		@include rem-fallback(font-size, $scale-4);
+	}
+
 	.distinct {
 		@include rem-fallback(font-size, $scale-2);
 		@include rem-fallback(line-height, $scale-3);
@@ -526,6 +544,13 @@ form.main.contact-form {
 
 	.principle {
 		@include rem-fallback(font-size, $scale-1);
+	}
+
+	form.main.contact-form {
+		@include rem-fallback(font-size, $scale-1);
+		input, textarea, button {
+			@include rem-fallback(font-size, $scale-1);
+		}
 	}
 
 	/* end @type 64em */
@@ -601,12 +626,69 @@ form.main.contact-form {
 		}
 	}
 
-	#contact {
+	form.main.contact-form {
 		h2 {
 			margin-left: 0;
 		}
 		padding-left: 10%;
 		padding-right: 10%;
+		.short-input {
+			width: 23.333%/80%*100%;
+		}
+		div.short-input {
+			display: inline-block;
+			float: left;
+			clear: left;
+			@include rem-fallback(padding-top, $scale-2);
+			fieldset {
+				label {
+					@include rem-fallback(margin-top, 1.5);
+				}
+				&:first-child label {
+					@include rem-fallback(margin-top, $scale-0);
+				}
+			}
+		}
+		.long-input {
+			display: inline-block;
+			float: right;
+			clear: right;
+			width: 51.666%/80%*100%;
+			@include rem-fallback(padding-top, $scale-2);
+		}
+		.additional-questions {
+			clear: both;
+			@include rem-fallback(font-size, $scale-0);
+			@include rem-fallback(padding-top, $scale-4);
+			.short-input {
+				float: left;
+				width: 28.333%/80%*100%;
+				padding-right: 5%/80%*100%;
+				&:last-of-type {
+					width: 23.333%/80%*100%;
+					padding-right: 0;
+				}
+				input {
+					@include rem-fallback(margin-top, $scale-n4);
+				}
+			}
+			fieldset:not(#foo) > .checkbox {
+	    		background-position: right 0.3rem;
+	    	}
+		}
+		.button-container {
+			clear: right;
+			@include rem-fallback(margin-top, $scale-4);
+			border-style: solid;
+			@include rem-fallback(border-top-width, $scale-n13);
+			border-top-color: $grey-3;
+			@include rem-fallback(padding-top, $scale-3);
+		}
+		.button {
+			float: right;
+			clear: right;
+			width: 23.333%/80%*100%;
+		}
 	}
 
 	/* end @layout 64em */
