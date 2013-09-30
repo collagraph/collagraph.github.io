@@ -461,6 +461,10 @@ fieldset.checkbox-list:not(#foo) {
 }
 
 .flexslider {
+	.flex-viewport {
+		height: 0;
+		padding-bottom: 48.616%;
+	}
 	.next, .previous {
 		display: inline-block;
 		@include rem-fallback(min-width, 10);
