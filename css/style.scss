@@ -537,6 +537,9 @@ form.main.contact-form {
 		@include rem-fallback(padding-top, $scale-3);
 		padding-left: 5%;
 		padding-right: 5%;
+		figure {
+			margin-top: 0;
+		}
 	}
 
 	.main {
