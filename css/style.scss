@@ -571,6 +571,7 @@ form.main.contact-form {
 	/* @layout 64em */
 
 	.site-header {
+		@include rem-fallback(padding-top, $scale-10);
 		padding-left: 10%;
 		padding-right: 10%;
 	}
