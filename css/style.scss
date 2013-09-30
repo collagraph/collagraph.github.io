@@ -570,13 +570,21 @@ form.main.contact-form {
 		}
 	}
 
-	.our-work .hentry {
-		.photo {
-			float: left;
-			clear: left;
-			width: 64.813%;
-			img {
+	.our-work {
+		padding-bottom: 0;
+		h2 {
+			margin-left: 10%;
+		}
+		.hentry {
+			position: relative;
+			overflow: hidden;
+			.photo {
+				float: left;
+				clear: left;
 				width: 100%;
+				img {
+					width: 100%;
+				}
 			}
 		}
 		.project-info {
