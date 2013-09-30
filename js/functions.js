@@ -1,36 +1,26 @@
 // Remap jQuery to $
 (function($){
 
-	$('#ServiceReq1').addClass('visuallyhidden');
-	$('#ServiceReq2').addClass('visuallyhidden');
-	$('#ServiceReq3').addClass('visuallyhidden');
-	$('#deadline-q').addClass('visuallyhidden');
-	$('#budget-q').addClass('visuallyhidden');
+    $('fieldset:not(#foo) #phone-q').click(function() {
+        if($('#phone-q').is(':checked')) {
+            $('#phone-c').addClass('checkbox-checked');
+            $('#more-phone').addClass('display-more').removeClass('display-hide');
+        } else {
+            $('#phone-c').removeClass('checkbox-checked');
+            $('#more-phone').removeClass('display-more').addClass('display-hide');
+        }
+    });
 
-	$('fieldset:not(#foo) #ServiceReq1').click(function() {
-		if($('#ServiceReq1').is(':checked')) {
-			$('#titleServiceReq1').addClass('checkbox-checked');
-		} else {
-			$('#titleServiceReq1').removeClass('checkbox-checked');
-		}
-	});
-
-	$('fieldset:not(#foo) #ServiceReq2').click(function() {
-		if($('#ServiceReq2').is(':checked')) {
-			$('#titleServiceReq2').addClass('checkbox-checked');
-		} else {
-			$('#titleServiceReq2').removeClass('checkbox-checked');
-		}
-	});
-	
-	$('fieldset:not(#foo) #ServiceReq3').click(function() {
-		if($('#ServiceReq3').is(':checked')) {
-			$('#titleServiceReq3').addClass('checkbox-checked');
-		} else {
-			$('#titleServiceReq3').removeClass('checkbox-checked');
-		}
-	});
-
+    $('fieldset:not(#foo) #deadline-q').click(function() {
+        if($('#deadline-q').is(':checked')) {
+            $('#deadline-c').addClass('checkbox-checked');
+            $('#more-deadline').addClass('display-more').removeClass('display-hide');
+            $('#deadline').focus();
+        } else {
+            $('#deadline-c').removeClass('checkbox-checked');
+            $('#more-deadline').removeClass('display-more').addClass('display-hide');
+        }
+    });
 
 	$('fieldset:not(#foo) #budget-q').click(function() {
 		if($('#budget-q').is(':checked')) {
@@ -39,17 +29,6 @@
 		} else {
 			$('#budget-c').removeClass('checkbox-checked');
 			$('#more-budget').removeClass('display-more').addClass('display-hide');
-		}
-	});
-
-	$('fieldset:not(#foo) #deadline-q').click(function() {
-		if($('#deadline-q').is(':checked')) {
-			$('#deadline-c').addClass('checkbox-checked');
-			$('#more-deadline').addClass('display-more').removeClass('display-hide');
-			$('#deadline').focus();
-		} else {
-			$('#deadline-c').removeClass('checkbox-checked');
-			$('#more-deadline').removeClass('display-more').addClass('display-hide');
 		}
 	});
 
@@ -122,7 +101,7 @@
         $('#contact').validate();
         // add html5 required into form and remove here if validate loads. Progressive enhancement for those with js.
 	});
-	
+
     // Ajax form http://malsup.com/jquery/form/
     $(document).ready(function(){
         var options = {
@@ -132,7 +111,7 @@
             beforeSubmit: showRequest,  // pre-submit callback
             success: showResponse,
             error: showAlert, // success callback
-            timeout:   3000 
+            timeout:   3000
         }
         $('#contact').ajaxForm(options);
     });
@@ -150,7 +129,7 @@
             $('#contact-success').fadeIn(600);
         });
     }
-    
+
      // Post-submit callback
     function showAlert(responseText, statusText, xhr, $form) {
 	        $('#contact-processing').fadeOut(600, function() {
