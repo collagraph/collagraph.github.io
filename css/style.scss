@@ -473,10 +473,6 @@ fieldset.checkbox-list:not(#foo) {
 }
 
 .flexslider {
-	.flex-viewport {
-		height: 0;
-		padding-bottom: 48.616%;
-	}
 	.next, .previous {
 		display: inline-block;
 		@include rem-fallback(min-width, 10);
@@ -579,6 +575,10 @@ form.main.contact-form {
 		@include rem-fallback(padding-top, $scale-3);
 		figure {
 			margin-top: 0;
+		}
+		.flex-viewport {
+			height: 0;
+			padding-bottom: 48.616%;
 		}
 	}
 
