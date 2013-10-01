@@ -249,8 +249,14 @@ a {
 	}
 }
 
-.our-approach {
-	border-top: 2px solid white;
+.our-approach,
+.contact-form {
+	border-top: {
+		@include rem-fallback( width, $scale-n6);
+		width: 1px;
+		style: solid;
+		color: white;
+	}
 	background-color: $grey-1;	
 }
 
@@ -274,10 +280,6 @@ button {
 	&:focus {
 		border-color: darken($grey-5, 30%);
 	}
-}
-
-.contact-form {
-	background-color: $grey-1;
 }
 
 .checkbox-list {
