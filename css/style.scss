@@ -540,14 +540,8 @@ form.main.contact-form {
 
 	img.logo {
 		@include rem-fallback(margin-top, $scale-6);
-		@include rem-fallback(margin-left, $scale-n7);
-		@include rem-fallback(max-width, 8.6);
-	}
-
-	h1.logo {
-		@include rem-fallback(margin, $scale-n1, 0, $scale-n1, -$scale-n7);
-		@include rem-fallback(font-size, $scale-6);
-		font-weight: 400;
+		@include rem-fallback(margin-left, -$scale-n8);
+		width: 100%;
 	}
 
 	.lede {
@@ -591,6 +585,11 @@ form.main.contact-form {
 		padding-left: 10%;
 		padding-right: 10%;
 	}
+
+	img.logo {
+		width: 23.333%/80%*100%;
+	}
+
 	.flexslider {
 		@include rem-fallback(padding-top, $scale-3);
 		figure {

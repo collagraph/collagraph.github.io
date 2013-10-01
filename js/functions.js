@@ -138,3 +138,32 @@
     }
 
 })(window.jQuery);
+
+// set #deadline placeholder to 3 months in advance
+
+var today = new Date();
+var mm = today.getMonth()+4; //January is 0!
+var yyyy = today.getFullYear();
+
+if(mm > 12){
+    mm = mm-12;
+    yyyy = yyyy+1;
+}
+
+mm = mm.toString();
+
+if (mm == "1"){mm = "January"}
+if (mm == "2"){mm = "February"}
+if (mm == "3"){mm = "March"}
+if (mm == "4"){mm = "April"}
+if (mm == "5"){mm = "May"}
+if (mm == "6"){mm = "June"}
+if (mm == "7"){mm = "July"}
+if (mm == "8"){mm = "August"}
+if (mm == "9"){mm = "September"}
+if (mm == "10"){mm = "October"}
+if (mm == "11"){mm = "November"}
+if (mm == "12"){mm = "December"}
+
+var element = document.getElementById("Deadline");
+element.setAttribute("placeholder", "e.g. the end of " + mm + " " + yyyy);
