@@ -189,7 +189,7 @@ label.invalid,
 
 $text-base: #222;
 
-$background: #f8f8f8;
+$background: #fcfcfc;
 
 $primary: #666;
 
@@ -241,7 +241,12 @@ a {
 	}
 }
 
-#our-work {
+.our-approach {
+	border-top: 2px solid white;
+	background-color: $grey-1;	
+}
+
+.our-work {
 	background-color: $grey-0;
 }
 
