@@ -542,6 +542,10 @@ form.main.contact-form {
 		@include rem-fallback(line-height, $scale-3);
 	}
 
+	.additional-questions {
+		@include rem-fallback(font-size, $scale-0);
+	}
+
 	.principle {
 		@include rem-fallback(font-size, $scale-1);
 	}
