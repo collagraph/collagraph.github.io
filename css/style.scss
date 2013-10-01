@@ -77,13 +77,10 @@ body {
 }
 
 /* serif elements	 */
-p {
-	font-family: $serif-stack;
-	/* overrides */
-	&.lead {
+p.lede {
 		font-family: $sans-stack;
 	}
-}
+
 
 h1, h2, h3 {
 	line-height: 1.2;
@@ -145,6 +142,11 @@ h3 {
 	@include rem-fallback(font-size, $scale-3);
 	@include rem-fallback(margin-top, $scale-1);
 	font-weight: normal;
+	font-family: $serif-stack;
+}
+
+legend {
+	font-family: $serif-stack;
 }
 
 a {
@@ -155,7 +157,7 @@ p, ul, figure {
 	@include rem-fallback(margin, $scale-0, 0, 0);
 }
 
-.lead .p-adr {
+.lede .p-adr {
 	display: block;
 }
 
@@ -181,6 +183,12 @@ label.invalid,
 	display: block;
 	@include rem-fallback(padding, $scale-n7, $scale-n7, $scale-n7);
 	font-weight: normal;
+}
+
+.top-link {
+	display: block;
+	text-align: center;
+	@include rem-fallback( padding, $scale-0, 0);
 }
 
 /* end @type */
@@ -297,6 +305,13 @@ label.invalid {
 input.invalid,
 textarea.invalid {
 	border-color: $alert;
+}
+.top-link {
+	transition: background-color .3s ease;
+	&:hover,
+	&:focus {
+		background-color: $grey-2;
+	}
 }
 
 /* end @colours */
@@ -533,7 +548,7 @@ form.main.contact-form {
 		@include rem-fallback(font-size, $scale-6);
 	}
 
-	.sub-lede {
+	.lede p + p {
 		@include rem-fallback(font-size, $scale-4);
 	}
 
