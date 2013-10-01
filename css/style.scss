@@ -307,9 +307,11 @@ textarea.invalid {
 	border-color: $alert;
 }
 .top-link {
-	transition: background-color .3s ease;
+	opacity: .8;
+	transition: all .3s ease;
 	&:hover,
 	&:focus {
+		opacity: 1;
 		background-color: $grey-2;
 	}
 }
