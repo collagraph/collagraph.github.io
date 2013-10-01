@@ -28,7 +28,7 @@
 		<script type="text/javascript">
 			var w = $(svg).parent().width(); //set width for page width
 			var h = 800; // set the height
-			var step = 10000; // set the duration of a single line drawing
+			var step = 20000; // set the duration of a single line drawing
 			var dataset = [
 			[89.9, 100, 66.6, 0],
 			[78.3, 50, 10, 0],
@@ -63,9 +63,11 @@
 			.transition()
 			.ease( "in-out")
 			.duration(step)
-			.delay( function(d, i) {
+			/*
+.delay( function(d, i) {
 			return (i * step)
 			})
+*/
 		  	.attr("x2", function(d) {
 	  			return d[2] + "%";
 			})
