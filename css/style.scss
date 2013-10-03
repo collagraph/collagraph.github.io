@@ -79,7 +79,11 @@ body {
 /* serif elements	 */
 p.lede {
 		font-family: $sans-stack;
-	}
+}
+legend,
+.our-approach p {
+	font-family: $serif-stack;
+}
 
 
 h1, h2, h3 {
@@ -142,9 +146,6 @@ h3 {
 	font-family: $serif-stack;
 }
 
-legend {
-	font-family: $serif-stack;
-}
 
 a {
 	text-decoration: none;
