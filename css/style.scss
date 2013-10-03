@@ -492,9 +492,6 @@ fieldset.checkbox-list:not(#foo) {
 	@include rem-fallback(padding, $scale-4, 0, $scale-6);
 }
 
-.main > * {
-	@include rem-fallback(padding, 0, $scale-0);
-}
 
 .legend {
 	@include rem-fallback(margin, $scale-0, 0, 0);
@@ -562,23 +559,38 @@ fieldset.checkbox-list:not(#foo) {
 
 /* @mq */
 
-/* 30em --------------------------------------------------------------  */
+/* Below 30em --------------------------------------------------------------  */
+@media screen and (max-width: 30em) {
 
+	.main > * {
+		@include rem-fallback(padding, 0, $scale-0);
+	}
+
+}
+
+/* 30em & UP --------------------------------------------------------------  */
 @media screen and (min-width: 30em) {
 
 	/* @type 30em */
 
 	.our-approach {
-		p {
+		p  {
 			@include rem-fallback( font-size, $scale-1);
-		}	
+		}
+		a.button { display: none;} 	
 	}
+	/* end @type 30em */
 	
 	/* @layout 30em */
 
-	.our-approach {
-		
+	.site-header,
+	.our-approach,
+	.contact-form {
+		padding-left: 10%;
+		padding-right: 10%;	
 	}
+
+	/* end @layout 30em */
 
 }
 
