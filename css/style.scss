@@ -170,6 +170,12 @@ p, ul, figure {
 	}
 }
 
+.our-approach .button {
+	@include rem-fallback( margin-top, $scale-2);
+	display: inline-block;
+	@include rem-fallback( padding, $scale-n3, $scale-0);
+}
+
 label.invalid,
 .msg {
 	@include rem-fallback(margin, $scale-0, 0, 0);
@@ -383,6 +389,11 @@ input, textarea {
 	&:active {
 		background: darken($submit, 10%);
 	}
+}
+.our-approach .button:hover,
+.our-approach .button:focus {
+		background-color: darken($submit, 5%);
+		color: #fff;	
 }
 
 label {
