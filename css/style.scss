@@ -567,6 +567,12 @@ fieldset.checkbox-list:not(#foo) {
 @media screen and (min-width: 30em) {
 
 	/* @type 30em */
+
+	.our-approach {
+		p {
+			@include rem-fallback( font-size, $scale-1);
+		}	
+	}
 	
 	/* @layout 30em */
 
