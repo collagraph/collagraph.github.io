@@ -106,7 +106,7 @@
     $(document).ready(function(){
         var options = {
             dataType: 'jsonp',
-			url: 'http://getsimpleform.com/messages/ajax?form_api_token=d683d58f62e4cb8a410787d71d1e1694',
+			url: 'http://getsimpleform.com/messages/ajax?form_api_token=17732cc462230cce1807da0bed5d3bd9',
             target: '#contact-success', // target element(s) to be updated with server response
             beforeSubmit: showRequest,  // pre-submit callback
             success: showResponse,
