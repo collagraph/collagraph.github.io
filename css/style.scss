@@ -90,15 +90,8 @@ img.logo {
 	display: block;
 }
 
-h1.logo {
-	@include rem-fallback(margin, $scale-0, 0, $scale-3);
-	@include rem-fallback(font-size, $scale-5);
-	font-weight: 400;
-}
-
 .distinct {
-	@include rem-fallback(font-size, $scale-2);
-	@include rem-fallback(line-height, $scale-3);
+	@include rem-fallback(font-size, $scale-1);
 }
 
 .discrete {
@@ -107,7 +100,7 @@ h1.logo {
 
 .details {
 	@include rem-fallback(margin-top, $scale-2);
-	@include rem-fallback(font-size, $scale-n1);
+	@include rem-fallback(font-size, $scale-0);
 	letter-spacing: 1px;
 	/* Image replace */
 	li {
@@ -129,6 +122,10 @@ h1.logo {
 			background-size: auto 1em;
 		}
 	}
+}
+
+.lede .p-adr {
+	display: block;
 }
 
 h2 {
@@ -155,10 +152,6 @@ a {
 
 p, ul, figure {
 	@include rem-fallback(margin, $scale-0, 0, 0);
-}
-
-.lede .p-adr {
-	display: block;
 }
 
 .image-changer li {
@@ -397,7 +390,6 @@ label {
 }
 legend {
 	font-family: $serif-stack;
-	@include rem-fallback(margin, $scale-0, 0, 0);
 }
 .textarea {
 	width: 100%;
@@ -473,30 +465,27 @@ fieldset.checkbox-list:not(#foo) {
 
 /* @layout -------------------------------------------------------------- */
 
-.site-header,
+.main.site-header {
+	@include rem-fallback(padding-top, $scale-6);
+}
+
 .main {
-	@include rem-fallback(padding, $scale-3, $scale-0);
+	@include rem-fallback(padding, $scale-4, 0, $scale-6);
 }
 
-#our-approach {
-		@include rem-fallback(margin-top, $scale-5);
+.main > * {
+	@include rem-fallback(padding, 0, $scale-0);
 }
 
-.principle {
-	margin: 0;
-	h3 {
-		margin-top: 0;
-		@include rem-fallback(padding-top, $scale-2)
-	}
-	+ .principle {
-		margin-top: 0;
-		+ .principle {
-			@include rem-fallback(padding-bottom, $scale-3);
-		}
-	}
+.legend {
+	@include rem-fallback(margin, $scale-0, 0, 0);
 }
 
 .flexslider {
+	padding: 0;
+	.project-info {
+		@include rem-fallback(padding, 0, $scale-0);
+	}
 	.next, .previous {
 		display: inline-block;
 		@include rem-fallback(min-width, 10);
@@ -516,7 +505,24 @@ fieldset.checkbox-list:not(#foo) {
 	}
 }
 
-form.main.contact-form {
+.principle {
+	margin: 0;
+	h3 {
+		margin-top: 0;
+		@include rem-fallback(padding-top, $scale-2)
+	}
+	+ .principle {
+		margin-top: 0;
+		+ .principle {
+			@include rem-fallback(padding-bottom, $scale-3);
+		}
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.main.contact-form {
 	@include rem-fallback(padding-bottom, $scale-5);
 	fieldset {
 		margin: 0;
@@ -558,7 +564,11 @@ form.main.contact-form {
 
 	.distinct {
 		@include rem-fallback(font-size, $scale-2);
-		@include rem-fallback(line-height, $scale-3);
+		@include rem-fallback(line-height, $scale-4);
+	}
+
+	.details {
+		@include rem-fallback(font-size, $scale-1);
 	}
 
 	.additional-questions {
@@ -569,7 +579,7 @@ form.main.contact-form {
 		@include rem-fallback(font-size, $scale-1);
 	}
 
-	form.main.contact-form {
+	.main.contact-form {
 		@include rem-fallback(font-size, $scale-1);
 		input, textarea, button {
 			@include rem-fallback(font-size, $scale-1);
@@ -581,15 +591,16 @@ form.main.contact-form {
 	/* @colours 64em */
 
 	.project-info {
-		background-color: rgba(255,255,255,0.666);
+		background-color: #fff;
 	}
 
 	/* end @colours 64em */
 
 	/* @layout 64em */
 
-	.site-header {
-		@include rem-fallback(padding-top, $scale-10);
+	.main.site-header {
+		@include rem-fallback(padding-top, $scale-8);
+		@include rem-fallback(padding-bottom, $scale-8);
 		padding-left: 10%;
 		padding-right: 10%;
 	}
@@ -598,8 +609,21 @@ form.main.contact-form {
 		width: 23.333%/80%*100%;
 	}
 
+	.details li {
+		a {
+			@include rem-fallback(padding-left, $scale-n5);
+		}
+		&:first-child a {
+			padding-left: $scale-n3;
+		}
+	}
+
+	.main.contact-form .lede {
+		@include rem-fallback(margin-bottom, $scale-2);
+	}
+
 	.flexslider {
-		@include rem-fallback(padding-top, $scale-3);
+		@include rem-fallback(padding-top, $scale-6);
 		figure {
 			margin-top: 0;
 		}
@@ -609,23 +633,17 @@ form.main.contact-form {
 		}
 	}
 
-	.main {
-		@include rem-fallback(padding, $scale-6, 0, $scale-7);
-	}
-
-	h2 {
-		margin-left: 5%/90%*100%;
-		@include rem-fallback(margin-bottom, $scale-3);
-	}
-
 	.our-approach {
-		padding-left: 5%;
-		padding-right: 5%;
+		padding-left: 10%;
+		padding-right: 10%;
 		.principle {
-			display: inline-block;
-			padding-left: 5%/90%*100%;
-			width: 28.333%/90%*100%;
-			vertical-align: top;
+			width: 66.666%;
+			float: left;
+			clear: left;
+			&:nth-child(2n+1) {
+				float: right;
+				clear: right;
+			}
 		}
 	}
 
@@ -650,6 +668,7 @@ form.main.contact-form {
 			position: absolute;
 			left: 61.667%;
 			height: 9999px;
+			@include rem-fallback(padding-top, $scale-6);
 			padding-left: 5%;
 			padding-right: 5%;
 			width: 33.333%;
@@ -659,10 +678,7 @@ form.main.contact-form {
 		}
 	}
 
-	form.main.contact-form {
-		h2 {
-			margin-left: 0;
-		}
+	.main.contact-form {
 		padding-left: 10%;
 		padding-right: 10%;
 		.short-input {
