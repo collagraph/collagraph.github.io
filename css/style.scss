@@ -687,16 +687,11 @@ fieldset.checkbox-list:not(#foo) {
 	.our-approach {
 		padding-left: 10%;
 		padding-right: 10%;
-		.principle {
-			width: 66.666%;
-			float: left;
-			clear: left;
-			&:nth-child(2n+1) {
-				float: right;
-				clear: right;
-			}
-		}
+		p {
+			max-width: 51.66%;
+		}	
 	}
+
 
 	.our-work {
 		padding-bottom: 0;
