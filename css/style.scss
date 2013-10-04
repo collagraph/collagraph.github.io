@@ -157,7 +157,10 @@ p, ul, figure {
 .slide-link {
 	display: inline-block;
 	@include rem-fallback(margin-right, $scale-0);
-		border-bottom: 1px solid transparent;
+	@include rem-fallback(font-size, $scale-0);
+	border-bottom-style: solid;
+	border-bottom-color: transparent;
+	@include rem-fallback(border-bottom-width, $scale-n13);
 	&:hover {
 		cursor: pointer;
 		border-bottom-color: #ccc;
