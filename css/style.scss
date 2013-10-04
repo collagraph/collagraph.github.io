@@ -530,8 +530,11 @@ img.logo {
 
 .main.contact-form {
 	@include rem-fallback(padding-bottom, $scale-5);
-	.lede p:first-child {
+	.lede {
 		@include rem-fallback(font-size, $scale-2);
+	}
+	.lede p + p {
+		@include rem-fallback(font-size, $scale-0);
 	}
 	fieldset {
 		margin: 0;
@@ -583,14 +586,6 @@ img.logo {
 		@include rem-fallback(font-size, $scale-3);
 	}
 
-	.lede {
-		@include rem-fallback(font-size, $scale-6);
-	}
-
-	.lede p + p {
-		@include rem-fallback(font-size, $scale-4);
-	}
-
 	.distinct {
 		@include rem-fallback(font-size, $scale-2);
 	}
@@ -599,14 +594,28 @@ img.logo {
 		@include rem-fallback(font-size, $scale-1);
 	}
 
-	.additional-questions {
-		@include rem-fallback(font-size, $scale-0);
+	.our-approach {
+		p {
+			@include rem-fallback(font-size, $scale-3);
+		}
+		p + p {
+			@include rem-fallback(font-size, $scale-1);
+		}
 	}
 
 	.main.contact-form {
 		@include rem-fallback(font-size, $scale-1);
+		.lede {
+			@include rem-fallback(font-size, $scale-5);
+		}
+		.lede p + p {
+			@include rem-fallback(font-size, $scale-3);
+		}
 		input, textarea, button {
 			@include rem-fallback(font-size, $scale-1);
+		}
+		.additional-questions {
+			@include rem-fallback(font-size, $scale-0);
 		}
 	}
 
@@ -619,8 +628,26 @@ img.logo {
 
 	/* @type 64em */
 
-	.our-approach p {
-		@include rem-fallback(font-size, $scale-1);
+	h3 {
+		@include rem-fallback(font-size, $scale-4);
+	}
+
+	.our-approach {
+		p {
+			@include rem-fallback(font-size, $scale-4);
+		}
+		p + p {
+			@include rem-fallback(font-size, $scale-1);
+		}
+	}
+
+	.main.contact-form {
+		.lede {
+			@include rem-fallback(font-size, $scale-6);
+		}
+		.lede p + p {
+			@include rem-fallback(font-size, $scale-4);
+		}
 	}
 
 	/* end @type 64em */
@@ -673,6 +700,9 @@ img.logo {
 
 	.our-approach {
 		p {
+			width: 51.666%/80%*100%;
+		}
+		p + p {
 			width: 50%;
 		}
 	}
