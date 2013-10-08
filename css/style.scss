@@ -94,6 +94,14 @@ h1, h2, h3 {
 	line-height: 1.2;
 }
 
+
+nav.primary a {
+	@include rem-fallback(font-size, 0.875);
+	font-weight: bold;
+	text-transform: uppercase;
+	@include rem-fallback(letter-spacing, $scale-n13);
+}
+
 .distinct {
 	@include rem-fallback(font-size, $scale-1);
 }
@@ -478,16 +486,29 @@ fieldset.checkbox-list:not(#foo) {
 /* @layout -------------------------------------------------------------- */
 
 .site-header {
-	@include rem-fallback(padding, $scale-6, $scale-0);
+	@include rem-fallback(padding, 0, $scale-0, $scale-8);
 }
 
+nav.primary {
+	float: left;
+	@include rem-fallback(padding-bottom, $scale-6);
+	ul {
+		margin-top: 0;
+	}
+	li {
+		float: left;
+		a {
+			display: block;
+			@include rem-fallback(padding, $scale-0, $scale-n4);
+		}
+	}
+}
 
 img.logo {
-	display: block;
+	display: inline-block;
 	max-width: 66.666%;
 	@include rem-fallback(min-width, $scale-12);
 }
-
 
 .legend {
 	@include rem-fallback(margin, $scale-0, 0, 0);
@@ -567,12 +588,24 @@ img.logo {
 /* 30em & UP --------------------------------------------------------------  */
 @media screen and (min-width: 30em) {
 
+	/* @tpye 30em */
+
+	nav.primary a {
+		@include rem-fallback(font-size, $scale-0);
+	}
+
+	/* end @type 30em */
+
 	/* @layout 30em */
 
 	.site-header,
 	.main {
 		padding-left: 10%;
 		padding-right: 10%;
+	}
+
+	nav.primary li a {
+		@include rem-fallback(padding, $scale-0);
 	}
 
 	.our-work {
@@ -635,6 +668,35 @@ img.logo {
 
 	/* end @type 42em */
 
+	/* @layout 42em */
+
+	.site-header {
+		@include rem-fallback(padding-top, $scale-8);
+	}
+
+	nav.primary {
+		float: right;
+		padding-bottom: 0;
+		ul {
+			float: right;
+			clear: left;
+			@include rem-fallback(margin-top, -$scale-0);
+		}
+		li {
+			float: none;
+			text-align: right;
+			a {
+				@include rem-fallback(padding, $scale-0, 0, 0);
+			}
+		}
+	}
+
+	img.logo {
+		display: inline-block;
+		max-width: 50%;
+		@include rem-fallback(min-width, $scale-12);
+	}
+
 	.main,
 	.our-work {
 		@include rem-fallback(padding-bottom, $scale-10);
@@ -642,7 +704,10 @@ img.logo {
 
 	.main.contact-form {
 		@include rem-fallback(padding-top, $scale-8);
+		@include rem-fallback(padding-bottom, $scale-8);
 	}
+
+	/* end @layout 42em */
 
 }
 
@@ -675,21 +740,27 @@ img.logo {
 
 	/* end @type 64em */
 
-	/* @colours 64em */
-
-	// .project-info {
-	// 	background-color: #fff;
-	// }
-
-	/* end @colours 64em */
-
 	/* @layout 64em */
 
 	.site-header {
 		@include rem-fallback(padding-top, $scale-10);
-		@include rem-fallback(padding-bottom, $scale-10);
+		@include rem-fallback(padding-bottom, $scale-11);
 		padding-left: 10%;
 		padding-right: 10%;
+	}
+
+	nav.primary {
+		li {
+			float: left;
+			text-align: left;
+			a {
+				@include rem-fallback(margin, 0, $scale-0);
+				@include rem-fallback(padding-bottom, $scale-0);
+			}
+			&:last-child a {
+				margin-right: 0;
+			}
+		}
 	}
 
 	img.logo {
@@ -714,7 +785,7 @@ img.logo {
 	.flexslider {
 		.flex-viewport {
 			height: 0;
-			padding-bottom: 48.616%;
+			padding-bottom: 56.25%;
 		}
 	}
 
