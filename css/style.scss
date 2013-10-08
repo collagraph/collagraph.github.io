@@ -740,10 +740,19 @@ img.logo {
 				}
 			}
 		}
+		.gradient {
+			position:absolute;
+			width: 100%;
+			height: 100%;
+			background-image: -webkit-gradient(
+			  linear, 33% center, 66% center, from(rgba(255,255,255,0)),
+			  to(rgba(255,255,255,.66))
+			);
+		}
 		.project-info {
 			position: absolute;
 			left: 61.667%;
-			@include rem-fallback(bottom, $scale-6);
+			@include rem-fallback(bottom, $scale-10);
 			padding-left: 5%;
 			padding-right: 5%;
 			width: 33.333%;
