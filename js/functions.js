@@ -1,4 +1,4 @@
-// Remap jQuery to $
+// remap jQuery to $
 (function($){
 
     $('fieldset:not(#foo) #phone-q').click(function() {
@@ -59,7 +59,7 @@
 
     $(document).ready(function() {
 
-		// Flexslider
+		// flexslider
 		$(".flexslider")
 		.flexslider({
 			animation: "slide",
@@ -71,32 +71,18 @@
 			controlNav: false
 		}).flexsliderManualDirectionControls();
 
-        // Smooth scrolling
+        // smooth scrolling
         $('.scroll').click(function(event){
-            $('html, body').animate({scrollTop:$(this.hash).offset().top+1}, 300);
+            event.preventDefault();
+            var thisHash = $(this).attr('href');
+            $('html, body').animate({scrollTop:$(this.hash).offset().top}, 300);
+            window.history.replaceState('Object', 'Title', '/'+thisHash);
         });
 
     });
 
-    // $(window).load(function() {
-
-    //     // Hide img object on larger screens
-    //     enquire.register("screen and (min-width: 64em)", {
-    //         match : function() {
-    //             resizeDiv();
-    //             $('.photo').css({'background-position': 'center center'});
-    //             $('.photo img').addClass('visuallyhidden');
-    //         },
-    //         unmatch : function() {
-    //             $('.photo').css({'height': 'auto'});
-    //             $('.photo img').removeClass('visuallyhidden');
-    //         }
-    //     });
-
-    // });
-
-    /* Form validation -------------------------------------------------------------- */
-    // Form validation http://jqueryvalidation.org/documentation/
+    /* form validation -------------------------------------------------------------- */
+    // form validation http://jqueryvalidation.org/documentation/
     $(document).ready(function(){
         $('#contact').validate();
         // add html5 required into form and remove here if validate loads. Progressive enhancement for those with js.
@@ -116,21 +102,21 @@
         $('#contact').ajaxForm(options);
     });
 
-    // Pre-submit callback
+    // pre-submit callback
     function showRequest(formData, jqForm, options) {
         $('#saveForm').css('display', 'none');
         $('#contact-processing').css('display', 'block');
         return true;
     }
 
-    // Post-submit callback
+    // post-submit callback
     function showResponse(responseText, statusText, xhr, $form) {
 	        $('#contact-processing').fadeOut(600, function() {
             $('#contact-success').fadeIn(600);
         });
     }
 
-     // Post-submit callback
+     // post-submit callback
     function showAlert(responseText, statusText, xhr, $form) {
 	        $('#contact-processing').fadeOut(600, function() {
             $('#contact-alert').fadeIn(600);
