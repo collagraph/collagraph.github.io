@@ -81,11 +81,38 @@
 
     });
 
+    var lastScrollTop = 0;
+
+    $(window).scroll(function(){
+
+        var windowHeight = $(window).innerHeight() / 6;
+        var distanceScrolled = $(window).scrollTop();
+
+        if (distanceScrolled < windowHeight) {
+                $('nav.primary ul').css('opacity', '1');
+        }
+
+        setTimeout(function() {
+            if (distanceScrolled > lastScrollTop){
+                if ((distanceScrolled - lastScrollTop) > 50) {
+                        $('nav.primary ul').css('opacity', '1');
+                }
+            } else {
+                if ((lastScrollTop - distanceScrolled) > 50) {
+                    $('nav.primary ul').css('opacity', '0');
+                }
+            }
+        }, 100);
+
+        lastScrollTop = distanceScrolled;
+
+    });
+
     /* form validation -------------------------------------------------------------- */
+
     // form validation http://jqueryvalidation.org/documentation/
     $(document).ready(function(){
         $('#contact').validate();
-        // add html5 required into form and remove here if validate loads. Progressive enhancement for those with js.
 	});
 
     // Ajax form http://malsup.com/jquery/form/
@@ -126,7 +153,6 @@
 })(window.jQuery);
 
 // set #deadline placeholder to 3 months in advance
-
 var today = new Date();
 var mm = today.getMonth()+4; //January is 0!
 var yyyy = today.getFullYear();
