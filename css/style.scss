@@ -674,7 +674,11 @@ img.logo {
 		}
 		p + p {
 			@include rem-fallback(font-size, $scale-1);
+			@include rem-fallback(line-height, $scale-4);
 		}
+	}
+	.project-info {
+		@include rem-fallback(line-height, $scale-4);
 	}
 
 	.main.contact-form {
