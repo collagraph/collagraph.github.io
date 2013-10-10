@@ -86,6 +86,11 @@ legend,
 	font-family: $serif-stack;
 }
 
+.about p + p,
+.project-info {
+	line-height: 1.7;
+}
+
 .about p:first-of-type {
 	margin-top: 0;
 }
