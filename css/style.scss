@@ -94,14 +94,6 @@ h1, h2, h3 {
 	line-height: 1.2;
 }
 
-
-nav.primary a {
-	@include rem-fallback(font-size, 0.875);
-	font-weight: bold;
-	text-transform: uppercase;
-	@include rem-fallback(letter-spacing, $scale-n13);
-}
-
 .distinct {
 	@include rem-fallback(font-size, $scale-1);
 }
@@ -252,13 +244,6 @@ a {
 	}
 	&:active {
 
-	}
-}
-
-nav.primary a {
-	color: $text-base;
-	&:hover, &:focus {
-		color: $primary;
 	}
 }
 
@@ -508,22 +493,11 @@ fieldset.checkbox-list:not(#foo) {
 /* @layout -------------------------------------------------------------- */
 
 .site-header {
-	@include rem-fallback(padding, 0, $scale-0, $scale-8);
+	@include rem-fallback(padding, $scale-8, $scale-0);
 }
 
 nav.primary {
-	float: left;
-	@include rem-fallback(padding-bottom, $scale-6);
-	ul {
-		margin-top: 0;
-	}
-	li {
-		float: left;
-		a {
-			display: block;
-			@include rem-fallback(padding, $scale-0, $scale-n4);
-		}
-	}
+	display: none;
 }
 
 img.logo {
@@ -578,7 +552,6 @@ img.logo {
 }
 
 .main.contact-form {
-	@include rem-fallback(padding-top, $scale-6);
 	.lede {
 		@include rem-fallback(font-size, $scale-2);
 		p:first-of-type {
@@ -607,16 +580,9 @@ img.logo {
 
 /* @mq */
 
-/* 30em & UP --------------------------------------------------------------  */
+/* 30em & up -------------------------------------------------------------- */
+
 @media screen and (min-width: 30em) {
-
-	/* @tpye 30em */
-
-	nav.primary a {
-		@include rem-fallback(font-size, $scale-0);
-	}
-
-	/* end @type 30em */
 
 	/* @layout 30em */
 
@@ -624,10 +590,6 @@ img.logo {
 	.main {
 		padding-left: 10%;
 		padding-right: 10%;
-	}
-
-	nav.primary li a {
-		@include rem-fallback(padding, $scale-0);
 	}
 
 	.portfolio {
@@ -692,46 +654,6 @@ img.logo {
 
 	/* @layout 42em */
 
-	.site-header {
-		@include rem-fallback(padding-top, $scale-8);
-	}
-
-	nav.primary {
-		position: fixed;
-		z-index: 1000;
-		top: 0;
-		right: 0;
-		width: 100%;
-		padding-right: 0;
-		ul {
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin-top: 0;
-			@include rem-fallback(padding, $scale-8 - $scale-0, 0, $scale-12);
-			padding-right: 10%;
-			padding-left: 15%;
-		    -webkit-transition: opacity ease 1s;
-		    -moz-transition: opacity ease 1s;
-		    -o-transition: opacity ease 1s;
-		    transition: opacity ease 1s;
-			&:hover, &:focus {
-				opacity: 1;
-			}
-		}
-		li {
-			float: left;
-			a {
-				@include rem-fallback(margin, 0, $scale-0);
-				@include rem-fallback(padding, $scale-0, 0);
-			}
-			&:last-child a {
-				margin-right: 0;
-			}
-		}
-	}
-
 	img.logo {
 		display: inline-block;
 		max-width: 50%;
@@ -744,7 +666,6 @@ img.logo {
 	}
 
 	.main.contact-form {
-		@include rem-fallback(padding-top, $scale-8);
 		@include rem-fallback(padding-bottom, $scale-8);
 	}
 
@@ -752,13 +673,20 @@ img.logo {
 
 }
 
-/* 64em --------------------------------------------------------------  */
+/* 64em -------------------------------------------------------------- */
+
 @media screen and (min-width: 64em) {
 
 	/* @type 64em */
 
 	h3 {
 		@include rem-fallback(font-size, $scale-4);
+	}
+
+	nav.primary a {
+		font-weight: bold;
+		text-transform: uppercase;
+		@include rem-fallback(letter-spacing, $scale-n13);
 	}
 
 	.about {
@@ -781,6 +709,17 @@ img.logo {
 
 	/* end @type 64em */
 
+	/* @colours 64em */
+
+	nav.primary a {
+		color: $primary;
+		&:hover, &:focus {
+			color: $discrete;
+		}
+	}
+
+	/* end @colours 64em */
+
 	/* @layout 64em */
 
 	.site-header {
@@ -788,20 +727,6 @@ img.logo {
 		@include rem-fallback(padding-bottom, $scale-11);
 		padding-left: 10%;
 		padding-right: 10%;
-	}
-
-	nav.primary {
-		li {
-			float: left;
-			text-align: left;
-			a {
-				@include rem-fallback(margin, 0, $scale-0);
-				@include rem-fallback(padding-bottom, $scale-0);
-			}
-			&:last-child a {
-				margin-right: 0;
-			}
-		}
 	}
 
 	img.logo {
@@ -816,6 +741,35 @@ img.logo {
 		}
 		&:first-child a {
 			padding-left: $scale-n3;
+		}
+	}
+
+	nav.primary {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		padding-right: 0;
+		ul {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin-top: 0;
+			@include rem-fallback(padding, $scale-8 - $scale-0, 0, $scale-12);
+			padding-right: 10%;
+			padding-left: 15%;
+		}
+		li {
+			float: left;
+			a {
+				display: block;
+				@include rem-fallback(margin, 0, $scale-0);
+				@include rem-fallback(padding, $scale-0, 0);
+			}
+			&:last-child a {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -863,7 +817,7 @@ img.logo {
 			width: 100%;
 			height: 100%;
 			background-image: -webkit-gradient(
-			  linear, 33% center, 66% center, from(rgba(0,0,0,0)),
+			  linear, 50% center, 75% center, from(rgba(0,0,0,0)),
 			  to(rgba(0,0,0,.5))
 			);
 		}
@@ -941,6 +895,32 @@ img.logo {
 
 }
 
+/* 80em -------------------------------------------------------------- */
+
+@media screen and (min-width: 80em) {
+
+	/* @layout 80em */
+
+	nav.primary {
+		position: fixed;
+		z-index: 1000;
+		ul {
+		    -webkit-transition: opacity ease .3s;
+		    -moz-transition: opacity ease .3s;
+		    -o-transition: opacity ease .3s;
+		    transition: opacity ease .3s;
+			&:hover, &:focus {
+				opacity: 1 !important;
+			}
+		}
+	}
+
+	/* end @layout 80em */
+
+}
+
+/* 84em -------------------------------------------------------------- */
+
 @media screen and (min-width: 84em) {
 
 	/* @type 80em */
@@ -953,7 +933,7 @@ img.logo {
 
 }
 
-/* @retina */
+/* @retina -------------------------------------------------------------- */
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
