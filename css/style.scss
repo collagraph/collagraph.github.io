@@ -170,9 +170,10 @@ p, ul, figure {
 }
 
 .image-changer {
-	margin-left: -100px;
 	@include rem-fallback(font-size, $scale-0);
 	line-height: 2;
+	text-align: center;
+	margin-left: -100px;
 	width: 200px;
 	position: relative;
 	left: 50%;
