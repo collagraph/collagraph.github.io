@@ -86,6 +86,11 @@ legend,
 	font-family: $serif-stack;
 }
 
+.about p + p,
+.project-info {
+	line-height: 1.7;
+}
+
 .about p:first-of-type {
 	margin-top: 0;
 }
@@ -680,7 +685,11 @@ img.logo {
 		}
 		p + p {
 			@include rem-fallback(font-size, $scale-1);
+			@include rem-fallback(line-height, $scale-4);
 		}
+	}
+	.project-info {
+		@include rem-fallback(line-height, $scale-4);
 	}
 
 	.main.contact-form {
