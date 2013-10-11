@@ -75,7 +75,7 @@
         $('.scroll').click(function(event){
             event.preventDefault();
             var thisHash = $(this).attr('href');
-            $('html, body').animate({scrollTop:$(this.hash).offset().top}, 300);
+            $('html, body').animate({scrollTop:$(this.hash).offset().top+1}, 300);
             window.history.replaceState('Object', 'Title', '/'+thisHash);
         });
 
