@@ -94,6 +94,14 @@ h1, h2, h3 {
 	line-height: 1.2;
 }
 
+a {
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
+	}
+}
+
 .distinct {
 	@include rem-fallback(font-size, $scale-1);
 }
@@ -156,22 +164,31 @@ p, ul, figure {
 	@include rem-fallback(margin, $scale-2, 0, 0);
 }
 
+.image-changer {
+	margin-left: -100px;
+	@include rem-fallback(font-size, $scale-0);
+	line-height: 2;
+	width: 200px;
+	position: relative;
+	left: 50%;
+	@include rem-fallback(bottom, $scale-7);
+}
+
 .image-changer li {
 	display: inline-block;
+	&:last-child .slide-link {
+		margin-right: 0;
+	}
 }
 .slide-link {
 	display: inline-block;
+	text-align: center;
 	@include rem-fallback(margin-right, $scale-0);
-	@include rem-fallback(font-size, $scale-0);
-	border-bottom-style: solid;
-	border-bottom-color: transparent;
-	@include rem-fallback(border-bottom-width, $scale-n13);
 	&:hover {
 		cursor: pointer;
-		border-bottom-color: #ccc;
+		text-decoration: none;
 	}
 	&.current {
-		border-bottom-color: #888;
 	}
 }
 
@@ -237,13 +254,13 @@ body {
 }
 
 a {
-	color: $primary;
+	color: $submit;
 	&:hover,
 	&:focus {
-		color: darken($primary, 20%);
+		color: darken($submit, 10%);
 	}
 	&:active {
-
+		color: darken($submit, 20%);
 	}
 }
 
@@ -287,11 +304,28 @@ button {
 	}
 }
 
+.slide-link {
+	color: #eee;
+	@include rem-fallback(border-width, $scale-n11);
+	border-style: solid;
+	border-color: darken($submit, 20%);
+	&:hover {
+		color: #eee;
+		background-color: darken($submit, 20%);
+	}
+	&.current {
+		color: #eee;
+		background-color: $submit;
+		border-color: $submit;
+	}
+}
+
 .checkbox-list {
 	.checkbox-checked {
 		color: darken($text-base, 30%);
 	}
 }
+
 .form-addition .checkbox-checked {
 	color: lighten($text-base, 30%);
 }
@@ -303,16 +337,20 @@ button {
 label.invalid {
 	background-color: $alert;
 }
+
 .processing {
 	background-color: $grey-2;
 }
+
 .success {
 	background-color: $success;
 }
+
 input.invalid,
 textarea.invalid {
 	border-color: $alert;
 }
+
 .top-link {
 	opacity: .8;
 	transition: all .3s ease;
@@ -458,7 +496,7 @@ fieldset.checkbox-list:not(#foo) {
 }
 
 .form-additional {
-	@include rem-fallback(padding-top, $scale-1);
+	@include rem-fallback(padding-top, $scale-0);
 	div {
 		-webkit-transition: opacity .3s ease;
 		-moz-transition: opacity .3s ease;
@@ -551,6 +589,13 @@ img.logo {
 	}
 }
 
+.slide-link {
+	@include rem-fallback(height, $scale-4);
+	@include rem-fallback(width, $scale-4);
+	display: block;
+	border-radius: 50%;
+}
+
 .main.contact-form {
 	.lede {
 		@include rem-fallback(font-size, $scale-2);
@@ -600,6 +645,10 @@ img.logo {
 		}
 	}
 
+	.image-changer {
+		@include rem-fallback(bottom, $scale-8);
+	}
+
 	/* end @layout 30em */
 
 }
@@ -640,6 +689,7 @@ img.logo {
 			@include rem-fallback(font-size, $scale-5);
 		}
 		.lede p + p {
+			margin-top: 0;
 			@include rem-fallback(font-size, $scale-3);
 		}
 		input, textarea, button {
@@ -714,7 +764,8 @@ img.logo {
 	nav.primary a {
 		color: $primary;
 		&:hover, &:focus {
-			color: $discrete;
+			color: $grey-5;
+			text-decoration: none;
 		}
 	}
 
@@ -758,7 +809,7 @@ img.logo {
 			margin-top: 0;
 			@include rem-fallback(padding, $scale-8 - $scale-0, 0, $scale-12);
 			padding-right: 10%;
-			padding-left: 15%;
+			padding-left: 10%;
 		}
 		li {
 			float: left;
@@ -771,10 +822,6 @@ img.logo {
 				margin-right: 0;
 			}
 		}
-	}
-
-	.main.contact-form .lede {
-		@include rem-fallback(margin-bottom, $scale-2);
 	}
 
 	.flexslider {
@@ -831,7 +878,8 @@ img.logo {
 			color: white;
 		}
 		.image-changer {
-			@include rem-fallback(margin-top, $scale-0);
+			position: absolute;
+			@include rem-fallback(bottom, $scale-6);
 		}
 	}
 
@@ -863,7 +911,7 @@ img.logo {
 		.additional-questions {
 			clear: both;
 			@include rem-fallback(font-size, $scale-0);
-			@include rem-fallback(padding-top, $scale-4);
+			@include rem-fallback(padding-top, $scale-2);
 			.short-input {
 				float: left;
 				width: 28.333%/80%*100%;
