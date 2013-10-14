@@ -85,21 +85,21 @@
 
     $(window).scroll(function(){
 
-        var windowHeight = $(window).innerHeight() / 6;
+        var windowHeight = $(window).innerHeight() / 3;
         var distanceScrolled = $(window).scrollTop();
 
         if (distanceScrolled < windowHeight) {
-                $('nav.primary ul').css('opacity', '1');
+                $('nav.primary').css('opacity', '1');
         }
 
         setTimeout(function() {
             if (distanceScrolled > lastScrollTop){
                 if ((distanceScrolled - lastScrollTop) > 50) {
-                        $('nav.primary ul').css('opacity', '1');
+                        $('nav.primary').css('opacity', '1');
                 }
             } else {
                 if ((lastScrollTop - distanceScrolled) > 50) {
-                    $('nav.primary ul').css('opacity', '0');
+                    $('nav.primary').css('opacity', '0');
                 }
             }
         }, 100);
