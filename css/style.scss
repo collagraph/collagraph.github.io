@@ -73,7 +73,7 @@ $serif-stack:  "ff-meta-serif-web-pro", georgia;
 body {
 	font-family: $sans-stack;
 	@include rem-fallback(font-size, $scale-0);
-	line-height: 1.4;
+	line-height: 1.663;
 }
 
 /* serif elements	 */
@@ -86,17 +86,12 @@ legend,
 	font-family: $serif-stack;
 }
 
-.about p + p,
-.project-info {
-	line-height: 1.7;
-}
-
 .about p:first-of-type {
-	margin-top: 0;
+	line-height: 1.358;
 }
 
 h1, h2, h3 {
-	line-height: 1.2;
+	line-height: 1.358;
 }
 
 a {
@@ -119,25 +114,8 @@ a {
 	@include rem-fallback(margin-top, $scale-2);
 	@include rem-fallback(font-size, $scale-0);
 	letter-spacing: 1px;
-	/* Image replace */
-	li {
-		@include rem-fallback(margin, 0, 0, $scale-n2)
-	}
-	i {
-		text-indent: -9999em;
-		display: inline-block;
-		font-style: normal;
-		width: 1.7rem;
-		margin: 0;
-		background: transparent left center no-repeat;
-		&.icon-e {
-			background-image: url('/assets/email-icon.png');
-			background-size: 1em auto;
-		}
-		&.icon-ph {
-			background-image: url('/assets/phone-icon.png');
-			background-size: auto 1em;
-		}
+	li + li {
+		@include rem-fallback(margin-top, $scale-n5)
 	}
 }
 
@@ -169,7 +147,13 @@ p, ul, figure {
 	@include rem-fallback(margin, $scale-2, 0, 0);
 }
 
-.image-changer {
+.project-info {
+	// @include rem-fallback(margin-top, -$scale-7);
+	@include rem-fallback(padding-top, $scale-4);
+}
+
+.project-changer {
+	display: none;
 	@include rem-fallback(font-size, $scale-0);
 	line-height: 2;
 	text-align: center;
@@ -180,21 +164,10 @@ p, ul, figure {
 	@include rem-fallback(bottom, $scale-7);
 }
 
-.image-changer li {
+.project-changer li {
 	display: inline-block;
-	&:last-child .slide-link {
+	&:last-child .project-link {
 		margin-right: 0;
-	}
-}
-.slide-link {
-	display: inline-block;
-	text-align: center;
-	@include rem-fallback(margin-right, $scale-0);
-	&:hover {
-		cursor: pointer;
-		text-decoration: none;
-	}
-	&.current {
 	}
 }
 
@@ -227,7 +200,7 @@ $discrete: #888;
 $contrast: #9b8f8f;
 
 $grey-0: #fff;
-$grey-1: #f4f4f4;
+$grey-1: #f2f2f2;
 $grey-2: #ddd;
 $grey-3: #ccc;
 $grey-4: #bbb;
@@ -310,7 +283,7 @@ button {
 	}
 }
 
-.slide-link {
+.project-link {
 	color: #eee;
 	@include rem-fallback(border-width, $scale-n11);
 	border-style: solid;
@@ -559,6 +532,10 @@ img.logo {
 	@include rem-fallback(padding-right, $scale-0);
 }
 
+.about p:first-of-type {
+	margin-top: 0;
+}
+
 .main,
 .portfolio {
 	@include rem-fallback(padding-bottom, $scale-8);
@@ -569,6 +546,50 @@ img.logo {
 	.project-info {
 		@include rem-fallback(padding-left, $scale-0);
 		@include rem-fallback(padding-right, $scale-0);
+	}
+	.image-changer li {
+		display: inline-block;
+		@include rem-fallback(margin-right, $scale-0);
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.slide-link {
+	text-indent: -9999em;
+	overflow: hidden;
+	display: inline-block;
+	@include rem-fallback(width, 3);
+	@include rem-fallback(height, 3);
+	border-radius: 50%;
+	&.small-screen {
+		background: url('/assets/phone-icon-blue.png') center center no-repeat;
+		background-size: 1.8rem auto;
+		&.current {
+			background-image: url('/assets/phone-icon.png');
+		}
+	}
+	&.medium-screen {
+		background: url('/assets/tablet-icon-blue.png') center center no-repeat;
+		background-size:  1.8rem auto;
+		&.current {
+			background-image: url('/assets/tablet-icon.png');
+		}
+	}
+	&.large-screen {
+		background: url('/assets/desktop-icon-blue.png') center center no-repeat;
+		background-size: 1.8rem auto;
+		&.current {
+			background-image: url('/assets/desktop-icon.png');
+		}
+	}
+	&.current {
+		background-color: $submit;
+	}
+	&:hover, &:focus {
+		cursor: pointer;
+		background-color: darken($submit, 20%);
 	}
 }
 
@@ -595,7 +616,7 @@ img.logo {
 	}
 }
 
-.slide-link {
+.project-link {
 	@include rem-fallback(height, $scale-4);
 	@include rem-fallback(width, $scale-4);
 	display: block;
@@ -615,16 +636,20 @@ img.logo {
 	fieldset {
 		margin: 0;
 	}
+	div.short-input,
+	.long-input {
+		@include rem-fallback(padding-top, $scale-2);
+	}
 }
 
 /* tools */
 
 .visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px; width: 1px;
+	margin: -1px; padding: 0; border: 0;
 }
 
 /* end @layout */
@@ -651,7 +676,11 @@ img.logo {
 		}
 	}
 
-	.image-changer {
+	.project-info {
+		// @include rem-fallback(margin-top, -$scale-8);
+	}
+
+	.project-changer {
 		@include rem-fallback(bottom, $scale-8);
 	}
 
@@ -686,11 +715,11 @@ img.logo {
 		}
 		p + p {
 			@include rem-fallback(font-size, $scale-1);
-			@include rem-fallback(line-height, $scale-4);
 		}
 	}
+
 	.project-info {
-		@include rem-fallback(line-height, $scale-4);
+		@include rem-fallback(font-size, $scale-1);
 	}
 
 	.main.contact-form {
@@ -758,6 +787,10 @@ img.logo {
 		}
 	}
 
+	.project-info {
+		@include rem-fallback(font-size, $scale-0);
+	}
+
 	.main.contact-form {
 		.lede {
 			@include rem-fallback(font-size, $scale-6);
@@ -796,28 +829,20 @@ img.logo {
 		max-width: 100%;
 	}
 
-	.details li {
-		a {
-			@include rem-fallback(padding-left, $scale-n5);
-		}
-		&:first-child a {
-			padding-left: $scale-n3;
-		}
-	}
-
 	nav.primary {
 		display: block;
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 100%;
+		@include rem-fallback(height, 13.257);
 		padding-right: 0;
 		ul {
 			position: absolute;
 			top: 0;
 			right: 0;
 			margin-top: 0;
-			@include rem-fallback(padding, $scale-8 - $scale-0, 0, $scale-12);
+			@include rem-fallback(padding, $scale-8 - $scale-0, 0, $scale-8);
 			padding-right: 10%;
 			padding-left: 10%;
 		}
@@ -827,6 +852,9 @@ img.logo {
 				display: block;
 				@include rem-fallback(margin, 0, $scale-0);
 				@include rem-fallback(padding, $scale-0, 0);
+			}
+			&:first-child a {
+				margin-left: 0;
 			}
 			&:last-child a {
 				margin-right: 0;
@@ -845,16 +873,13 @@ img.logo {
 		p {
 			width: 51.666%/80%*100%;
 		}
-		p + p {
-			width: 50%;
-		}
 	}
 
 	.portfolio {
+		color: $grey-1;
 		h2 {
 			position: absolute;
 			z-index: 1000;
-			color: white;
 		}
 		padding-bottom: 0;
 		.hentry {
@@ -881,15 +906,29 @@ img.logo {
 		.project-info {
 			position: absolute;
 			left: 61.667%;
-			@include rem-fallback(bottom, $scale-10);
+			@include rem-fallback(bottom, $scale-8);
+			margin-top: 0;
+			padding-top: 0;
 			padding-left: 5%;
 			padding-right: 5%;
 			width: 33.333%;
-			color: white;
 		}
-		.image-changer {
-			position: absolute;
-			@include rem-fallback(bottom, $scale-6);
+	}
+
+	.project-changer {
+		position: absolute;
+		@include rem-fallback(bottom, $scale-4);
+	}
+
+	.slide-link {
+		&.small-screen {
+			background-image: url('/assets/phone-icon.png');
+		}
+		&.medium-screen {
+			background-image: url('/assets/tablet-icon.png');
+		}
+		&.large-screen {
+			background-image: url('/assets/desktop-icon.png');
 		}
 	}
 
@@ -901,10 +940,9 @@ img.logo {
 			display: inline-block;
 			float: left;
 			clear: left;
-			@include rem-fallback(padding-top, $scale-2);
 			fieldset {
 				label {
-					@include rem-fallback(margin-top, 1.5);
+					@include rem-fallback(margin-top, 1.1);
 				}
 				&:first-child label {
 					@include rem-fallback(margin-top, $scale-0);
@@ -916,7 +954,6 @@ img.logo {
 			float: right;
 			clear: right;
 			width: 51.666%/80%*100%;
-			@include rem-fallback(padding-top, $scale-2);
 		}
 		.additional-questions {
 			clear: both;
@@ -962,15 +999,27 @@ img.logo {
 	nav.primary {
 		position: fixed;
 		z-index: 1000;
-		ul {
-		    -webkit-transition: opacity ease .3s;
-		    -moz-transition: opacity ease .3s;
-		    -o-transition: opacity ease .3s;
-		    transition: opacity ease .3s;
-			&:hover, &:focus {
-				opacity: 1 !important;
-			}
+	    -webkit-transition: opacity ease .3s;
+	    -moz-transition: opacity ease .3s;
+	    -o-transition: opacity ease .3s;
+	    transition: opacity ease .3s;
+		&:hover, &:focus {
+			opacity: 1 !important;
 		}
+	}
+
+	.about {
+		p + p {
+			width: 50%;
+		}
+	}
+
+	.portfolio .project-info {
+		@include rem-fallback(bottom, $scale-10);
+	}
+
+	.project-changer {
+		@include rem-fallback(bottom, $scale-6);
 	}
 
 	/* end @layout 80em */
@@ -979,15 +1028,24 @@ img.logo {
 
 /* 84em -------------------------------------------------------------- */
 
-@media screen and (min-width: 84em) {
+@media screen and (min-width: 88em) {
 
-	/* @type 80em */
+	/* @type 88em */
 
-	.project-info {
+	.portfolio .project-info {
 		@include rem-fallback(font-size, $scale-1);
+		@include rem-fallback(bottom, $scale-12);
 	}
 
-	/* end @type 80em */
+	/* end @type 88em */
+
+	/* @layout 88em */
+
+	.project-changer {
+		@include rem-fallback(bottom, $scale-8);
+	}
+
+	/* end @layout 88em */
 
 }
 
