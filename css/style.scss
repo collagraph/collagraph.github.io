@@ -202,7 +202,7 @@ $discrete: #888;
 $contrast: #9b8f8f;
 
 $grey-0: #fff;
-$grey-1: #f2f2f2;
+$grey-1: #f0f0f0;
 $grey-2: #ddd;
 $grey-3: #ccc;
 $grey-4: #bbb;
@@ -255,7 +255,11 @@ a {
 	}
 }
 
-.about, .contact-form {
+.about {
+	background-color: $grey-0;
+}
+
+.contact-form {
 	background-color: $grey-1;
 }
 
@@ -361,7 +365,7 @@ fieldset {
 
 	fieldset:not(#foo) > .checkbox {
 		@include rem-fallback(padding-right, $scale-2);
-	    background: url('/assets/off.png') right 0.65rem no-repeat;
+	    background: url('/assets/off.png') right .4em no-repeat;
 	    -webkit-transition: color .3s ease;
 		-moz-transition: color .3s ease;
 		transition: color .3s ease;
@@ -770,7 +774,7 @@ img.logo {
 	/* @type 64em */
 
 	h3 {
-		@include rem-fallback(font-size, $scale-4);
+		@include rem-fallback(font-size, $scale-3);
 	}
 
 	nav.primary a {
@@ -781,7 +785,7 @@ img.logo {
 
 	.about {
 		p {
-			@include rem-fallback(font-size, $scale-4);
+			@include rem-fallback(font-size, $scale-3);
 		}
 		p + p {
 			@include rem-fallback(font-size, $scale-1);
@@ -790,6 +794,9 @@ img.logo {
 
 	.project-info {
 		@include rem-fallback(font-size, $scale-0);
+		h3 {
+			@include rem-fallback(font-size, $scale-3);
+		}
 	}
 
 	.main.contact-form {
@@ -797,7 +804,7 @@ img.logo {
 			@include rem-fallback(font-size, $scale-6);
 		}
 		.lede p + p {
-			@include rem-fallback(font-size, $scale-4);
+			@include rem-fallback(font-size, $scale-3);
 		}
 	}
 
@@ -819,7 +826,7 @@ img.logo {
 		color: $grey-5;
 		@include rem-fallback(font-size, $scale-0);
 		background-color: rgba(0,0,0,0.25);
-		@include rem-fallback(padding, $scale-n2, $scale-0);
+		@include rem-fallback(padding, $scale-n4, $scale-n2);
 		&:hover, &:focus {
 			color: $grey-3;
 			text-decoration: none;
@@ -999,11 +1006,46 @@ img.logo {
 
 	/* end @layout 64em */
 
+	/* @forms 64em */
+
+	fieldset:not(#foo) > .checkbox {
+	    background-position: right .6em !important;
+	}
+
+	/* end @forms 64em */
+
 }
 
 /* 80em -------------------------------------------------------------- */
 
 @media screen and (min-width: 80em) {
+
+
+	/* @type 80em */
+
+	h3 {
+		@include rem-fallback(font-size, $scale-4);
+	}
+
+	.about {
+		p {
+			@include rem-fallback(font-size, $scale-4);
+		}
+	}
+
+	.project-info {
+		h3 {
+			@include rem-fallback(font-size, $scale-4);
+		}
+	}
+
+	.main.contact-form {
+		.lede p + p {
+			@include rem-fallback(font-size, $scale-4);
+		}
+	}
+
+	/* end @type 80em */
 
 	/* @layout 80em */
 
@@ -1032,6 +1074,10 @@ img.logo {
 	.portfolio .project-info {
 		@include rem-fallback(font-size, $scale-1);
 		@include rem-fallback(bottom, $scale-8);
+	}
+
+	.view-project {
+		@include rem-fallback(padding, $scale-n2, $scale-0);
 	}
 
 	.project-changer {
