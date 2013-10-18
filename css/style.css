@@ -932,8 +932,7 @@ img.logo {
       margin-top: 0;
       padding: 69.056px 0px 86.064px;
       padding: 4.316rem 0rem 5.379rem;
-      padding-right: 10%;
-      padding-left: 10%; }
+      padding-right: 10%; }
     nav.primary li {
       float: left; }
       nav.primary li a {
@@ -1061,16 +1060,6 @@ img.logo {
 
   /* end @type 80em */
   /* @layout 80em */
-  nav.primary {
-    position: fixed;
-    z-index: 1000;
-    -webkit-transition: opacity ease .3s;
-    -moz-transition: opacity ease .3s;
-    -o-transition: opacity ease .3s;
-    transition: opacity ease .3s; }
-    nav.primary:hover, nav.primary:focus {
-      opacity: 1 !important; }
-
   .about p {
     width: 64.5825%; }
   .about p + p {
