@@ -286,8 +286,8 @@ a:hover, a:focus, a:active {
   display: block; }
 
 h2 {
-  padding-top: 57.376px;
-  padding-top: 3.586rem;
+  padding-top: 38.256px;
+  padding-top: 2.391rem;
   padding-bottom: 38.256px;
   padding-bottom: 2.391rem;
   font-size: 17.008px;
@@ -309,12 +309,6 @@ a {
 p, ul, figure {
   margin: 25.504px 0px 0px;
   margin: 1.594rem 0rem 0rem; }
-
-.project-info {
-  padding-top: 38.256px;
-  padding-top: 2.391rem; }
-  .project-info h3 {
-    margin-top: 0; }
 
 .project-changer {
   display: none;
@@ -654,8 +648,8 @@ img.logo {
 
 .main,
 .portfolio {
-  padding-bottom: 86.064px;
-  padding-bottom: 5.379rem; }
+  padding-bottom: 57.376px;
+  padding-bottom: 3.586rem; }
 
 .portfolio h2,
 .portfolio .project-info {
@@ -663,12 +657,22 @@ img.logo {
   padding-left: 1.063rem;
   padding-right: 17.008px;
   padding-right: 1.063rem; }
-.portfolio .image-changer li {
-  display: inline-block;
-  margin-right: 17.008px;
-  margin-right: 1.063rem; }
-  .portfolio .image-changer li:last-child {
-    margin-right: 0; }
+.portfolio .project-info {
+  padding-top: 17.008px;
+  padding-top: 1.063rem; }
+  .portfolio .project-info h3 {
+    margin-top: 0; }
+.portfolio .entry-summary P:first-of-type {
+  margin-top: 0; }
+.portfolio .image-changer {
+  margin: 17.008px 0px;
+  margin: 1.063rem 0rem; }
+  .portfolio .image-changer li {
+    display: inline-block;
+    margin-right: 17.008px;
+    margin-right: 1.063rem; }
+    .portfolio .image-changer li:last-child {
+      margin-right: 0; }
 
 .slide-link {
   text-indent: -9999em;
@@ -728,20 +732,20 @@ img.logo {
   display: block;
   border-radius: 50%; }
 
+.main.contact-form h2 {
+  padding-bottom: 34.496px;
+  padding-bottom: 2.156rem; }
 .main.contact-form .lede {
   font-size: 25.504px;
   font-size: 1.594rem; }
   .main.contact-form .lede p:first-of-type {
     margin-top: 0; }
 .main.contact-form .lede p + p {
+  margin-top: 0;
   font-size: 17.008px;
   font-size: 1.063rem; }
 .main.contact-form fieldset {
   margin: 0; }
-.main.contact-form div.short-input,
-.main.contact-form .long-input {
-  padding-top: 25.504px;
-  padding-top: 1.594rem; }
 
 /* tools */
 .visuallyhidden {
@@ -812,7 +816,6 @@ img.logo {
       font-size: 51.744px;
       font-size: 3.234rem; }
     .main.contact-form .lede p + p {
-      margin-top: 0;
       font-size: 34.496px;
       font-size: 2.156rem; }
     .main.contact-form input, .main.contact-form textarea, .main.contact-form button {
@@ -835,6 +838,13 @@ img.logo {
   .portfolio {
     padding-bottom: 129.376px;
     padding-bottom: 8.086rem; }
+
+  .portfolio .image-changer {
+    margin: 25.504px 0px;
+    margin: 1.594rem 0rem; }
+  .portfolio .project-info {
+    padding-top: 38.256px;
+    padding-top: 2.391rem; }
 
   .main.contact-form {
     padding-bottom: 86.064px;
@@ -874,6 +884,9 @@ img.logo {
     .view-project:hover, .view-project:focus {
       text-decoration: none; }
 
+  .main.contact-form h2 {
+    padding-bottom: 51.744px;
+    padding-bottom: 3.234rem; }
   .main.contact-form .lede {
     font-size: 57.376px;
     font-size: 3.586rem; }
@@ -978,6 +991,9 @@ img.logo {
       padding-left: 7.5%;
       padding-right: 5%;
       width: 50%; }
+    .portfolio .image-changer {
+      margin: 17.008px 0px;
+      margin: 1.063rem 0rem; }
 
   .project-changer {
     position: absolute;
@@ -1001,7 +1017,9 @@ img.logo {
     padding: 0.472rem 0.708rem; }
 
   .main.contact-form .short-input {
-    width: 29.16625%; }
+    width: 29.16625%;
+    padding-top: 25.504px;
+    padding-top: 1.594rem; }
   .main.contact-form div.short-input {
     display: inline-block;
     float: left;
@@ -1016,7 +1034,9 @@ img.logo {
     display: inline-block;
     float: right;
     clear: right;
-    width: 64.5825%; }
+    width: 64.5825%;
+    padding-top: 25.504px;
+    padding-top: 1.594rem; }
   .main.contact-form .additional-questions {
     clear: both;
     font-size: 17.008px;
@@ -1046,7 +1066,7 @@ img.logo {
   /* @forms 64em */
   /* end @forms 64em */ }
 /* 80em -------------------------------------------------------------- */
-@media screen and (min-width: 80em) {
+@media screen and (min-width: 84em) {
   /* @type 80em */
   h3 {
     font-size: 38.256px;
@@ -1060,6 +1080,10 @@ img.logo {
     font-size: 38.256px;
     font-size: 2.391rem; }
 
+  .portfolio .project-info {
+    font-size: 23.008px;
+    font-size: 1.438rem; }
+
   .main.contact-form .lede p + p {
     font-size: 38.256px;
     font-size: 2.391rem; }
@@ -1072,35 +1096,22 @@ img.logo {
     width: 50%;
     padding-right: 2.5%; }
 
-  .portfolio .project-info {
-    font-size: 23.008px;
-    font-size: 1.438rem;
-    bottom: 86.064px;
-    bottom: 5.379rem; }
-
   .view-project {
     padding: 11.328px 17.008px;
     padding: 0.708rem 1.063rem; }
+
+  .portfolio .project-info {
+    bottom: 86.064px;
+    bottom: 5.379rem; }
+  .portfolio .image-changer {
+    margin: 25.504px 0px;
+    margin: 1.594rem 0rem; }
 
   .project-changer {
     bottom: 57.376px;
     bottom: 3.586rem; }
 
   /* end @layout 80em */ }
-/* 84em -------------------------------------------------------------- */
-@media screen and (min-width: 88em) {
-  /* @type 88em */
-  .portfolio .project-info {
-    bottom: 129.376px;
-    bottom: 8.086rem; }
-
-  /* end @type 88em */
-  /* @layout 88em */
-  .project-changer {
-    bottom: 86.064px;
-    bottom: 5.379rem; }
-
-  /* end @layout 88em */ }
 /* @retina -------------------------------------------------------------- */
 @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   /* @layout retina */
