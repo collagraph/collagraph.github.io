@@ -861,7 +861,6 @@ img.logo {
 			margin-top: 0;
 			@include rem-fallback(padding, $scale-8 - $scale-0, 0, $scale-8);
 			padding-right: 10%;
-			padding-left: 10%;
 		}
 		li {
 			float: left;
@@ -1036,18 +1035,6 @@ img.logo {
 	/* end @type 80em */
 
 	/* @layout 80em */
-
-	nav.primary {
-		position: fixed;
-		z-index: 1000;
-	    -webkit-transition: opacity ease .3s;
-	    -moz-transition: opacity ease .3s;
-	    -o-transition: opacity ease .3s;
-	    transition: opacity ease .3s;
-		&:hover, &:focus {
-			opacity: 1 !important;
-		}
-	}
 
 	.about {
 		p {
