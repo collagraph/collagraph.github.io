@@ -276,14 +276,11 @@ a:hover, a:focus, a:active {
   font-size: 0.958rem; }
 
 .details {
-  margin-top: 25.504px;
-  margin-top: 1.594rem;
+  margin-top: 34.496px;
+  margin-top: 2.156rem;
   font-size: 17.008px;
   font-size: 1.063rem;
   letter-spacing: 1px; }
-  .details li + li {
-    margin-top: 6.816px;
-    margin-top: 0.426rem; }
 
 .lede .p-adr {
   display: block; }
@@ -604,6 +601,8 @@ fieldset.checkbox-list:not(#foo) .checkbox-checked {
     -webkit-transition: opacity .3s ease;
     -moz-transition: opacity .3s ease;
     transition: opacity .3s ease; }
+  .form-additional label {
+    display: block; }
 
 .display-hide {
   opacity: 0;
@@ -792,8 +791,8 @@ img.logo {
     font-size: 1.594rem; }
 
   .details {
-    font-size: 23.008px;
-    font-size: 1.438rem; }
+    font-size: 25.504px;
+    font-size: 1.594rem; }
 
   .about p {
     font-size: 34.496px;
@@ -869,6 +868,12 @@ img.logo {
       font-size: 34.496px;
       font-size: 2.156rem; }
 
+  .view-project {
+    font-size: 17.008px;
+    font-size: 1.063rem; }
+    .view-project:hover, .view-project:focus {
+      text-decoration: none; }
+
   .main.contact-form .lede {
     font-size: 57.376px;
     font-size: 3.586rem; }
@@ -885,18 +890,10 @@ img.logo {
       text-decoration: none; }
 
   .view-project {
-    display: inline-block;
-    margin-top: 7.552px;
-    margin-top: 0.472rem;
     color: #aaaaaa;
-    font-size: 17.008px;
-    font-size: 1.063rem;
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 7.552px 11.328px;
-    padding: 0.472rem 0.708rem; }
+    background-color: rgba(0, 0, 0, 0.25); }
     .view-project:hover, .view-project:focus {
-      color: #cccccc;
-      text-decoration: none; }
+      color: #cccccc; }
     .view-project:active {
       color: #3678b6; }
 
@@ -993,6 +990,15 @@ img.logo {
     background-image: url("/assets/tablet-icon.png"); }
   .slide-link.large-screen {
     background-image: url("/assets/desktop-icon.png"); }
+
+  .view-project {
+    float: right;
+    clear: right;
+    display: inline-block;
+    margin-top: 7.552px;
+    margin-top: 0.472rem;
+    padding: 7.552px 11.328px;
+    padding: 0.472rem 0.708rem; }
 
   .main.contact-form .short-input {
     width: 29.16625%; }
@@ -1099,20 +1105,20 @@ img.logo {
 @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   /* @layout retina */
   .project-info .slide-link.small-screen {
-    background: url("/assets/phone-icon-blue-retina.png") center center no-repeat; }
+    background-image: url("/assets/phone-icon-blue-retina.png");
+    background-size: 50% auto; }
     .project-info .slide-link.small-screen.current, .project-info .slide-link.small-screen:hover, .project-info .slide-link.small-screen:focus {
-      background-image: url("/assets/phone-icon-retina.png");
-      background-size: 50% auto; }
+      background-image: url("/assets/phone-icon-retina.png"); }
   .project-info .slide-link.medium-screen {
-    background: url("/assets/tablet-icon-blue-retina.png") center center no-repeat; }
+    background-image: url("/assets/tablet-icon-blue-retina.png");
+    background-size: 50% auto; }
     .project-info .slide-link.medium-screen.current, .project-info .slide-link.medium-screen:hover, .project-info .slide-link.medium-screen:focus {
-      background-image: url("/assets/tablet-icon-retina.png");
-      background-size: 50% auto; }
+      background-image: url("/assets/tablet-icon-retina.png"); }
   .project-info .slide-link.large-screen {
-    background: url("/assets/desktop-icon-blue-retina.png") center center no-repeat; }
+    background-image: url("/assets/desktop-icon-blue-retina.png");
+    background-size: 50% auto; }
     .project-info .slide-link.large-screen.current, .project-info .slide-link.large-screen:hover, .project-info .slide-link.large-screen:focus {
-      background-image: url("/assets/desktop-icon-retina.png");
-      background-size: 50% auto; }
+      background-image: url("/assets/desktop-icon-retina.png"); }
 
   /* end @layout retina */
   /* @forms retina */
