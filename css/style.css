@@ -249,20 +249,22 @@ body {
   font-size: 1.063rem;
   line-height: 1.663; }
 
-/* serif elements */
-p.lede {
-  font-family: "ff-meta-web-pro", "open sans", sans-serif; }
-
 legend,
 .about p,
 .project-info {
   font-family: "ff-meta-serif-web-pro", georgia; }
 
-h1, h2, h3, .about p:first-of-type {
+h1,
+h2,
+h3,
+.about p:first-of-type {
   line-height: 1.358; }
 
 a:hover, a:focus, a:active {
   text-decoration: underline; }
+
+.site-header .lede {
+  font-family: "ff-meta-web-pro", "open sans", sans-serif; }
 
 .distinct {
   font-size: 23.008px;
@@ -305,7 +307,9 @@ h3 {
 a {
   text-decoration: none; }
 
-p, ul, figure {
+p,
+ul,
+figure {
   margin: 25.504px 0px 0px;
   margin: 1.594rem 0rem 0rem; }
 
@@ -348,40 +352,40 @@ label.invalid,
 /* @colours -------------------------------------------------------------- */
 /* off-black text */
 body, select, input, textarea {
-  color: #222; }
+  color: #222222; }
 
 /* remove text-shadow from section */
 ::-moz-selection {
-  background: #ddd;
-  color: #222;
+  background: #f0f0f0;
+  color: #222222;
   text-shadow: none; }
 
 ::selection {
-  background: #ddd;
-  color: #222;
+  background: #f0f0f0;
+  color: #222222;
   text-shadow: none; }
 
 /*  set touch-screen highlight colour */
 a:link {
-  -webkit-tap-highlight-color: #ddd; }
+  -webkit-tap-highlight-color: #f0f0f0; }
 
 ins {
-  background-color: #ddd;
-  color: #222;
+  background-color: #f0f0f0;
+  color: #222222;
   text-decoration: none; }
 
 mark {
-  background-color: #ddd;
-  color: #222;
+  background-color: #f0f0f0;
+  color: #222222;
   font-style: italic;
   font-weight: bold; }
 
 /* Mozilla dosen't style place holders by default */
 input:-moz-placeholder {
-  color: #888; }
+  color: #888888; }
 
 textarea:-moz-placeholder {
-  color: #888; }
+  color: #888888; }
 
 body {
   color: #222222;
@@ -416,16 +420,16 @@ button {
     border-color: #5d5d5d; }
 
 .project-link {
-  color: #eee;
+  color: #f0f0f0;
   border-width: 2.016px;
   border-width: 0.126rem;
   border-style: solid;
   border-color: #1f4467; }
   .project-link:hover {
-    color: #eee;
+    color: #f0f0f0;
     background-color: #1f4467; }
   .project-link.current {
-    color: #eee;
+    color: #f0f0f0;
     background-color: #3678b6;
     border-color: #3678b6; }
 
@@ -622,7 +626,7 @@ fieldset.checkbox-list:not(#foo) .checkbox-checked {
 nav.primary {
   display: none; }
 
-img.logo {
+.logo {
   display: inline-block;
   max-width: 66.666%;
   min-width: 193.648px;
@@ -701,7 +705,9 @@ img.logo {
 
 .flexslider .slides,
 .flexslider figure {
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: -10px;
+  margin-bottom: -0.625rem; }
 .flexslider .next, .flexslider .previous {
   display: inline-block;
   min-width: 160px;
@@ -830,7 +836,7 @@ img.logo {
 
   /* end @type 42em */
   /* @layout 42em */
-  img.logo {
+  .logo {
     display: inline-block;
     max-width: 50%;
     padding-right: 2.5%;
@@ -923,7 +929,7 @@ img.logo {
     padding-left: 10%;
     padding-right: 10%; }
 
-  img.logo {
+  .logo {
     margin-left: -3.36px;
     margin-left: -0.21rem;
     width: 29.16625%;

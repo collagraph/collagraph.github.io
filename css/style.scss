@@ -76,18 +76,16 @@ body {
 	line-height: 1.663;
 }
 
-/* serif elements */
-p.lede {
-		font-family: $sans-stack;
-}
-
 legend,
 .about p,
 .project-info {
 	font-family: $serif-stack;
 }
 
-h1, h2, h3, .about p:first-of-type {
+h1,
+h2,
+h3,
+.about p:first-of-type {
 	line-height: 1.358;
 }
 
@@ -97,6 +95,11 @@ a {
 	&:active {
 		text-decoration: underline;
 	}
+}
+
+
+.site-header .lede {
+		font-family: $sans-stack;
 }
 
 .distinct {
@@ -136,7 +139,9 @@ a {
 	text-decoration: none;
 }
 
-p, ul, figure {
+p,
+ul,
+figure {
 	@include rem-fallback(margin, $scale-2, 0, 0);
 }
 
@@ -183,7 +188,7 @@ $background: #fcfcfc;
 
 $primary: #666;
 
-$discrete: #888;
+$discreet: #888;
 
 $contrast: #9b8f8f;
 
@@ -199,21 +204,47 @@ $success: #9aab44;
 $submit: #3678b6;
 
 /* off-black text */
-body, select, input, textarea {color: #222;}
+body, select, input, textarea { color: $text-base; }
 
 /* remove text-shadow from section */
-::-moz-selection{background: #ddd; color: #222; text-shadow: none;}
-::selection {background: #ddd; color: #222; text-shadow: none;}
+::-moz-selection {
+	background: $grey-1;
+	color: $text-base;
+	text-shadow: none;
+}
+
+::selection {
+	background: $grey-1;
+	color: $text-base;
+	text-shadow: none;
+}
 
 /*  set touch-screen highlight colour */
-a:link {-webkit-tap-highlight-color: #ddd;}
+a:link {
+	-webkit-tap-highlight-color: $grey-1;
+}
 
-ins {background-color: #ddd; color: #222; text-decoration: none;}
-mark {background-color: #ddd; color: #222; font-style: italic; font-weight: bold;}
+ins {
+	background-color: $grey-1;
+	color: $text-base;
+	text-decoration: none;
+}
+
+mark {
+	background-color: $grey-1;
+	color: $text-base;
+	font-style: italic;
+	font-weight: bold;
+}
 
 /* Mozilla dosen't style place holders by default */
-input:-moz-placeholder {color:#888;}
-textarea:-moz-placeholder {color:#888;}
+input:-moz-placeholder {
+	color: $discreet;
+}
+
+textarea:-moz-placeholder {
+	color: $discreet;
+}
 
 body {
 	color: $text-base;
@@ -234,7 +265,6 @@ a {
 .about, .contact-form {
 	background-color: $grey-1;
 }
-
 
 .portfolio {
 	background-color: $grey-0;
@@ -259,16 +289,16 @@ button {
 }
 
 .project-link {
-	color: #eee;
+	color: $grey-1;
 	@include rem-fallback(border-width, $scale-n11);
 	border-style: solid;
 	border-color: darken($submit, 20%);
 	&:hover {
-		color: #eee;
+		color: $grey-1;
 		background-color: darken($submit, 20%);
 	}
 	&.current {
-		color: #eee;
+		color: $grey-1;
 		background-color: $submit;
 		border-color: $submit;
 	}
@@ -285,7 +315,7 @@ button {
 }
 
 .discrete {
-	color: $discrete;
+	color: $discreet;
 }
 
 label.invalid {
@@ -320,35 +350,33 @@ textarea.invalid {
 /* @forms -------------------------------------------------------------- */
 
 /* toggled state */
-
 fieldset {
 	display: block;
 }
 
-	/* restyle checkboxes for supported browsers */
+/* restyle checkboxes for supported browsers */
+fieldset:not(#foo) > label + input[type="checkbox"] {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
 
-	fieldset:not(#foo) > label + input[type="checkbox"] {
-		position: absolute;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
-		height: 1px;
-		width: 1px;
-		margin: -1px;
-		padding: 0;
-		border: 0;
-	}
+fieldset:not(#foo) > .checkbox {
+	@include rem-fallback(padding-right, $scale-2);
+    background: url('/assets/off.png') right .4em no-repeat;
+    -webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	transition: color .3s ease;
+}
 
-	fieldset:not(#foo) > .checkbox {
-		@include rem-fallback(padding-right, $scale-2);
-	    background: url('/assets/off.png') right .4em no-repeat;
-	    -webkit-transition: color .3s ease;
-		-moz-transition: color .3s ease;
-		transition: color .3s ease;
-	}
-
-	fieldset:not(#foo) > .checkbox-checked {
-	    background-image: url('/assets/check.png');
-	}
+fieldset:not(#foo) > .checkbox-checked {
+    background-image: url('/assets/check.png');
+}
 
 label,
 input,
@@ -498,7 +526,7 @@ nav.primary {
 	display: none;
 }
 
-img.logo {
+.logo {
 	display: inline-block;
 	max-width: 66.666%;
 	@include rem-fallback(min-width, $scale-12);
@@ -594,6 +622,7 @@ img.logo {
 	.slides,
 	figure {
 		margin-top: 0;
+		@include rem-fallback(margin-bottom, -0.625);
 	}
 	.next, .previous {
 		display: inline-block;
@@ -751,7 +780,7 @@ img.logo {
 
 	/* @layout 42em */
 
-	img.logo {
+	.logo {
 		display: inline-block;
 		max-width: 50%;
 		padding-right: 2.5%;
@@ -865,7 +894,7 @@ img.logo {
 		padding-right: 10%;
 	}
 
-	img.logo {
+	.logo {
 		@include rem-fallback(margin-left, -$scale-n8);
 		width: 23.333%/80%*100%;
 		max-width: 100%;
