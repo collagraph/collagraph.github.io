@@ -113,7 +113,7 @@ a {
 .details {
 	@include rem-fallback(margin-top, $scale-3);
 	@include rem-fallback(font-size, $scale-0);
-	@include rem-fallback(letter-spacing, $scale-n13);
+	letter-spacing: 1px;
 }
 
 .lede .p-adr {
@@ -125,7 +125,7 @@ h2 {
 	@include rem-fallback(padding-bottom, $scale-4);
 	@include rem-fallback(font-size, $scale-0);
 	text-transform: uppercase;
-	@include rem-fallback(letter-spacing, $scale-n13);
+	letter-spacing: 1px;
 }
 
 h3 {
@@ -397,7 +397,7 @@ button {
 	font-family: $sans-stack;
 	@include rem-fallback(font-size, $scale-0);
 	@include rem-fallback(letter-spacing, $scale-n5);
-	@include rem-fallback(letter-spacing, $scale-n13);
+	letter-spacing: 1px;
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
@@ -413,7 +413,7 @@ input, textarea {
 .button {
 	@include rem-fallback(padding, $scale-n4);
 	border: none;
-	@include rem-fallback(letter-spacing, $scale-n13);
+	letter-spacing: 1px;
 	color: $grey-0;
 	background-color: $submit;
 	&:hover,
@@ -822,7 +822,7 @@ nav.primary {
 	nav.primary a {
 		font-weight: bold;
 		text-transform: uppercase;
-		@include rem-fallback(letter-spacing, $scale-n13);
+		letter-spacing: 1px;
 	}
 
 	.about {

@@ -279,8 +279,7 @@ a:hover, a:focus, a:active {
   margin-top: 2.156rem;
   font-size: 17.008px;
   font-size: 1.063rem;
-  letter-spacing: 1.344px;
-  letter-spacing: 0.084rem; }
+  letter-spacing: 1px; }
 
 .lede .p-adr {
   display: block; }
@@ -293,8 +292,7 @@ h2 {
   font-size: 17.008px;
   font-size: 1.063rem;
   text-transform: uppercase;
-  letter-spacing: 1.344px;
-  letter-spacing: 0.084rem; }
+  letter-spacing: 1px; }
 
 h3 {
   font-size: 25.504px;
@@ -513,8 +511,7 @@ button {
   font-size: 1.063rem;
   letter-spacing: 6.816px;
   letter-spacing: 0.426rem;
-  letter-spacing: 1.344px;
-  letter-spacing: 0.084rem;
+  letter-spacing: 1px;
   vertical-align: middle;
   -webkit-appearance: none; }
 
@@ -530,8 +527,7 @@ input, textarea {
   padding: 7.552px;
   padding: 0.472rem;
   border: none;
-  letter-spacing: 1.344px;
-  letter-spacing: 0.084rem;
+  letter-spacing: 1px;
   color: white;
   background-color: #3678b6; }
   .button:hover, .button:focus {
@@ -870,8 +866,7 @@ nav.primary {
   nav.primary a {
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1.344px;
-    letter-spacing: 0.084rem; }
+    letter-spacing: 1px; }
 
   .about p {
     font-size: 34.496px;
