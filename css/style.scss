@@ -559,6 +559,12 @@ img.logo {
 			}
 		}
 	}
+	.no-js {
+		.image-changer,
+		.project-changer {
+			display: none;
+		}
+	}
 }
 
 .slide-link {
@@ -875,19 +881,13 @@ img.logo {
 
 	nav.primary {
 		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100%;
+		float: right;
+		clear: right;
+		padding-right: 10%;
 		@include rem-fallback(height, 13.257);
-		padding-right: 0;
 		ul {
-			position: absolute;
-			top: 0;
-			right: 0;
 			margin-top: 0;
 			@include rem-fallback(padding, $scale-8 - $scale-0, 0, $scale-8);
-			padding-right: 10%;
 		}
 		li {
 			float: left;
@@ -1079,6 +1079,11 @@ img.logo {
 	/* end @type 80em */
 
 	/* @layout 80em */
+
+	body {
+		margin: 0 auto;
+		max-width: 105em;
+	}
 
 	.about {
 		p {

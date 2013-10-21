@@ -673,6 +673,9 @@ img.logo {
     margin-right: 1.063rem; }
     .portfolio .image-changer li:last-child {
       margin-right: 0; }
+.portfolio .no-js .image-changer,
+.portfolio .no-js .project-changer {
+  display: none; }
 
 .slide-link {
   text-indent: -9999em;
@@ -933,21 +936,15 @@ img.logo {
 
   nav.primary {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
+    float: right;
+    clear: right;
+    padding-right: 10%;
     height: 212.112px;
-    height: 13.257rem;
-    padding-right: 0; }
+    height: 13.257rem; }
     nav.primary ul {
-      position: absolute;
-      top: 0;
-      right: 0;
       margin-top: 0;
       padding: 69.056px 0px 86.064px;
-      padding: 4.316rem 0rem 5.379rem;
-      padding-right: 10%; }
+      padding: 4.316rem 0rem 5.379rem; }
     nav.primary li {
       float: left; }
       nav.primary li a {
@@ -1095,6 +1092,10 @@ img.logo {
 
   /* end @type 80em */
   /* @layout 80em */
+  body {
+    margin: 0 auto;
+    max-width: 105em; }
+
   .about p {
     width: 64.5825%; }
   .about p + p {
