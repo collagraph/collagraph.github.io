@@ -96,7 +96,9 @@
             '/assets/desktop-icon-retina.png',
             '/assets/phone-icon-blue.png',
             '/assets/tablet-icon.png',
-            '/assets/desktop-icon.png'
+            '/assets/desktop-icon.png',
+            '/assets/check.png',
+            '/assets/check-retina.png'
         ]);
     });
 
