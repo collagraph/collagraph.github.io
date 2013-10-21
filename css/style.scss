@@ -689,6 +689,14 @@ img.logo {
 
 	/* end @layout 30em */
 
+	/* @forms 30em */
+
+	.form-additional label {
+		display: inline-block;
+	}
+
+	/* end @forms 30em */
+
 }
 
 @media screen and (min-width: 42em) {
