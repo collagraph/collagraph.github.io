@@ -511,7 +511,6 @@ fieldset.checkbox-list:not(#foo) {
 	display: none;
 }
 
-/* .no-js, don't show addition form fields... keep it simple. */
 .no-js .form-additional {
 	display: none;
 }
@@ -576,11 +575,12 @@ nav.primary {
 			}
 		}
 	}
-	.no-js {
-		.image-changer,
-		.project-changer {
-			display: none;
-		}
+}
+
+.no-js .portfolio {
+	.image-changer,
+	.project-changer {
+		display: none;
 	}
 }
 

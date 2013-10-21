@@ -610,7 +610,6 @@ fieldset.checkbox-list:not(#foo) .checkbox-checked {
   margin-top: 2.156rem;
   display: none; }
 
-/* .no-js, don't show addition form fields... keep it simple. */
 .no-js .form-additional {
   display: none; }
 
@@ -668,8 +667,9 @@ nav.primary {
     margin-right: 1.063rem; }
     .portfolio .image-changer li:last-child {
       margin-right: 0; }
-.portfolio .no-js .image-changer,
-.portfolio .no-js .project-changer {
+
+.no-js .portfolio .image-changer,
+.no-js .portfolio .project-changer {
   display: none; }
 
 .slide-link {
