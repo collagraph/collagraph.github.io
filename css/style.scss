@@ -622,7 +622,7 @@ nav.primary {
 	.slides,
 	figure {
 		margin-top: 0;
-		@include rem-fallback(margin-bottom, -0.625);
+		@include rem-fallback(padding-bottom, -0.625);
 	}
 	.next, .previous {
 		display: inline-block;
@@ -1170,11 +1170,11 @@ nav.primary {
 
 	fieldset.checkbox-list:not(#foo) {
 		.checkbox {
-			background-image: url('/assets/off-retina.png');
+			background-image: url('/assets/off-retina.png') !important;
 			background-size: 50% auto;
 		}
 		.checkbox-checked {
-		    background-image: url('/assets/check-retina.png');
+		    background-image: url('/assets/check-retina.png') !important;
 		    background-size: 50% auto;
 		}
 	}

@@ -706,8 +706,8 @@ nav.primary {
 .flexslider .slides,
 .flexslider figure {
   margin-top: 0;
-  margin-bottom: -10px;
-  margin-bottom: -0.625rem; }
+  padding-bottom: -10px;
+  padding-bottom: -0.625rem; }
 .flexslider .next, .flexslider .previous {
   display: inline-block;
   min-width: 160px;
@@ -1138,10 +1138,10 @@ nav.primary {
   /* end @layout retina */
   /* @forms retina */
   fieldset.checkbox-list:not(#foo) .checkbox {
-    background-image: url("/assets/off-retina.png");
+    background-image: url("/assets/off-retina.png") !important;
     background-size: 50% auto; }
   fieldset.checkbox-list:not(#foo) .checkbox-checked {
-    background-image: url("/assets/check-retina.png");
+    background-image: url("/assets/check-retina.png") !important;
     background-size: 50% auto; }
 
   /* end @forms retina */ }
