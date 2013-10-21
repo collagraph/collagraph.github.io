@@ -91,8 +91,12 @@
         preload([
             '/assets/portfolio/project-1/slide-2.jpg',
             '/assets/portfolio/project-1/slide-3.jpg',
-            '/assets/check-focus.png',
-            '/assets/check.png'
+            '/assets/phone-icon-blue-retina.png',
+            '/assets/desktop-icon-retina.png',
+            '/assets/tablet-icon-retina.png',
+            '/assets/phone-icon-blue-retina.png',
+            '/assets/desktop-icon.png',
+            '/assets/tablet-icon.png'
         ]);
     });
 
