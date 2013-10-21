@@ -81,6 +81,21 @@
 
     });
 
+    function preload(arrayOfImages) {
+        $(arrayOfImages).each(function(){
+            $('<img/>')[0].src = this;
+        });
+    }
+
+    $(window).bind("load", function() {
+        preload([
+            '/assets/portfolio/project-1/slide-2.jpg',
+            '/assets/portfolio/project-1/slide-3.jpg',
+            '/assets/check-focus.png',
+            '/assets/check.png'
+        ]);
+    });
+
     /* form validation -------------------------------------------------------------- */
 
     // form validation http://jqueryvalidation.org/documentation/
