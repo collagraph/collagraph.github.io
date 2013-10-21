@@ -92,11 +92,11 @@
             '/assets/portfolio/project-1/slide-2.jpg',
             '/assets/portfolio/project-1/slide-3.jpg',
             '/assets/phone-icon-blue-retina.png',
-            '/assets/desktop-icon-retina.png',
             '/assets/tablet-icon-retina.png',
-            '/assets/phone-icon-blue-retina.png',
-            '/assets/desktop-icon.png',
-            '/assets/tablet-icon.png'
+            '/assets/desktop-icon-retina.png',
+            '/assets/phone-icon-blue.png',
+            '/assets/tablet-icon.png',
+            '/assets/desktop-icon.png'
         ]);
     });
 
