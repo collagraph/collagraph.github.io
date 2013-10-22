@@ -488,6 +488,12 @@ fieldset:not(#foo) > .checkbox {
 fieldset:not(#foo) > .checkbox-checked {
   background-image: url("/assets/check.png"); }
 
+fieldset:not(#foo) > .checkbox-checked-focused {
+  background-image: url("/assets/check-focus.png"); }
+
+fieldset:not(#foo) > .checkbox-focused {
+  background-image: url("/assets/off-focus.png"); }
+
 label,
 input,
 textarea,
@@ -577,11 +583,14 @@ legend {
     float: left;
     clear: right; }
 
-fieldset.checkbox-list:not(#foo) .checkbox {
+fieldset:not(#foo) .checkbox {
   background: url("/assets/off.png") right center no-repeat; }
-fieldset.checkbox-list:not(#foo) .checkbox-checked {
-  background-image: url("/assets/check.png");
-  font-weight: bold; }
+fieldset:not(#foo) .checkbox-checked {
+  background-image: url("/assets/check.png"); }
+fieldset:not(#foo) .checkbox-checked-focused {
+  background-image: url("/assets/check-focus.png"); }
+fieldset:not(#foo) .checkbox-focused {
+  background-image: url("/assets/off-focus.png"); }
 
 .form-additional {
   padding-top: 17.008px;
@@ -1139,6 +1148,12 @@ nav.primary {
     background-size: 50% auto; }
   fieldset.checkbox-list:not(#foo) .checkbox-checked {
     background-image: url("/assets/check-retina.png");
+    background-size: 50% auto; }
+  fieldset.checkbox-list:not(#foo) .checkbox-checked-focused {
+    background-image: url("/assets/check-focus-retina.png");
+    background-size: 50% auto; }
+  fieldset.checkbox-list:not(#foo) .checkbox-focused {
+    background-image: url("/assets/off-focus-retina.png");
     background-size: 50% auto; }
 
   /* end @forms retina */ }

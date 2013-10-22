@@ -3,34 +3,76 @@
 
     $('fieldset:not(#foo) #phone-q').click(function() {
         if($('#phone-q').is(':checked')) {
-            $('#phone-c').addClass('checkbox-checked');
+            $('#phone-c').removeClass('checkbox-focused').addClass('checkbox-checked-focused');
             $('#more-phone').addClass('display-more').removeClass('display-hide');
         } else {
-            $('#phone-c').removeClass('checkbox-checked');
+            $('#phone-c').removeClass('checkbox-checked, checkbox-checked-focused').addClass('checkbox-focused');
             $('#more-phone').removeClass('display-more').addClass('display-hide');
         }
     });
 
     $('fieldset:not(#foo) #deadline-q').click(function() {
         if($('#deadline-q').is(':checked')) {
-            $('#deadline-c').addClass('checkbox-checked');
+            $('#deadline-c').removeClass('checkbox-focused').addClass('checkbox-checked-focused');
             $('#more-deadline').addClass('display-more').removeClass('display-hide');
             $('#deadline').focus();
         } else {
-            $('#deadline-c').removeClass('checkbox-checked');
+            $('#deadline-c').removeClass('checkbox-checked, checkbox-checked-focused').addClass('checkbox-focused');
             $('#more-deadline').removeClass('display-more').addClass('display-hide');
         }
     });
 
 	$('fieldset:not(#foo) #budget-q').click(function() {
 		if($('#budget-q').is(':checked')) {
-			$('#budget-c').addClass('checkbox-checked');
+			$('#budget-c').removeClass('checkbox-focused').addClass('checkbox-checked-focused');
 			$('#more-budget').addClass('display-more').removeClass('display-hide');
 		} else {
-			$('#budget-c').removeClass('checkbox-checked');
+			$('#budget-c').removeClass('checkbox-checked, checkbox-checked-focused').addClass('checkbox-focused');
 			$('#more-budget').removeClass('display-more').addClass('display-hide');
 		}
 	});
+
+    $('fieldset:not(#foo) #phone-q').focus(function() {
+        if ($('#phone-q').is(':checked')) {
+            $('#phone-c').removeClass('checkbox-checked').addClass('checkbox-checked-focused');
+        } else {
+            $('#phone-c').addClass('checkbox-focused');
+        }
+    }).blur(function() {
+        if ($('#phone-q').is(':checked')) {
+            $('#phone-c').removeClass('checkbox-checked-focused').addClass('checkbox-checked');
+        } else {
+            $('#phone-c').removeClass('checkbox-focused');
+        }
+    });
+
+    $('fieldset:not(#foo) #deadline-q').focus(function() {
+        if ($('#deadline-q').is(':checked')) {
+            $('#deadline-c').removeClass('checkbox-checked').addClass('checkbox-checked-focused');
+        } else {
+            $('#deadline-c').addClass('checkbox-focused');
+        }
+    }).blur(function() {
+        if ($('#deadline-q').is(':checked')) {
+            $('#deadline-c').removeClass('checkbox-checked-focused').addClass('checkbox-checked');
+        } else {
+            $('#deadline-c').removeClass('checkbox-focused');
+        }
+    });
+
+    $('fieldset:not(#foo) #budget-q').focus(function() {
+        if ($('#budget-q').is(':checked')) {
+            $('#budget-c').removeClass('checkbox-checked').addClass('checkbox-checked-focused');
+        } else {
+            $('#budget-c').addClass('checkbox-focused');
+        }
+    }).blur(function() {
+        if ($('#budget-q').is(':checked')) {
+            $('#budget-c').removeClass('checkbox-checked-focused').addClass('checkbox-checked');
+        } else {
+            $('#budget-c').removeClass('checkbox-focused');
+        }
+    });
 
     // flexslider slide changer
 	$('.slide-1').click(function(){

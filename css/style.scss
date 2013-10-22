@@ -378,6 +378,14 @@ fieldset:not(#foo) > .checkbox-checked {
     background-image: url('/assets/check.png');
 }
 
+fieldset:not(#foo) > .checkbox-checked-focused {
+    background-image: url('/assets/check-focus.png');
+}
+
+fieldset:not(#foo) > .checkbox-focused {
+    background-image: url('/assets/off-focus.png');
+}
+
 label,
 input,
 textarea,
@@ -470,13 +478,18 @@ legend {
 	}
 }
 
-fieldset.checkbox-list:not(#foo) {
+fieldset:not(#foo) {
 	.checkbox {
 		background: url('/assets/off.png') right center no-repeat;
 	}
 	.checkbox-checked {
 	    background-image: url('/assets/check.png');
-	    font-weight: bold;
+	}
+	.checkbox-checked-focused {
+		background-image: url('/assets/check-focus.png');
+	}
+	.checkbox-focused {
+		background-image: url('/assets/off-focus.png');
 	}
 }
 
@@ -1177,6 +1190,14 @@ nav.primary {
 		}
 		.checkbox-checked {
 		    background-image: url('/assets/check-retina.png');
+		    background-size: 50% auto;
+		}
+		.checkbox-checked-focused {
+		    background-image: url('/assets/check-focus-retina.png');
+		    background-size: 50% auto;
+		}
+		.checkbox-focused {
+		    background-image: url('/assets/off-focus-retina.png');
 		    background-size: 50% auto;
 		}
 	}
