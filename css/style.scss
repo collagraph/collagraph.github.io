@@ -478,21 +478,6 @@ legend {
 	}
 }
 
-fieldset:not(#foo) {
-	.checkbox {
-		background: url('/assets/off.png') right center no-repeat;
-	}
-	.checkbox-checked {
-	    background-image: url('/assets/check.png');
-	}
-	.checkbox-checked-focused {
-		background-image: url('/assets/check-focus.png');
-	}
-	.checkbox-focused {
-		background-image: url('/assets/off-focus.png');
-	}
-}
-
 .form-additional {
 	@include rem-fallback(padding-top, $scale-0);
 	div {

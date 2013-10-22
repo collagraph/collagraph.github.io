@@ -583,15 +583,6 @@ legend {
     float: left;
     clear: right; }
 
-fieldset:not(#foo) .checkbox {
-  background: url("/assets/off.png") right center no-repeat; }
-fieldset:not(#foo) .checkbox-checked {
-  background-image: url("/assets/check.png"); }
-fieldset:not(#foo) .checkbox-checked-focused {
-  background-image: url("/assets/check-focus.png"); }
-fieldset:not(#foo) .checkbox-focused {
-  background-image: url("/assets/off-focus.png"); }
-
 .form-additional {
   padding-top: 17.008px;
   padding-top: 1.063rem; }
