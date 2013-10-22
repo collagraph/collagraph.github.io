@@ -140,7 +140,11 @@
             '/assets/tablet-icon.png',
             '/assets/desktop-icon.png',
             '/assets/check.png',
-            '/assets/check-retina.png'
+            '/assets/check-retina.png',
+            '/assets/off-focus.png',
+            '/assets/off-focus-retina.png',
+            '/assets/check-focus.png',
+            '/assets/check-focus-retina.png'
         ]);
     });
 
