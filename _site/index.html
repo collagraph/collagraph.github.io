@@ -15,13 +15,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
 
-        <title>Home | Collagraph</title>
+        <title>Collagraph | Clear design for the web</title>
 
         <meta name="author" content="Collagraph" />
-        <meta name="title" content="Home" />
         
             <meta name="description" content="Clear design for the web" />
         
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/favicon.png">
 
         <!-- Mobile viewport fix -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,11 +64,10 @@
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
         <!-- Modernizr -->
-    	<script type="text/javascript" src="/js/modernizr.min.js"></script>
+    	<script type="text/javascript" src="/js/modernizr.js"></script>
 
         <!-- Stylesheets -->
         <link type="text/css" rel="stylesheet" href="/css/style.css" media="screen" />
-        <link type="text/css" rel="stylesheet" href="/css/flexslider.css" media="screen" />
 
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -79,218 +80,243 @@
 	</head>
 
     <!-- @body -->
-    <body class="Home default">
+    <body id="top" class="Home default">
 
 <!-- @header -->
 <header class="h-card site-header" role="banner">
 
-	<img class="logo u-logo" src="assets/temp-logo-iii.png" alt="Collagraph logo" />
+	<img class="logo u-logo" src="/assets/logo.png" alt="Collagraph" />
 
-	<h1 class="logo p-name">Collagraph</h1>
+    <h1 class="logo p-name visuallyhidden">Collagraph</h1>
 
-	<p class="distinct lead p-role">Clear&nbsp;design for the web, <span class="p-adr">based in <span class="p-locality">Sydney</span>, <span class="p-country-name">Australia</span>.</span></p>
-	
+	<p class="distinct lede p-role">Clear&nbsp;design for the web <span class="p-adr">based in <span class="p-locality">Sydney</span>, <span class="p-country-name">Australia</span>.</span></p>
+
 	<ul class="details">
-		<li><i class="icon-e">Email: </i><a href="mailto:info@collagraph.com.au" class="u-email">info@collagraph.com.au</a></li>
-		<li><i class="icon-ph">Phone: </i><a href="tel:+61406566693" class="p-tel">+61 406 566 693</a></li>
+		<li><a href="mailto:info@collagraph.com.au" class="u-email">info@collagraph.com.au</a></li>
+		<li><a href="tel:+61406566693" class="p-tel">+61 406 566 693</a></li>
 	</ul>
-	
+
+    <nav class="primary clearfix">
+
+        <ul class="clearfix">
+            <li><a class="scroll" href="#about">About us</a></li>
+            <li><a class="scroll" href="#portfolio">Our work</a></li>
+            <li><a class="scroll" href="#contact">Contact us</a></li>
+        </ul>
+
+    </nav>
+
 </header>
 <!-- end @header -->
 
-<!-- @our-approach -->
-<section id="our-approach" class="our-approach main clearfix">
+<!-- @about -->
+<section id="about" class="about main clearfix">
 
-	<h2>Our approach</h2>
-	
-	<div class="principle">
-	
-		<h3>Designed for you</h3>
-		
-		<p>A website designed from the ground up to achieve <em>your</em> goals. We make sure you, and your users, are&nbsp;happy.</p>
-	
-	</div><!--
-	
-	--><div class="principle">
-	
-		<h3>Content strategy</h3>
-		
-		<p>Well organised information puts you in control. We help you to develop strong web content that&#8217;s clear and&nbsp;effective.</p>
-	
-	</div><!--
-	
-	--><div class="principle">
-	
-		<h3>Mobile, Tablet, Desktop, ?</h3>
-		
-		<p>One site that looks and works great, no matter how your users view&nbsp;it.</p>
-	
-	</div>
-	
+    <h2>About us</h2>
+
+    <p class="distinct">Collagraph is a digital design partnership founded&nbsp;by Robert&nbsp;Irish and&nbsp;Luke&nbsp;Bacon.</p>
+
+    <p>We design and build websites, develop communications strategies, and help clients publish&nbsp;great&nbsp;content.</p>
+
+    <p>We’ve worked on successful projects with forward-thinking companies and organisations including the Australian Centre for Independent Journalism, Jobs Australia, the Australian National University, Sustainable House and the Australian Council of Social&nbsp;Services.</p>
+
+    <p>We’re always excited to take on new challenges, big and&nbsp;small. <a class="scroll" href="#portfolio" title="See an exmpale of our work.">See&nbsp;some&nbsp;of&nbsp;our&nbsp;work</a> and <a class="scroll" href="#contact" title="Contact Collagraph.">get&nbsp;in&nbsp;touch</a> about your next&nbsp;project.</p>
+
 </section>
-<!-- end @our-approach -->
+<!-- end @about -->
 
 <!-- @portfolio -->
-<section id="our-work" class="our-work main clearfix">
+<section id="portfolio" class="portfolio clearfix">
 
 	<h2>Our work</h2>
 
 	<div class="flexslider">
-		
 		<ul class="slides">
-		
 			<li>
-			
-				<article id="investigate-org-au" class="hentry">
-			
+				<article id="project-1" class="hentry">
 					<figure class="photo">
-						<img src="images/work/investigate-org-au/slide-1.jpg" alt="Investigate.org.au website displayed across a range of desktop, tablet and mobile devices" />
+						<img src="/assets/portfolio/project-1/slide-1.jpg" />
 					</figure>
-				
-					<h3 class="entry-title">Investigate.org.au</h3>
-						
-					<div class="entry-summary">
-						
-						<p>This is a sample paragraph written in regards to working on Investigate.org.au. It outlines the main considerations taken into account prior to commencement of the project, as well as the relationship between those initial goals and the final design outcomes.</p>
-						
-						<ul>
-							<li><a class="slide-link slide-1 current">Small</a></li>
-							<li><a class="slide-link slide-2">Medium</a></li>
-							<li><a class="slide-link slide-3">Large</a></li>
+					<ul class="project-changer">
+						<li><a class="project-link current">1</a></li>
+						<li><a class="project-link">2</a></li>
+						<li><a class="project-link">3</a></li>
+					</ul>
+					<div class="project-info">
+						<h3 class="entry-title">Sceptical Climate Report</h3>
+						<ul class="image-changer">
+							<li><a title="Smartphone screen" class="slide-link small-screen slide-1 current">Small screen</a></li>
+							<li><a title="Tablet screen" class="slide-link medium-screen slide-2">Medium screen</a></li>
+							<li><a title="Wide screen" class="slide-link large-screen slide-3">Large screen</a></li>
 						</ul>
-						
+						<div class="entry-summary">
+							<p>We worked with the Australian Centre for Independent Journalism to publish their research into how the Australian media reports on climate science.</p>
+							<p>Moving beyond the PDF, we created an accessible online publication with features like interactive data tables and user highlighting, designed to make the research more useful for their target audience.</p>
+							<p><a class="view-project" href="http://sceptical-climate.investigate.org.au" title="View the Sceptical Climate Report.">View the project &rarr;</a></p>
+
+	    					<!-- <a class="next" href="#sustainable-communities-plan">Next project</a> -->
+						</div>
 					</div>
-					
 				</article>
-		
 			</li>
-		    <li>
-		    
-			    <article id="sustainable-communities-plan" class="hentry">
-				
-					<figure class="photo">
-						<img src="images/work/sustainable-communities-plan/slide-1.jpg" alt="The Sustainable Communities Plan website displayed across a range of desktop, tablet and mobile devices" />
-					</figure>
-				
-					<h3 class="entry-title">The Sustainable Communities Plan</h3>
-						
-					<div class="entry-summary">
-						
-						<p>This is a sample paragraph written in regards to working on theplan.sustainablehouse.com.au. It outlines the main considerations taken into account prior to commencement of the project, as well as the relationship between those initial goals and the final design outcomes.</p>
-						
-						<ul>
-							<li><a class="slide-link slide-1 current">Small</a></li>
-							<li><a class="slide-link slide-2">Medium</a></li>
-							<li><a class="slide-link slide-3">Large</a></li>
-						</ul>
-						
-					</div>
-					
-			    </article>
-			
-			</li>
-		    <li>
-			
-				<article id="acoss-national-conference" class="hentry">
-				
-					<figure class="photo">
-						<img src="images/work/sustainable-communities-plan/slide-1.jpg" alt="The ACOSS National Conference website displayed across a range of desktop, tablet and mobile devices" />
-					</figure>
-				
-					<h3 class="entry-title">ACOSS National Conference 2013</h3>
-						
-					<div class="entry-summary">
-						
-						<p>This is a sample paragraph written in regards to working on conference.acoss.org.au. It outlines the main considerations taken into account prior to commencement of the project, as well as the relationship between those initial goals and the final design outcomes.</p>
-						
-						<ul>
-							<li><a class="slide-link slide-1 current">Small</a></li>
-							<li><a class="slide-link slide-2">Medium</a></li>
-							<li><a class="slide-link slide-3">Large</a></li>
-						</ul>
-						
-					</div>
-				
-				</article>	
-						
-			</li>
-			
 		</ul>
-		
 	</div>
-	
 </section>
 <!-- end @portfolio -->
 
 <!-- @form-contact -->
-<form id="contact" class="contact-form main clearfix">
+<form id="contact" class="contact-form main clearfix" novalidate action="http://getsimpleform.com/messages?form_api_token=17732cc462230cce1807da0bed5d3bd9" method="post">
 		<h2>Contact</h2>
-		<p>Let us know about your project</p>
-	
-		<fieldset>
-			<label for="contact-name">Your name <span class="discrete">(required)</span></label>
-			<input type="text" required id="contact-name" name="contact-name" />
-		</fieldset>
-		
-		<fieldset>
-			<label for="contact-email">Email address <span class="discrete">(required)</span></label>
-			<input type="email" required id="contact-email" name="contact-email" />
+
+		<legend class="lede">
+				<p>Interested in hiring us?</p>
+				<p>Fill out the form below, and we'll get back to&nbsp;you&nbsp;promptly.</p>
+		</legend>
+		<div class="short-input">
+			<fieldset>
+				<label id="titleName" for="Name">Your name <span class="discrete">(required)</span></label>
+				<input class="field" id="Name" name="Name" type="text" required="" tabindex="1" onkeyup="" maxlength="255" />
+			</fieldset>
+
+			<fieldset>
+				<label id="titleEmail" for="Email">Email address <span class="discrete">(required)</span></label>
+				<input class="field" id="Email" name="Email" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
+			</fieldset>
+
+			<fieldset>
+				<label id="titleOrg" for="Org">Organisation/company</label>
+				<input class="field" id="Org" name="Org" type="text" value="" maxlength="255" tabindex="4" onkeyup="" />
+			</fieldset>
+		</div>
+
+		<fieldset class="long-input">
+			<label id="titleMessage" for="Message">Tell us about your project <span class="discrete">(required)</span></label>
+			<textarea id="Message" name="Message" class="textarea field" spellcheck="true" rows="8" tabindex="5" onkeyup="" required  ></textarea>
 		</fieldset>
 
-		<fieldset>	
-			<label for="contact-org">Organisation/Company</label>
-			<input type="text" id="contact-org" name="contact-org" />
-		</fieldset>
-		<fieldset class="checkbox-list">
-			<legend>Service required:</legend>
-			<label for="service-webdesign" class="checkbox">Web design</label>
-			<input id="service-webdesign" name="service-webdesign" type="checkbox">
-			<label for="service-consulting" class="checkbox">Consulting</label>
-			<input id="service-consulting" name="service-consulting" type="checkbox">
-			<label for="service-general" class="checkbox">General information design</label>
-			<input id="service-general" name="service-general" type="checkbox">
-		</fieldset>
-		</fieldset>
-		<fieldset>
-			<label for="contact-msg">How can we help? <span class="discrete">(required)</span></label>
-			<textarea class="textarea" id="contact-msg" name="contact-msg" cols="50" rows="5" spellcheck="true" required ></textarea>
-		</fieldset>
+		<div class="additional-questions clearfix">
+			<fieldset class="form-additional short-input">
+				<label for="phone-q" id="phone-c" class="checkbox">Would you prefer to be contacted by phone?</label>
+				<input class="field" type="checkbox" name="phone-q" id="phone-q" tabindex="6"/>
+				<div id="more-phone" class="display-hide">
+					<label class="visuallyhidden" id="titlePhone" for="Phone">When is the project deadline?</label>
+					<input class="field" id="Phone" name="Phone" type="text" value="" maxlength="255" tabindex="6" onkeyup="" placeholder="e.g. +61 406 566 693"/>
+				</div>
+			</fieldset>
 
-		<fieldset class="form-additional">		
-			<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
-			<input type="checkbox" name="deadline-q" id="deadline-q"/>
-			<div id="more-deadline" class="display-hide">
-				<label for="deadline">When is the project deadline?</label>
-				<input id="deadline" name="deadline" type="text"/>
-			</div>
-		</fieldset>
+			<fieldset class="form-additional short-input">
+				<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
+				<input class="field" type="checkbox" name="deadline-q" id="deadline-q" tabindex="7"/>
+				<div id="more-deadline" class="display-hide">
+					<label class="visuallyhidden" id="titleDeadline" for="Deadline">When is the project deadline?</label>
+					<input class="field" id="Deadline" name="Deadline" type="text" value="" maxlength="255" tabindex="7" onkeyup="" placeholder="e.g. the end of November 2014"/>
+				</div>
+			</fieldset>
 
-		<fieldset class="form-additional">
-			<label for="budget-q" id="budget-c" class="checkbox">Do you have a rough budget for us?</label>
-			<input type="checkbox" name="budget-q" id="budget-q"/>
-			<div id="more-budget" class="display-hide">
-				<label for="budget">About how much is the budget?</label>
-				<input id="budget" name="budget" type="text"/>
-			</div>
-		</fieldset>
-		<div>
-			<input type="button" value="Send" class="button" >
-			<p class="msg alert required-alert">Please make sure to fill out all the required fields.</p>
-			<p class="msg alert email-alert">Please make sure you've entered your email correctly.</p>
-			<p class="msg success">Thanks for getting in touch. We'll be in contact shortly.</p>
+			<fieldset class="form-additional short-input">
+				<label for="budget-q" id="budget-c" class="checkbox" >Would you like to provide a budget estimate?</label>
+				<input type="checkbox" name="budget-q" id="budget-q" tabindex="8" />
+				<div id="more-budget" class="display-hide">
+					<label class="visuallyhidden" id="titleBudget" for="Budget">About how much is the budget?</label>
+					<input class="field" id="Budget" name="Budget" type="text" value="" maxlength="255" tabindex="8" onkeyup="" placeholder="e.g. between $x and $y"/>
+				</div>
+			</fieldset>
+		</div>
+
+		<div class="button-container">
+			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="9" >Send enquiry</button>
+
+			<p class="msg processing" id="contact-processing">Processing...</p>
+			<p class="msg success" id="contact-success">Thanks for getting in touch. We'll be in contact shortly.</p>
+			<p class="msg alert" id="contact-alert">Sorry, something's gone wrong with our form. Please contact us via email at <a href="info@collagraph.com.au" title="Email a Collagraph partner">info@collagraph.com.au</a>. Sorry for the inconvenience.</p>
+		</div>
 </form>
 <!-- end @form-contact -->
+
+<!-- @footer -->
+<!-- <footer class="site-footer">
+    <a href="#top" class="scroll top-link" >Back to top &uarr;</a>
+</footer> -->
+<!-- end @footer -->
+
         <!-- Include respond.min.js for < IE 9 -->
         <!--[if lt IE 9]>
             <script src="/js/respond.min.js"></script>
         <![endif]-->
 
         <!-- Javascript -->
-        <script type="text/javascript" src="/js/enquire.min.js"></script>
-        <script type="text/javascript" src="/js/flexslider.min.js"></script>
-        <script type="text/javascript" src="/js/widowfix.min.js"></script>
+        <!-- <script type="text/javascript" src="/js/enquire.min.js"></script> -->
+        <!-- <script type="text/javascript" src="/js/flexslider.min.js"></script> -->
+        <!-- <script type="text/javascript" src="/js/flexslider.manualDirectionControls.js"></script> -->
+        <script type="text/javascript" src="/js/jquery.form.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.validate.js"></script>
         <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/d3.v3.js"></script>
 
+		<style>
+			svg {
+				display: inline-block;
+				position: fixed;
+				top:0;
+				left: 0;
+				z-index: -99;
+			}
+		</style>
+
+		<!-- d3  line art -->
+<!--
+		<script type="text/javascript">
+			var w = $(svg).parent().width(); //set width for page width
+			var h = 800; // set the height
+			var step = 20000; // set the duration of a single line drawing
+			var dataset = [
+			[89.9, 100, 66.6, 0],
+			[78.3, 50, 10, 0],
+			[38.3, 20.8, 10, 100],
+			[10, 100, 66.6, 0],
+			[33.3, 35, 78.3, 50],
+			[33.3, 100, 90, 0]
+			]; // x1, y1, x2, y2 coordinates for the lines
+			//Create SVG element
+			var svg = d3.select("body")
+			.append("svg")
+			.attr("width", w)
+			.attr("height", h);
+			svg.selectAll("line")
+			.data(dataset)
+			.enter()
+			.append("line")
+			.attr("x1", function(d) {
+				return d[0] + "%";
+			})
+			.attr("y1", function(d) {
+				return d[1] + "%";
+			})
+			.attr("x2", function(d) {
+				return d[0] + "%";
+			})
+			.attr("y2", function(d) {
+				return d[1] + "%";
+			})
+			.attr("stroke", "#cfcfcf")
+			.attr("stroke-width", "1")
+			.transition()
+			.ease( "in-out")
+			.duration(step)
+			/*
+.delay( function(d, i) {
+			return (i * step)
+			})
+*/
+		  	.attr("x2", function(d) {
+	  			return d[2] + "%";
+			})
+			.attr("y2", function(d) {
+				return d[3] + "%";
+			});
+
+		</script>
+-->
         <!-- Google Analytics -->
         <!-- <script>
 			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
