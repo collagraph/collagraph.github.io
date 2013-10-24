@@ -30,16 +30,16 @@
 
 		<div class="additional-questions clearfix">
 			<fieldset class="form-additional short-input">
-				<label for="phone-q" id="phone-c" class="checkbox">Would you prefer to be contacted by phone?</label>
+				<label for="phone-q" id="phone-c" class="checkbox" onClick="_gaq.push(['_trackEvent', 'Contact', 'Click Phone Checkbox']);">Would you prefer to be contacted by phone?</label>
 				<input class="field" type="checkbox" name="phone-q" id="phone-q" tabindex="6"/>
 				<div id="more-phone" class="display-hide">
-					<label class="visuallyhidden" id="titlePhone" for="Phone">When is the project deadline?</label>
+					<label class="visuallyhidden" id="titlePhone" for="Phone">What's your phone number?</label>
 					<input class="field" id="Phone" name="Phone" type="text" value="" maxlength="255" tabindex="6" onkeyup="" placeholder="e.g. +61 406 566 693"/>
 				</div>
 			</fieldset>
 
 			<fieldset class="form-additional short-input">
-				<label for="deadline-q" id="deadline-c" class="checkbox">Does your project have a deadline?</label>
+				<label for="deadline-q" id="deadline-c" class="checkbox" onClick="_gaq.push(['_trackEvent', 'Contact', 'Click Deadline Checkbox']);">Does your project have a deadline?</label>
 				<input class="field" type="checkbox" name="deadline-q" id="deadline-q" tabindex="7"/>
 				<div id="more-deadline" class="display-hide">
 					<label class="visuallyhidden" id="titleDeadline" for="Deadline">When is the project deadline?</label>
@@ -48,7 +48,7 @@
 			</fieldset>
 
 			<fieldset class="form-additional short-input">
-				<label for="budget-q" id="budget-c" class="checkbox" >Would you like to provide a budget estimate?</label>
+				<label for="budget-q" id="budget-c" class="checkbox" onClick="_gaq.push(['_trackEvent', 'Contact', 'Click Budget Checkbox']);">Would you like to provide a budget estimate?</label>
 				<input type="checkbox" name="budget-q" id="budget-q" tabindex="8" />
 				<div id="more-budget" class="display-hide">
 					<label class="visuallyhidden" id="titleBudget" for="Budget">About how much is the budget?</label>
@@ -58,11 +58,11 @@
 		</div>
 
 		<div class="button-container">
-			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="9" >Send enquiry</button>
+			<button id="saveForm" name="saveForm" class="button" type="submit" value="Submit" tabindex="9" onClick="_gaq.push(['_trackEvent', 'Contact', 'Click Submit Button']);">Send enquiry</button>
 
 			<p class="msg processing" id="contact-processing">Processing...</p>
 			<p class="msg success" id="contact-success">Thanks for getting in touch. We'll be in contact shortly.</p>
-			<p class="msg alert" id="contact-alert">Sorry, something's gone wrong with our form. Please contact us via email at <a href="info@collagraph.com.au" title="Email a Collagraph partner">info@collagraph.com.au</a>. Sorry for the inconvenience.</p>
+			<p class="msg alert" id="contact-alert">Sorry, something's gone wrong with our form. Please contact us via email at <a href="info@collagraph.com.au" title="Email a Collagraph partner" onClick="_gaq.push(['_trackEvent', 'Contact', 'Click Email', 'Ajax form Fail']);">info@collagraph.com.au</a>. Sorry for the inconvenience.</p>
 		</div>
 </form>
 <!-- end @form-contact -->
