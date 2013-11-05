@@ -208,14 +208,14 @@ body, select, input, textarea { color: $text-base; }
 
 /* remove text-shadow from section */
 ::-moz-selection {
-	background: $grey-1;
-	color: $text-base;
+	background: $submit;
+	color: $background;
 	text-shadow: none;
 }
 
 ::selection {
-	background: $grey-1;
-	color: $text-base;
+	background: $submit;
+	color: $background;
 	text-shadow: none;
 }
 

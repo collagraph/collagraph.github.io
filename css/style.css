@@ -354,13 +354,13 @@ body, select, input, textarea {
 
 /* remove text-shadow from section */
 ::-moz-selection {
-  background: #f0f0f0;
-  color: #222222;
+  background: #3678b6;
+  color: #fcfcfc;
   text-shadow: none; }
 
 ::selection {
-  background: #f0f0f0;
-  color: #222222;
+  background: #3678b6;
+  color: #fcfcfc;
   text-shadow: none; }
 
 /*  set touch-screen highlight colour */
