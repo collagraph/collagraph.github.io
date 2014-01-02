@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Design Principles
+title: Collagraph Design Principles
 permalink: /principles/
 ---
 
@@ -31,7 +31,7 @@ The beauty of the web is the chance encounters and unexpected combinations. Show
 
 One important aspect of accessibility is the ability of people with special access requirements to use the website; users with reduced vision for example. It is also about the ‘machine readability’ of the website. Search engines, social networks and other services should be able to easily get the information in the site so it can be displayed in their service at its best. Accessibility comes down to a core belief that everybody should be able to use and enjoy the service you provide.
 
- Universal accessibility is an [original design principle of the web](http://www.w3.org/TR/html-design-principles/#universal-access).
+Universal accessibility is an [original design principle of the web](http://www.w3.org/TR/html-design-principles/#universal-access).
 
 ## Good design makes society better
 
