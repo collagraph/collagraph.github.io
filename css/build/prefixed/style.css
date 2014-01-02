@@ -7,6 +7,7 @@ web: http://collagraph.com.au
 email: info@collagraph.com.au
 twitter: @_collagraph
 */
+
 /*
 	HTML5 Reset :: style.css
 	----------------------------------------------------------
@@ -17,9 +18,77 @@ twitter: @_collagraph
 	and the HTML5 Boilerplate	:: http://html5boilerplate.com
 
 -------------------------------------------------------------------------------*/
+
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,13 +98,25 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 }
 
 /* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
-article, aside, figure, figcaption, footer, header, hgroup, nav, section, details, summary {
+
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+nav,
+section,
+details,
+summary {
   display: block;
 }
 
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+
 img,
 object,
 embed {
@@ -43,17 +124,20 @@ embed {
 }
 
 /* force a vertical scrollbar to prevent a jumpy page */
+
 html {
   overflow-y: scroll;
 }
 
 /* we use a lot of ULs that aren't bulleted.
 	don't forget to restore the bullets within content. */
+
 ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
@@ -77,12 +161,14 @@ del {
   text-decoration: line-through;
 }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted #000;
   cursor: help;
 }
 
 /* tables still need cellspacing="0" in the markup */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -107,7 +193,8 @@ hr {
   padding: 0;
 }
 
-input, select {
+input,
+select {
   vertical-align: middle;
 }
 
@@ -138,7 +225,9 @@ input[type="checkbox"] {
   vertical-align: text-bottom;
 }
 
-select, input, textarea {
+select,
+input,
+textarea {
   font: 99% sans-serif;
 }
 
@@ -155,13 +244,16 @@ strong {
   font-weight: bold;
 }
 
-td, td img {
+td,
+td img {
   vertical-align: top;
 }
 
 /* Make sure sup and sub don't screw with your line-heights
 	gist.github.com/413930 */
-sub, sup {
+
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -176,11 +268,16 @@ sub {
 }
 
 /* standardize any monospaced elements */
-pre, code, kbd, samp {
+
+pre,
+code,
+kbd,
+samp {
   font-family: monospace, sans-serif;
 }
 
 /* hand cursor on clickable elements */
+
 .clickable,
 label,
 input[type=button],
@@ -191,28 +288,38 @@ button {
 }
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea {
+
+button,
+input,
+select,
+textarea {
   margin: 0;
 }
 
 /* make buttons play nice in IE */
+
 button {
   width: auto;
   overflow: visible;
 }
 
 /* scale images in IE7 more attractively */
+
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
 /* prevent BG image flicker upon hover */
+
 .ie6 html {
+  -webkit-filter: expression(document.execCommand("BackgroundImageCache", false, true));
   filter: expression(document.execCommand("BackgroundImageCache", false, true));
 }
 
 /* let's clear some floats */
-.clearfix:before, .clearfix:after {
+
+.clearfix:before,
+.clearfix:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -228,9 +335,9 @@ button {
 }
 
 /* natural box layout */
+
 * {
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -240,48 +347,86 @@ button {
 }
 
 /* @scale -------------------------------------------------------------- */
+
 /*
 	http://modularscale.com/scale/?px1=17&px2=23&ra1=1.5&ra2=0
 
 	17px @ 1:1.5
 	23px @ 1:1.5
 */
+
 /* 980.315px */
+
 /* 884.204px */
+
 /* 653.543px */
+
 /* 589.469px */
+
 /* 435.695px */
+
 /* 392.979px */
+
 /* 290.463px */
+
 /* 261.986px */
+
 /* 193.642px */
+
 /* 174.657px */
+
 /* 129.095px */
+
 /* 116.438px */
+
 /* 86.063px */
+
 /* 77.625px */
+
 /* 57.375px */
+
 /* 51.750px */
+
 /* 38.250px */
+
 /* 34.500px */
+
 /* 25.500px */
+
 /* 23.000px */
+
 /* 17.000px */
+
 /* 15.333px */
+
 /* 11.333px */
+
 /* 10.222px */
+
 /* 7.555px */
+
 /* 6.815px */
+
 /* 5.037px */
+
 /* 4.543px */
+
 /* 3.358px */
+
 /* 3.029px */
+
 /* 2.239px */
+
 /* 2.019px */
+
 /* 1.493px */
+
 /* 1.346px */
+
 /* end @scale */
+
 /* @type -------------------------------------------------------------- */
+
 body {
   font-family: "ff-meta-web-pro", "open sans", sans-serif;
   font-size: 17.008px;
@@ -302,7 +447,9 @@ h3,
   line-height: 1.358;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   text-decoration: underline;
 }
 
@@ -382,6 +529,7 @@ figure {
 .project-changer li {
   display: inline-block;
 }
+
 .project-changer li:last-child .project-link {
   margin-right: 0;
 }
@@ -404,13 +552,20 @@ label.invalid,
 }
 
 /* end @type */
+
 /* @colours -------------------------------------------------------------- */
+
 /* off-black text */
-body, select, input, textarea {
+
+body,
+select,
+input,
+textarea {
   color: #222222;
 }
 
 /* remove text-shadow from section */
+
 ::-moz-selection {
   background: #3678b6;
   color: #fcfcfc;
@@ -424,6 +579,7 @@ body, select, input, textarea {
 }
 
 /*  set touch-screen highlight colour */
+
 a:link {
   -webkit-tap-highlight-color: #f0f0f0;
 }
@@ -442,6 +598,7 @@ mark {
 }
 
 /* Mozilla dosen't style place holders by default */
+
 input:-moz-placeholder {
   color: #888888;
 }
@@ -458,14 +615,18 @@ body {
 a {
   color: #3678b6;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
   color: #2a5e8f;
 }
+
 a:active {
   color: #1f4467;
 }
 
-.about, .contact-form {
+.about,
+.contact-form {
   background-color: #f0f0f0;
 }
 
@@ -473,7 +634,8 @@ a:active {
   background-color: white;
 }
 
-.flexslider .next, .flexslider .previous {
+.flexslider .next,
+.flexslider .previous {
   color: #f0f0f0;
   background-color: #666666;
 }
@@ -485,6 +647,7 @@ button {
   border-color: #aaaaaa;
   background-color: white;
 }
+
 input:focus,
 textarea:focus,
 button:focus {
@@ -498,10 +661,12 @@ button:focus {
   border-style: solid;
   border-color: #1f4467;
 }
+
 .project-link:hover {
   color: #f0f0f0;
   background-color: #1f4467;
 }
+
 .project-link.current {
   color: #f0f0f0;
   background-color: #3678b6;
@@ -541,19 +706,25 @@ textarea.invalid {
   opacity: .8;
   transition: all .3s ease;
 }
-.top-link:hover, .top-link:focus {
+
+.top-link:hover,
+.top-link:focus {
   opacity: 1;
   background-color: #dddddd;
 }
 
 /* end @colours */
+
 /* @forms -------------------------------------------------------------- */
+
 /* toggled state */
+
 fieldset {
   display: block;
 }
 
 /* restyle checkboxes for supported browsers */
+
 fieldset:not(#foo) > label + input[type="checkbox"] {
   position: absolute;
   overflow: hidden;
@@ -569,8 +740,6 @@ fieldset:not(#foo) > .checkbox {
   padding-right: 25.504px;
   padding-right: 1.594rem;
   background: url("/assets/off.png") right 0.4em no-repeat;
-  -webkit-transition: color .3s ease;
-  -moz-transition: color .3s ease;
   transition: color .3s ease;
 }
 
@@ -615,7 +784,8 @@ button {
   -webkit-appearance: none;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 11.328px;
   padding: 0.708rem;
 }
@@ -633,9 +803,12 @@ input, textarea {
   color: white;
   background-color: #3678b6;
 }
-.button:hover, .button:focus {
+
+.button:hover,
+.button:focus {
   background-color: #306ba2;
 }
+
 .button:active {
   background: #2a5e8f;
 }
@@ -670,10 +843,12 @@ legend {
   margin: 17.008px 0px;
   margin: 1.063rem 0rem;
 }
+
 .checkbox-list label:first-of-type {
   margin-top: 7.552px;
   margin-top: 0.472rem;
 }
+
 .checkbox-list .checkbox {
   margin: 4.544px 0px 0px;
   margin: 0.284rem 0rem 0rem;
@@ -685,6 +860,7 @@ legend {
   width: 320px;
   width: 20rem;
 }
+
 .checkbox-list .checkbox + input[type="checkbox"] {
   display: block;
   float: left;
@@ -695,11 +871,11 @@ legend {
   padding-top: 17.008px;
   padding-top: 1.063rem;
 }
+
 .form-additional div {
-  -webkit-transition: opacity .3s ease;
-  -moz-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }
+
 .form-additional label {
   display: block;
 }
@@ -729,6 +905,7 @@ legend {
 }
 
 /* @layout -------------------------------------------------------------- */
+
 .site-header {
   padding: 86.064px 17.008px;
   padding: 5.379rem 1.063rem;
@@ -774,25 +951,31 @@ nav.primary {
   padding-right: 17.008px;
   padding-right: 1.063rem;
 }
+
 .portfolio .project-info {
   padding-top: 17.008px;
   padding-top: 1.063rem;
 }
+
 .portfolio .project-info h3 {
   margin-top: 0;
 }
+
 .portfolio .entry-summary P:first-of-type {
   margin-top: 0;
 }
+
 .portfolio .image-changer {
   margin: 17.008px 0px;
   margin: 1.063rem 0rem;
 }
+
 .portfolio .image-changer li {
   display: inline-block;
   margin-right: 17.008px;
   margin-right: 1.063rem;
 }
+
 .portfolio .image-changer li:last-child {
   margin-right: 0;
 }
@@ -812,28 +995,43 @@ nav.primary {
   height: 3rem;
   border-radius: 50%;
 }
+
 .slide-link.small-screen {
   background: url("/assets/phone-icon-blue.png") center center no-repeat;
 }
-.slide-link.small-screen.current, .slide-link.small-screen:hover, .slide-link.small-screen:focus {
+
+.slide-link.small-screen.current,
+.slide-link.small-screen:hover,
+.slide-link.small-screen:focus {
   background-image: url("/assets/phone-icon.png");
 }
+
 .slide-link.medium-screen {
   background: url("/assets/tablet-icon-blue.png") center center no-repeat;
 }
-.slide-link.medium-screen.current, .slide-link.medium-screen:hover, .slide-link.medium-screen:focus {
+
+.slide-link.medium-screen.current,
+.slide-link.medium-screen:hover,
+.slide-link.medium-screen:focus {
   background-image: url("/assets/tablet-icon.png");
 }
+
 .slide-link.large-screen {
   background: url("/assets/desktop-icon-blue.png") center center no-repeat;
 }
-.slide-link.large-screen.current, .slide-link.large-screen:hover, .slide-link.large-screen:focus {
+
+.slide-link.large-screen.current,
+.slide-link.large-screen:hover,
+.slide-link.large-screen:focus {
   background-image: url("/assets/desktop-icon.png");
 }
+
 .slide-link.current {
   background-color: #3678b6;
 }
-.slide-link:hover, .slide-link:focus {
+
+.slide-link:hover,
+.slide-link:focus {
   cursor: pointer;
   background-color: #1f4467;
 }
@@ -842,12 +1040,15 @@ nav.primary {
 .flexslider figure {
   margin-top: 0;
 }
+
 .flexslider .slides .photo,
 .flexslider figure .photo {
   margin-bottom: -10px;
   margin-bottom: -0.625rem;
 }
-.flexslider .next, .flexslider .previous {
+
+.flexslider .next,
+.flexslider .previous {
   display: inline-block;
   min-width: 160px;
   min-width: 10rem;
@@ -857,12 +1058,14 @@ nav.primary {
   padding: 0.708rem 1.063rem;
   text-align: center;
 }
+
 .flexslider .next {
   float: right;
   clear: right;
   margin-left: 4.544px;
   margin-left: 0.284rem;
 }
+
 .flexslider .previous {
   float: left;
   clear: left;
@@ -883,23 +1086,28 @@ nav.primary {
   padding-bottom: 34.496px;
   padding-bottom: 2.156rem;
 }
+
 .main.contact-form .lede {
   font-size: 25.504px;
   font-size: 1.594rem;
 }
+
 .main.contact-form .lede p:first-of-type {
   margin-top: 0;
 }
+
 .main.contact-form .lede p + p {
   margin-top: 0;
   font-size: 17.008px;
   font-size: 1.063rem;
 }
+
 .main.contact-form fieldset {
   margin: 0;
 }
 
 /* tools */
+
 .visuallyhidden {
   position: absolute;
   overflow: hidden;
@@ -912,10 +1120,14 @@ nav.primary {
 }
 
 /* end @layout */
+
 /* @mq */
+
 /* 30em & up -------------------------------------------------------------- */
+
 @media screen and (min-width: 30em) {
   /* @layout 30em */
+
   .site-header,
   .main {
     padding-left: 10%;
@@ -934,15 +1146,19 @@ nav.primary {
   }
 
   /* end @layout 30em */
+
   /* @forms 30em */
+
   .form-additional label {
     display: inline-block;
   }
 
   /* end @forms 30em */
 }
+
 @media screen and (min-width: 42em) {
   /* @type 42em */
+
   h2 {
     padding-top: 86.064px;
     padding-top: 5.379rem;
@@ -969,6 +1185,7 @@ nav.primary {
     font-size: 34.496px;
     font-size: 2.156rem;
   }
+
   .about p + p {
     font-size: 23.008px;
     font-size: 1.438rem;
@@ -983,25 +1200,33 @@ nav.primary {
     font-size: 23.008px;
     font-size: 1.438rem;
   }
+
   .main.contact-form .lede {
     font-size: 51.744px;
     font-size: 3.234rem;
   }
+
   .main.contact-form .lede p + p {
     font-size: 34.496px;
     font-size: 2.156rem;
   }
-  .main.contact-form input, .main.contact-form textarea, .main.contact-form button {
+
+  .main.contact-form input,
+  .main.contact-form textarea,
+  .main.contact-form button {
     font-size: 23.008px;
     font-size: 1.438rem;
   }
+
   .main.contact-form .additional-questions {
     font-size: 17.008px;
     font-size: 1.063rem;
   }
 
   /* end @type 42em */
+
   /* @layout 42em */
+
   .logo {
     display: inline-block;
     max-width: 50%;
@@ -1020,6 +1245,7 @@ nav.primary {
     margin: 25.504px 0px;
     margin: 1.594rem 0rem;
   }
+
   .portfolio .project-info {
     padding-top: 38.256px;
     padding-top: 2.391rem;
@@ -1032,9 +1258,12 @@ nav.primary {
 
   /* end @layout 42em */
 }
+
 /* 64em -------------------------------------------------------------- */
+
 @media screen and (min-width: 64em) {
   /* @type 64em */
+
   h3 {
     font-size: 34.496px;
     font-size: 2.156rem;
@@ -1050,6 +1279,7 @@ nav.primary {
     font-size: 34.496px;
     font-size: 2.156rem;
   }
+
   .about p + p {
     font-size: 23.008px;
     font-size: 1.438rem;
@@ -1059,6 +1289,7 @@ nav.primary {
     font-size: 17.008px;
     font-size: 1.063rem;
   }
+
   .project-info h3 {
     font-size: 34.496px;
     font-size: 2.156rem;
@@ -1068,7 +1299,9 @@ nav.primary {
     font-size: 17.008px;
     font-size: 1.063rem;
   }
-  .view-project:hover, .view-project:focus {
+
+  .view-project:hover,
+  .view-project:focus {
     text-decoration: none;
   }
 
@@ -1076,21 +1309,27 @@ nav.primary {
     padding-bottom: 51.744px;
     padding-bottom: 3.234rem;
   }
+
   .main.contact-form .lede {
     font-size: 57.376px;
     font-size: 3.586rem;
   }
+
   .main.contact-form .lede p + p {
     font-size: 34.496px;
     font-size: 2.156rem;
   }
 
   /* end @type 64em */
+
   /* @colours 64em */
+
   nav.primary a {
     color: #666666;
   }
-  nav.primary a:hover, nav.primary a:focus {
+
+  nav.primary a:hover,
+  nav.primary a:focus {
     color: #aaaaaa;
     text-decoration: none;
   }
@@ -1099,15 +1338,20 @@ nav.primary {
     color: #aaaaaa;
     background-color: rgba(0, 0, 0, 0.25);
   }
-  .view-project:hover, .view-project:focus {
+
+  .view-project:hover,
+  .view-project:focus {
     color: #cccccc;
   }
+
   .view-project:active {
     color: #3678b6;
   }
 
   /* end @colours 64em */
+
   /* @layout 64em */
+
   .site-header {
     padding-top: 174.656px;
     padding-top: 10.916rem;
@@ -1132,14 +1376,17 @@ nav.primary {
     height: 212.112px;
     height: 13.257rem;
   }
+
   nav.primary ul {
     margin-top: 0;
     padding: 69.056px 0px 86.064px;
     padding: 4.316rem 0rem 5.379rem;
   }
+
   nav.primary li {
     float: left;
   }
+
   nav.primary li a {
     display: block;
     margin: 0px 17.008px;
@@ -1147,9 +1394,11 @@ nav.primary {
     padding: 17.008px 0px;
     padding: 1.063rem 0rem;
   }
+
   nav.primary li:first-child a {
     margin-left: 0;
   }
+
   nav.primary li:last-child a {
     margin-right: 0;
   }
@@ -1167,22 +1416,27 @@ nav.primary {
     color: #f0f0f0;
     padding-bottom: 0;
   }
+
   .portfolio h2 {
     position: absolute;
     z-index: 1000;
   }
+
   .portfolio .hentry {
     position: relative;
     overflow: hidden;
   }
+
   .portfolio .hentry .photo {
     float: left;
     clear: left;
     width: 100%;
   }
+
   .portfolio .hentry .photo img {
     width: 100%;
   }
+
   .portfolio .project-info {
     position: absolute;
     left: 45%;
@@ -1194,6 +1448,7 @@ nav.primary {
     padding-right: 5%;
     width: 50%;
   }
+
   .portfolio .image-changer {
     margin: 17.008px 0px;
     margin: 1.063rem 0rem;
@@ -1208,9 +1463,11 @@ nav.primary {
   .slide-link.small-screen {
     background-image: url("/assets/phone-icon.png");
   }
+
   .slide-link.medium-screen {
     background-image: url("/assets/tablet-icon.png");
   }
+
   .slide-link.large-screen {
     background-image: url("/assets/desktop-icon.png");
   }
@@ -1230,19 +1487,23 @@ nav.primary {
     padding-top: 25.504px;
     padding-top: 1.594rem;
   }
+
   .main.contact-form div.short-input {
     display: inline-block;
     float: left;
     clear: left;
   }
+
   .main.contact-form div.short-input fieldset label {
     margin-top: 17.6px;
     margin-top: 1.1rem;
   }
+
   .main.contact-form div.short-input fieldset:first-child label {
     margin-top: 17.008px;
     margin-top: 1.063rem;
   }
+
   .main.contact-form .long-input {
     display: inline-block;
     float: right;
@@ -1251,6 +1512,7 @@ nav.primary {
     padding-top: 25.504px;
     padding-top: 1.594rem;
   }
+
   .main.contact-form .additional-questions {
     clear: both;
     font-size: 17.008px;
@@ -1258,24 +1520,29 @@ nav.primary {
     padding-top: 25.504px;
     padding-top: 1.594rem;
   }
+
   .main.contact-form .additional-questions .short-input {
     float: left;
     width: 35.41625%;
     padding-right: 6.25%;
   }
+
   .main.contact-form .additional-questions .short-input:last-of-type {
     width: 29.16625%;
     padding-right: 0;
   }
+
   .main.contact-form .additional-questions .short-input input {
     margin-top: 7.552px;
     margin-top: 0.472rem;
   }
+
   .main.contact-form .button-container {
     clear: right;
     padding-top: 57.376px;
     padding-top: 3.586rem;
   }
+
   .main.contact-form .button {
     float: right;
     clear: right;
@@ -1283,12 +1550,17 @@ nav.primary {
   }
 
   /* end @layout 64em */
+
   /* @forms 64em */
+
   /* end @forms 64em */
 }
+
 /* 80em -------------------------------------------------------------- */
+
 @media screen and (min-width: 84em) {
   /* @type 80em */
+
   h3 {
     font-size: 38.256px;
     font-size: 2.391rem;
@@ -1315,7 +1587,9 @@ nav.primary {
   }
 
   /* end @type 80em */
+
   /* @layout 80em */
+
   body {
     margin: 0 auto;
     max-width: 105em;
@@ -1324,6 +1598,7 @@ nav.primary {
   .about p {
     width: 64.5825%;
   }
+
   .about p + p {
     width: 50%;
     padding-right: 2.5%;
@@ -1338,6 +1613,7 @@ nav.primary {
     bottom: 86.064px;
     bottom: 5.379rem;
   }
+
   .portfolio .image-changer {
     margin: 25.504px 0px;
     margin: 1.594rem 0rem;
@@ -1350,45 +1626,64 @@ nav.primary {
 
   /* end @layout 80em */
 }
+
 /* @retina -------------------------------------------------------------- */
+
 @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   /* @layout retina */
+
   .project-info .slide-link.small-screen {
     background-image: url("/assets/phone-icon-blue-retina.png");
     background-size: 50% auto;
   }
-  .project-info .slide-link.small-screen.current, .project-info .slide-link.small-screen:hover, .project-info .slide-link.small-screen:focus {
+
+  .project-info .slide-link.small-screen.current,
+  .project-info .slide-link.small-screen:hover,
+  .project-info .slide-link.small-screen:focus {
     background-image: url("/assets/phone-icon-retina.png");
   }
+
   .project-info .slide-link.medium-screen {
     background-image: url("/assets/tablet-icon-blue-retina.png");
     background-size: 50% auto;
   }
-  .project-info .slide-link.medium-screen.current, .project-info .slide-link.medium-screen:hover, .project-info .slide-link.medium-screen:focus {
+
+  .project-info .slide-link.medium-screen.current,
+  .project-info .slide-link.medium-screen:hover,
+  .project-info .slide-link.medium-screen:focus {
     background-image: url("/assets/tablet-icon-retina.png");
   }
+
   .project-info .slide-link.large-screen {
     background-image: url("/assets/desktop-icon-blue-retina.png");
     background-size: 50% auto;
   }
-  .project-info .slide-link.large-screen.current, .project-info .slide-link.large-screen:hover, .project-info .slide-link.large-screen:focus {
+
+  .project-info .slide-link.large-screen.current,
+  .project-info .slide-link.large-screen:hover,
+  .project-info .slide-link.large-screen:focus {
     background-image: url("/assets/desktop-icon-retina.png");
   }
 
   /* end @layout retina */
+
   /* @forms retina */
+
   fieldset.checkbox-list:not(#foo) .checkbox {
     background-image: url("/assets/off-retina.png");
     background-size: 50% auto;
   }
+
   fieldset.checkbox-list:not(#foo) .checkbox-checked {
     background-image: url("/assets/check-retina.png");
     background-size: 50% auto;
   }
+
   fieldset.checkbox-list:not(#foo) .checkbox-checked-focused {
     background-image: url("/assets/check-focus-retina.png");
     background-size: 50% auto;
   }
+
   fieldset.checkbox-list:not(#foo) .checkbox-focused {
     background-image: url("/assets/off-focus-retina.png");
     background-size: 50% auto;
@@ -1396,16 +1691,20 @@ nav.primary {
 
   /* end @forms retina */
 }
+
 @media screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   /* @layout retina 64em */
+
   .project-info .slide-link.small-screen {
     background-image: url("/assets/phone-icon-retina.png");
     background-size: 50% auto;
   }
+
   .project-info .slide-link.medium-screen {
     background-image: url("/assets/tablet-icon-retina.png");
     background-size: 50% auto;
   }
+
   .project-info .slide-link.large-screen {
     background-image: url("/assets/desktop-icon-retina.png");
     background-size: 50% auto;
@@ -1413,4 +1712,5 @@ nav.primary {
 
   /* end @layout retina 64em */
 }
+
 /* end @retina */
