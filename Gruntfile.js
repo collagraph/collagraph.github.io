@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         files: {
-              'css/build/style.min.css': ['build/prefixed/style.css']
+              'css/build/style.min.css': ['css/build/prefixed/style.css']
         }
       }
     },
@@ -44,16 +44,14 @@ module.exports = function(grunt) {
     concat: {
       production: {
         src: [
-          'js/jquery.form.min.js',
-          'js/jquery.validate.js',
+          'js/plugins/*.js',
           'js/functions.js'
         ],
         dest: 'js/build/production.js',
       },
       polyfill: {
         src: [
-          'js/html5shiv.min.js',
-          'js/respond.min.js'
+          'js/pollyfills/*.js'
         ],
         dest: 'js/build/polyfill.js',
       }

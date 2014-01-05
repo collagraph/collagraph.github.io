@@ -1,0 +1,245 @@
+/* @forms -------------------------------------------------------------- */
+
+input,
+textarea,
+button {
+    color: darken($text-base, 30%);
+    border-color: $grey-5;
+    background-color: $grey-0;
+    &:focus {
+        border-color: darken($grey-5, 30%);
+    }
+}
+
+label.invalid {
+    background-color: $alert;
+}
+
+.processing {
+    background-color: $grey-2;
+}
+
+.success {
+    background-color: $success;
+}
+
+input.invalid,
+textarea.invalid {
+    border-color: $alert;
+}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder {
+    color: $discreet;
+}
+
+textarea:-moz-placeholder {
+    color: $discreet;
+}
+
+label.invalid,
+.msg {
+    @include rem-fallback(margin, $scale-0, 0, 0);
+    display: block;
+    @include rem-fallback(padding, $scale-n7, $scale-n7, $scale-n7);
+    font-weight: normal;
+}
+
+.checkbox-list {
+    .checkbox-checked {
+        color: darken($text-base, 30%);
+    }
+}
+
+.form-addition .checkbox-checked {
+    color: lighten($text-base, 30%);
+}
+
+/* toggled state */
+fieldset {
+    display: block;
+}
+
+/* restyle checkboxes for supported browsers */
+fieldset:not(#foo) > label + input[type="checkbox"] {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+fieldset:not(#foo) > .checkbox {
+    @include rem-fallback(padding-right, $scale-2);
+    background: url('/assets/off.png') right .4em no-repeat;
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    transition: color .3s ease;
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('/assets/off-retina.png');
+        background-size: 50% auto;
+    }
+}
+
+fieldset:not(#foo) > .checkbox-checked {
+    background-image: url('/assets/check.png');
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('/assets/check-retina.png');
+        background-size: 50% auto;
+    }
+}
+
+fieldset:not(#foo) > .checkbox-checked-focused {
+    background-image: url('/assets/check-focus.png');
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('/assets/check-focus-retina.png');
+        background-size: 50% auto;
+    }
+}
+
+fieldset:not(#foo) > .checkbox-focused {
+    background-image: url('/assets/off-focus.png');
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('/assets/off-focus-retina.png');
+        background-size: 50% auto;
+    }
+}
+
+label,
+input,
+textarea,
+button {
+    display: block;
+}
+
+input,
+textarea,
+button {
+    @include rem-fallback(margin, $scale-n7, 0);
+    @include rem-fallback(padding, $scale-n7, $scale-n7);
+    width: 100%;
+    border-radius: 0;
+    @include rem-fallback(border-width, $scale-n13);
+    border-style: solid;
+    font-family: $sans-stack;
+    @include rem-fallback(font-size, $scale-0);
+    @include rem-fallback(letter-spacing, $scale-n5);
+    letter-spacing: 1px;
+    vertical-align: middle;
+    -webkit-appearance: none;
+}
+
+input, textarea {
+    @include rem-fallback(padding, $scale-n2);
+}
+
+.button-container {
+    @include rem-fallback(padding-top, $scale-2);
+}
+
+.button {
+    @include rem-fallback(padding, $scale-n4);
+    border: none;
+    letter-spacing: 1px;
+    color: $grey-0;
+    background-color: $submit;
+    &:hover,
+    &:focus {
+        background-color: darken($submit, 5%);
+    }
+    &:active {
+        background: darken($submit, 10%);
+    }
+}
+
+label {
+    @include rem-fallback(margin, $scale-0, 0, 0);
+}
+
+legend {
+    font-family: $serif-stack;
+}
+
+.textarea {
+    width: 100%;
+}
+
+.checkbox {
+    display: inline-block;
+    margin: 0;
+}
+
+.checkbox + input[type="checkbox"] {
+    display: inline-block;
+    width: 2rem;
+    overflow: visible;
+}
+
+.checkbox-list {
+    clear: both;
+    float: none;
+    @include rem-fallback(margin, $scale-0, 0);
+    label:first-of-type {
+        @include rem-fallback(margin-top, $scale-n4);
+    }
+    .checkbox {
+        @include rem-fallback(margin, $scale-n7, 0, 0);
+        display: block;
+        float: left;
+        clear: left;
+        @include rem-fallback(padding, $scale-n7, 0);
+        @include rem-fallback(width, 20);
+    }
+    .checkbox + input[type="checkbox"] {
+        display: block;
+        float: left;
+        clear: right;
+    }
+}
+
+.form-additional {
+    @include rem-fallback(padding-top, $scale-0);
+    div {
+        -webkit-transition: opacity .3s ease;
+        -moz-transition: opacity .3s ease;
+        transition: opacity .3s ease;
+    }
+    label {
+        display: block;
+
+        @include mq(xs) {
+            display: inline-block;
+        }
+
+    }
+}
+
+.display-hide {
+    opacity: 0;
+    height: 0;
+    display: none;
+}
+
+.display-more {
+    opacity: 1;
+    height: auto;
+    display: block;
+}
+
+#contact-processing,
+#contact-success,
+#contact-alert {
+    @include rem-fallback(margin-top, $scale-3);
+    display: none;
+}
+
+.no-js .form-additional {
+    display: none;
+}
