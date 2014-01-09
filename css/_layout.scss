@@ -47,8 +47,8 @@ body {
             width: 100%;
         }
 
-        @include mq(xxl) {
-            width: 51.666%/80%*100%;
+        @include mq(xl) {
+            @include rem-fallback(max-width, 44);
         }
 
         &::first-of-type {
