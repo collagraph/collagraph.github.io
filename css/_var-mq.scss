@@ -1,0 +1,43 @@
+// -------------------------------------------------------------------------------
+// media querie variables
+// -------------------------------------------------------------------------------
+
+$width-xs:  30em;
+$width-s: 42em;
+$width-m: 47em;
+$width-l:  55em;
+$width-xl: 64em;
+$width-xxl: 84em;
+
+@mixin mq($args) {
+
+        @if $args == xs {
+        @media only screen and (min-width: $width-xs) {
+            @content; }
+    }
+
+    @else if $args == s {
+        @media only screen and (min-width: $width-s) {
+           @content; }
+    }
+
+    @else if $args == m {
+        @media only screen and (min-width: $width-m) {
+           @content; }
+    }
+
+    @else if $args == l {
+        @media only screen and (min-width: $width-l) {
+            @content; }
+    }
+
+    @else if $args == xl {
+        @media only screen and (min-width: $width-xl) {
+            @content; }
+    }
+
+    @else if $args == xxl {
+        @media only screen and (min-width: $width-xxl) {
+            @content; }
+    }
+}

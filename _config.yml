@@ -1,0 +1,10 @@
+creator: "@_collagraph"
+description: "Clear design for the web"
+markdown: redcarpet
+name: Collagraph
+permalink: pretty
+timezone: Australia/Sydney
+title: Collagraph
+twitter: "@_collagraph"
+
+exclude: ['node_modules', 'Gruntfile.js', 'package.json', 'README.md', '*.scss']
