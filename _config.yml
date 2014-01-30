@@ -6,4 +6,5 @@ permalink: pretty
 timezone: Australia/Sydney
 title: Collagraph
 twitter: "@_collagraph"
-url: http://collagraph.com.au
+
+exclude: ['node_modules', 'Gruntfile.js', 'package.json', 'README.md', '*.scss']

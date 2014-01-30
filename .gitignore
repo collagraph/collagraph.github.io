@@ -3,4 +3,11 @@
 .scssc
 .sass-cache
 .DS_Store
+<<<<<<< HEAD
 /_site
+=======
+_site/
+node_modules
+.npm-debug.log
+tmp
+>>>>>>> 36aa62ecab1c26eb598e4f30a122a376a968a9eb

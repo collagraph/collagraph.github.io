@@ -1,0 +1,375 @@
+/* -------------------------------------------------------------------------------
+ * type base
+ * -------------------------------------------------------------------------------*/
+
+$sans-stack:  "ff-meta-web-pro", "open sans", sans-serif ;
+$serif-stack:  "ff-meta-serif-web-pro", georgia;
+
+body {
+    font-family: $sans-stack;
+    @include rem-fallback(font-size, $scale-0);
+    line-height: 1.663;
+    background-color: $background;
+    color: $text-base;
+}
+
+legend,
+.about p,
+.project-info {
+    font-family: $serif-stack;
+}
+
+h1,
+h2,
+h3,
+.about p:first-of-type {
+    line-height: 1.358;
+}
+
+a {
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+.site-header .lede {
+        font-family: $sans-stack;
+}
+
+.distinct {
+    @include rem-fallback(font-size, $scale-1);
+
+    @include mq(s) {
+        @include rem-fallback(font-size, $scale-2);
+    }
+}
+
+.discrete {
+    @include rem-fallback(font-size, $scale-n1);
+}
+
+.details {
+    @include rem-fallback(margin-top, $scale-3);
+    @include rem-fallback(font-size, $scale-0);
+    letter-spacing: 1px;
+
+    @include mq(s) {
+        @include rem-fallback(font-size, $scale-2);
+    }
+}
+
+.lede .p-adr {
+    display: block;
+}
+
+h2 {
+    @include rem-fallback(padding-top, $scale-4);
+    @include rem-fallback(padding-bottom, $scale-4);
+    @include rem-fallback(font-size, $scale-0);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include mq(s) {
+        @include rem-fallback(padding-top, $scale-8);
+        @include rem-fallback(padding-bottom, $scale-6);
+    }
+}
+
+h3 {
+    @include rem-fallback(font-size, $scale-2);
+    @include rem-fallback(margin-top, $scale-1);
+    font-weight: normal;
+    font-family: $serif-stack;
+
+    @include mq(s) {
+        @include rem-fallback(font-size, $scale-3);
+    }
+
+    @include mq(xl) {
+        @include rem-fallback(font-size, $scale-3);
+    }
+
+    @include mq(xxl) {
+        @include rem-fallback(font-size, $scale-4);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+ul,
+figure {
+    @include rem-fallback(margin, $scale-2, 0, 0);
+}
+
+.project-changer {
+    display: none;
+    @include rem-fallback(font-size, $scale-0);
+    line-height: 2;
+    text-align: center;
+    @include rem-fallback(margin-left, -6.25);
+    @include rem-fallback(width, 12.5);
+    position: relative;
+    left: 50%;
+    @include rem-fallback(bottom, $scale-7);
+}
+
+.project-changer li {
+    display: inline-block;
+    &:last-child .project-link {
+        margin-right: 0;
+    }
+}
+
+.top-link {
+    display: block;
+    text-align: center;
+    @include rem-fallback( padding, $scale-0, 0);
+}
+
+/* remove text-shadow from section */
+::-moz-selection {
+    background: $submit;
+    color: $background;
+    text-shadow: none;
+}
+
+::selection {
+    background: $submit;
+    color: $background;
+    text-shadow: none;
+}
+
+ins {
+    background-color: $grey-1;
+    color: $text-base;
+    text-decoration: none;
+}
+
+mark {
+    background-color: $grey-1;
+    color: $text-base;
+    font-style: italic;
+    font-weight: bold;
+}
+
+a {
+    color: $submit;
+    :link {
+        -webkit-tap-highlight-color: $grey-1;
+    }
+    &:hover,
+    &:focus {
+        color: darken($submit, 10%);
+    }
+    &:active {
+        color: darken($submit, 20%);
+    }
+}
+
+nav.primary a {
+    @include mq(xl) {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $primary;
+
+        &:hover,
+        &:focus {
+            color: $grey-5;
+            text-decoration: none;
+        }
+    }
+}
+
+.about, .contact-form {
+    background-color: $grey-1;
+}
+
+.about {
+    p {
+        @include mq(s) {
+            @include rem-fallback(font-size, $scale-3);
+        }
+
+        @include mq(xl) {
+            @include rem-fallback(font-size, $scale-3);
+        }
+
+        @include mq(xxl) {
+            @include rem-fallback(font-size, $scale-4);
+        }
+    }
+
+    p + p {
+        @include mq(s) {
+            @include rem-fallback(font-size, $scale-1);
+        }
+
+        @include mq(xl) {
+            @include rem-fallback(font-size, $scale-1);
+        }
+    }
+}
+
+.portfolio {
+    background-color: $grey-0;
+}
+
+.flexslider {
+    .next, .previous {
+        color: $grey-1;
+        background-color: $primary;
+    }
+}
+
+.discrete {
+    color: $discreet;
+}
+
+.project-info {
+    @include mq(s) {
+        @include rem-fallback(font-size, $scale-1);
+    }
+
+    @include mq(xl) {
+        @include rem-fallback(font-size, $scale-0);
+    }
+
+    @include mq(xxl) {
+        @include rem-fallback(font-size, $scale-1);
+    }
+
+    h3 {
+        @include mq(xl) {
+            @include rem-fallback(font-size, $scale-3);
+        }
+
+        @include mq(xxl) {
+            @include rem-fallback(font-size, $scale-4);
+        }
+    }
+}
+
+.project-link {
+    color: $grey-1;
+    @include rem-fallback(border-width, $scale-n11);
+    border-style: solid;
+    border-color: darken($submit, 20%);
+
+    &:hover {
+        color: $grey-1;
+        background-color: darken($submit, 20%);
+    }
+
+    &.current {
+        color: $grey-1;
+        background-color: $submit;
+        border-color: $submit;
+    }
+}
+
+.view-project {
+    @include mq(xl) {
+        float: right;
+        clear: right;
+        display: inline-block;
+        @include rem-fallback(margin-top, $scale-n4);
+        @include rem-fallback(padding, $scale-n4, $scale-n2);
+        @include rem-fallback(font-size, $scale-0);
+        color: $grey-5;
+        background-color: rgba(0,0,0,0.25);
+
+        &:hover,
+        &:focus {
+            color: $grey-3;
+            text-decoration: none;
+        }
+
+        &:active {
+            color: $submit;
+        }
+    }
+
+    @include mq(xxl) {
+        @include rem-fallback(padding, $scale-n2, $scale-0);
+    }
+}
+
+.main.contact-form {
+
+    @include mq(s) {
+        @include rem-fallback(font-size, $scale-1);
+    }
+
+    h2 {
+        @include rem-fallback(padding-bottom, $scale-3);
+
+        @include mq(xl) {
+            @include rem-fallback(padding-bottom, $scale-5);
+        }
+    }
+
+    input, textarea, button {
+        @include mq(s) {
+            @include rem-fallback(font-size, $scale-1);
+        }
+    }
+
+    fieldset {
+        margin: 0;
+    }
+
+    .lede {
+        @include rem-fallback(font-size, $scale-2);
+
+        p:first-of-type {
+            margin-top: 0;
+        }
+
+        @include mq(s) {
+            @include rem-fallback(font-size, $scale-5);
+        }
+
+        @include mq(xl) {
+            @include rem-fallback(font-size, $scale-6);
+        }
+    }
+
+    .lede p + p {
+        margin-top: 0;
+        @include rem-fallback(font-size, $scale-0);
+
+        @include mq(s) {
+            @include rem-fallback(font-size, $scale-3);
+        }
+
+        @include mq(xl) {
+            @include rem-fallback(font-size, $scale-3);
+        }
+
+        @include mq(xxl) {
+            @include rem-fallback(font-size, $scale-4);
+        }
+    }
+
+    .additional-questions {
+        @include mq(s) {
+            @include rem-fallback(font-size, $scale-0);
+        }
+    }
+}
+
+.top-link {
+    opacity: .8;
+    transition: all .3s ease;
+    &:hover,
+    &:focus {
+        opacity: 1;
+        background-color: $grey-2;
+    }
+}

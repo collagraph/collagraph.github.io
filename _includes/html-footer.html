@@ -1,14 +1,12 @@
         <!-- Include respond.min.js for < IE 9 -->
         <!--[if lt IE 9]>
-            <script src="{{ site.url }}/js/respond.min.js"></script>
+            <script src="{{ site.url }}/js/build/polyfill.min.js"></script>
         <![endif]-->
 
         <!-- Javascript -->
         <!-- <script type="text/javascript" src="{{ site.url }}/js/flexslider.min.js"></script> -->
         <!-- <script type="text/javascript" src="{{ site.url }}/js/flexslider.manualDirectionControls.js"></script> -->
-        <script type="text/javascript" src="{{ site.url }}/js/jquery.form.min.js"></script>
-        <script type="text/javascript" src="{{ site.url }}/js/jquery.validate.js"></script>
-        <script type="text/javascript" src="{{ site.url }}/js/functions.js"></script>
+        <script type="text/javascript" src="{{ site.url }}/js/build/production.min.js"></script>
 
         <!-- Google Analytics -->
         <script type="text/javascript">
@@ -16,7 +14,7 @@
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-38054833-1']);
 		  _gaq.push(['_trackPageview']);
-		
+
 		  (function() {
 		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
