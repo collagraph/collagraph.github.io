@@ -96,6 +96,10 @@ body {
         @include mq(xxl) {
             @include rem-fallback(bottom, $scale-8);
         }
+
+        .p-summary {
+            @include rem-fallback(margin-top, $scale-0);
+        }
     }
 
     h2 {
