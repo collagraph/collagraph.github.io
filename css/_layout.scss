@@ -75,7 +75,6 @@ body {
 }
 
 .portfolio {
-
     @include mq(xl) {
         color: $grey-1;
         padding-bottom: 0;
@@ -110,7 +109,6 @@ body {
     }
 
     .hentry {
-
         @include mq(xl) {
             position: relative;
             overflow: hidden;
@@ -128,17 +126,11 @@ body {
                     width: 100%;
                 }
             }
-
         }
     }
 
     .project-info {
-        // @include rem-fallback(margin-top, -$scale-7);
         @include rem-fallback(padding-top, $scale-0);
-
-        // @include mq(xs) {
-        //    @include rem-fallback(margin-top, -$scale-8);
-        // }
 
         @include mq(s) {
             @include rem-fallback(padding-top, $scale-4);
@@ -176,20 +168,8 @@ body {
         }
     }
 
-    .entry-summary P:first-of-type {
-        margin-top: 0;
-    }
-
     .image-changer {
         @include rem-fallback(margin, $scale-0, 0);
-            li {
-                display: inline-block;
-                @include rem-fallback(margin-right, $scale-0);
-
-                &:last-child {
-                    margin-right: 0;
-            }
-        }
 
         @include mq(s) {
             @include rem-fallback(margin, $scale-2, 0);
@@ -202,6 +182,15 @@ body {
         @include mq(xxl) {
             @include rem-fallback(margin, $scale-2, 0);
         }
+
+        li {
+            display: inline-block;
+            @include rem-fallback(margin-right, $scale-0);
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 }
 
@@ -212,105 +201,7 @@ body {
     }
 }
 
-.slide-link {
-    text-indent: -9999em;
-    overflow: hidden;
-    display: inline-block;
-    @include rem-fallback(width, 3);
-    @include rem-fallback(height, 3);
-    border-radius: 50%;
-
-    &.small-screen {
-        background: url('/assets/phone-icon-blue.png') center center no-repeat;
-
-        @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            background-image: url('/assets/phone-icon-blue-retina.png');
-            background-size: 50% auto;
-        }
-
-        @include mq(xl) {
-            background-image: url('/assets/phone-icon.png');
-        }
-
-        @media screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            background-image: url('/assets/phone-icon-retina.png');
-            background-size: 50% auto;
-        }
-
-        &.current, &:hover, &:focus {
-            background-image: url('/assets/phone-icon.png');
-
-            @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-                background-image: url('/assets/phone-icon-retina.png');
-            }
-        }
-    }
-
-    &.medium-screen {
-        background: url('/assets/tablet-icon-blue.png') center center no-repeat;
-
-        @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            background-image: url('/assets/tablet-icon-blue-retina.png');
-            background-size: 50% auto;
-        }
-
-        @include mq(xl) {
-            background-image: url('/assets/tablet-icon.png');
-        }
-
-        @media screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            background-image: url('/assets/tablet-icon-retina.png');
-            background-size: 50% auto;
-        }
-
-        &.current, &:hover, &:focus {
-            background-image: url('/assets/tablet-icon.png');
-
-            @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-                background-image: url('/assets/tablet-icon-retina.png');
-            }
-        }
-    }
-
-    &.large-screen {
-        background: url('/assets/desktop-icon-blue.png') center center no-repeat;
-
-        @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            background-image: url('/assets/desktop-icon-blue-retina.png');
-            background-size: 50% auto;
-        }
-
-        @include mq(xl) {
-            background-image: url('/assets/desktop-icon.png');
-        }
-
-        @media screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            background-image: url('/assets/desktop-icon-retina.png');
-            background-size: 50% auto;
-        }
-
-        &.current, &:hover, &:focus {
-            background-image: url('/assets/desktop-icon.png');
-
-            @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-                background-image: url('/assets/desktop-icon-retina.png');
-            }
-        }
-    }
-
-    &.current {
-        background-color: $submit;
-    }
-
-    &:hover,
-    &:focus {
-        cursor: pointer;
-        background-color: darken($submit, 20%);
-    }
-}
-
 .flexslider {
-
     @include mq(xl) {
         .flexslider {
             .flex-viewport {

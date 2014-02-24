@@ -1173,20 +1173,9 @@ body {
     bottom: 3.586rem;
   }
 }
-.portfolio .entry-summary P:first-of-type {
-  margin-top: 0;
-}
 .portfolio .image-changer {
   margin: 17.008px 0px;
   margin: 1.063rem 0rem;
-}
-.portfolio .image-changer li {
-  display: inline-block;
-  margin-right: 17.008px;
-  margin-right: 1.063rem;
-}
-.portfolio .image-changer li:last-child {
-  margin-right: 0;
 }
 @media only screen and (min-width: 42em) {
   .portfolio .image-changer {
@@ -1206,112 +1195,18 @@ body {
     margin: 1.594rem 0rem;
   }
 }
+.portfolio .image-changer li {
+  display: inline-block;
+  margin-right: 17.008px;
+  margin-right: 1.063rem;
+}
+.portfolio .image-changer li:last-child {
+  margin-right: 0;
+}
 
 .no-js .portfolio .image-changer,
 .no-js .portfolio .project-changer {
   display: none;
-}
-
-.slide-link {
-  text-indent: -9999em;
-  overflow: hidden;
-  display: inline-block;
-  width: 48px;
-  width: 3rem;
-  height: 48px;
-  height: 3rem;
-  border-radius: 50%;
-}
-.slide-link.small-screen {
-  background: url("/assets/phone-icon-blue.png") center center no-repeat;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.small-screen {
-    background-image: url("/assets/phone-icon-blue-retina.png");
-    background-size: 50% auto;
-  }
-}
-@media only screen and (min-width: 64em) {
-  .slide-link.small-screen {
-    background-image: url("/assets/phone-icon.png");
-  }
-}
-@media screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.small-screen {
-    background-image: url("/assets/phone-icon-retina.png");
-    background-size: 50% auto;
-  }
-}
-.slide-link.small-screen.current, .slide-link.small-screen:hover, .slide-link.small-screen:focus {
-  background-image: url("/assets/phone-icon.png");
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.small-screen.current, .slide-link.small-screen:hover, .slide-link.small-screen:focus {
-    background-image: url("/assets/phone-icon-retina.png");
-  }
-}
-.slide-link.medium-screen {
-  background: url("/assets/tablet-icon-blue.png") center center no-repeat;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.medium-screen {
-    background-image: url("/assets/tablet-icon-blue-retina.png");
-    background-size: 50% auto;
-  }
-}
-@media only screen and (min-width: 64em) {
-  .slide-link.medium-screen {
-    background-image: url("/assets/tablet-icon.png");
-  }
-}
-@media screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.medium-screen {
-    background-image: url("/assets/tablet-icon-retina.png");
-    background-size: 50% auto;
-  }
-}
-.slide-link.medium-screen.current, .slide-link.medium-screen:hover, .slide-link.medium-screen:focus {
-  background-image: url("/assets/tablet-icon.png");
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.medium-screen.current, .slide-link.medium-screen:hover, .slide-link.medium-screen:focus {
-    background-image: url("/assets/tablet-icon-retina.png");
-  }
-}
-.slide-link.large-screen {
-  background: url("/assets/desktop-icon-blue.png") center center no-repeat;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.large-screen {
-    background-image: url("/assets/desktop-icon-blue-retina.png");
-    background-size: 50% auto;
-  }
-}
-@media only screen and (min-width: 64em) {
-  .slide-link.large-screen {
-    background-image: url("/assets/desktop-icon.png");
-  }
-}
-@media screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.large-screen {
-    background-image: url("/assets/desktop-icon-retina.png");
-    background-size: 50% auto;
-  }
-}
-.slide-link.large-screen.current, .slide-link.large-screen:hover, .slide-link.large-screen:focus {
-  background-image: url("/assets/desktop-icon.png");
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .slide-link.large-screen.current, .slide-link.large-screen:hover, .slide-link.large-screen:focus {
-    background-image: url("/assets/desktop-icon-retina.png");
-  }
-}
-.slide-link.current {
-  background-color: #3678b6;
-}
-.slide-link:hover, .slide-link:focus {
-  cursor: pointer;
-  background-color: #1f4467;
 }
 
 @media only screen and (min-width: 64em) {
