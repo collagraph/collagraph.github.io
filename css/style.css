@@ -766,6 +766,7 @@ fieldset:not(#foo) > .checkbox {
   padding-right: 25.504px;
   padding-right: 1.594rem;
   background: url("/assets/off.png") right 0.4em no-repeat;
+  background-size: auto 1.1em;
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
   transition: color .3s ease;

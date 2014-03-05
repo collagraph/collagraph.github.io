@@ -75,6 +75,7 @@ fieldset:not(#foo) > label + input[type="checkbox"] {
 fieldset:not(#foo) > .checkbox {
     @include rem-fallback(padding-right, $scale-2);
     background: url('/assets/off.png') right .4em no-repeat;
+    background-size: auto 1.1em;
     -webkit-transition: color .3s ease;
     -moz-transition: color .3s ease;
     transition: color .3s ease;
