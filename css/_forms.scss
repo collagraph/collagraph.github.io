@@ -78,38 +78,18 @@ fieldset:not(#foo) > .checkbox {
     -webkit-transition: color .3s ease;
     -moz-transition: color .3s ease;
     transition: color .3s ease;
-
-    // @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    //     background-image: url('/assets/off-retina.png');
-    //     background-size: 50% auto;
-    // }
 }
 
 fieldset:not(#foo) > .checkbox-checked {
     background-image: url('/assets/check.png');
-
-    // @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    //     background-image: url('/assets/check-retina.png');
-    //     background-size: 50% auto;
-    // }
 }
 
 fieldset:not(#foo) > .checkbox-checked-focused {
     background-image: url('/assets/check-focus.png');
-
-    // @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    //     background-image: url('/assets/check-focus-retina.png');
-    //     background-size: 50% auto;
-    // }
 }
 
 fieldset:not(#foo) > .checkbox-focused {
     background-image: url('/assets/off-focus.png');
-
-    // @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    //     background-image: url('/assets/off-focus-retina.png');
-    //     background-size: 50% auto;
-    // }
 }
 
 label,

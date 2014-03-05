@@ -419,7 +419,7 @@ button {
  * -------------------------------------------------------------------------------*/
 
 body {
-  font-family: "ff-meta-web-pro", "open sans", sans-serif;
+  font-family: "ff-meta-web-pro", sans-serif;
   font-size: 17.008px;
   font-size: 1.063rem;
   line-height: 1.663;
@@ -447,7 +447,7 @@ a:active {
 }
 
 .site-header .lede {
-  font-family: "ff-meta-web-pro", "open sans", sans-serif;
+  font-family: "ff-meta-web-pro", sans-serif;
 }
 
 .distinct {
@@ -996,7 +996,7 @@ button {
   border-width: 1.344px;
   border-width: 0.084rem;
   border-style: solid;
-  font-family: "ff-meta-web-pro", "open sans", sans-serif;
+  font-family: "ff-meta-web-pro", sans-serif;
   font-size: 17.008px;
   font-size: 1.063rem;
   letter-spacing: 6.816px;
