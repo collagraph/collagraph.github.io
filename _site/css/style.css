@@ -1100,6 +1100,10 @@ body {
     bottom: 5.379rem;
   }
 }
+.portfolio .project-info .p-summary {
+  margin-top: 17.008px;
+  margin-top: 1.063rem;
+}
 @media only screen and (min-width: 64em) {
   .portfolio h2 {
     position: absolute;
