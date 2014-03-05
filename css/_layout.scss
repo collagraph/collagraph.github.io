@@ -77,7 +77,6 @@ body {
 .portfolio {
     @include mq(xl) {
         color: $grey-1;
-        padding-bottom: 0;
     }
 
     h2,

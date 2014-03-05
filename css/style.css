@@ -277,7 +277,7 @@ button {
  * type base
  * -------------------------------------------------------------------------------*/
 body {
-  font-family: "ff-meta-web-pro", "open sans", sans-serif;
+  font-family: "ff-meta-web-pro", sans-serif;
   font-size: 17.008px;
   font-size: 1.063rem;
   line-height: 1.663;
@@ -303,7 +303,7 @@ a:hover, a:focus, a:active {
 }
 
 .site-header .lede {
-  font-family: "ff-meta-web-pro", "open sans", sans-serif;
+  font-family: "ff-meta-web-pro", sans-serif;
 }
 
 .distinct {
@@ -545,8 +545,13 @@ a:active {
     font-size: 1.438rem;
   }
 }
+.project-info h3 {
+  padding-top: 7.552px;
+  padding-top: 0.472rem;
+}
 @media only screen and (min-width: 64em) {
   .project-info h3 {
+    padding-top: 0;
     font-size: 34.496px;
     font-size: 2.156rem;
   }
@@ -556,6 +561,68 @@ a:active {
     font-size: 38.256px;
     font-size: 2.391rem;
   }
+}
+.project-info .p-summary p {
+  margin-top: 17.008px;
+  margin-top: 1.063rem;
+}
+
+.portfolio .portfolio-small-wrapper {
+  padding-left: 17.008px;
+  padding-left: 1.063rem;
+  padding-right: 17.008px;
+  padding-right: 1.063rem;
+}
+@media only screen and (min-width: 30em) {
+  .portfolio .portfolio-small-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media only screen and (min-width: 42em) {
+  .portfolio .portfolio-small-wrapper {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+
+.portfolio .portfolio-small {
+  font-size: 17.008px;
+  font-size: 1.063rem;
+  margin-top: 57.376px;
+  margin-top: 3.586rem;
+  color: #222222;
+}
+@media only screen and (min-width: 42em) {
+  .portfolio .portfolio-small {
+    margin-top: 116.432px;
+    margin-top: 7.277rem;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 2.94%;
+    padding-right: 2.94%;
+  }
+}
+@media only screen and (min-width: 84em) {
+  .portfolio .portfolio-small {
+    width: 33.3%;
+  }
+}
+.portfolio .portfolio-small h3 {
+  font-size: 23.008px;
+  font-size: 1.438rem;
+  margin-top: 25.504px;
+  margin-top: 1.594rem;
+}
+.portfolio .portfolio-small .p-summary p {
+  margin-top: 17.008px;
+  margin-top: 1.063rem;
+}
+.portfolio .portfolio-small figure.photo {
+  float: none;
+  clear: none;
+  border: 1px solid #dddddd;
 }
 
 .project-link {
@@ -575,30 +642,43 @@ a:active {
   border-color: #3678b6;
 }
 
+.view-project {
+  float: right;
+  clear: right;
+  display: inline-block;
+  margin-top: 7.552px;
+  margin-top: 0.472rem;
+  padding: 7.552px 11.328px;
+  padding: 0.472rem 0.708rem;
+  font-size: 17.008px;
+  font-size: 1.063rem;
+  color: #fcfcfc;
+  background-color: #3678b6;
+  font-family: "ff-meta-web-pro", sans-serif;
+}
+.view-project:hover, .view-project:focus {
+  color: #fcfcfc;
+  background-color: #5391cc;
+  text-decoration: none;
+}
+.view-project:active {
+  color: #fcfcfc;
+  background: #2a5e8f;
+  text-decoration: none;
+}
 @media only screen and (min-width: 64em) {
-  .view-project {
-    float: right;
-    clear: right;
-    display: inline-block;
-    margin-top: 7.552px;
-    margin-top: 0.472rem;
-    padding: 7.552px 11.328px;
-    padding: 0.472rem 0.708rem;
-    font-size: 17.008px;
-    font-size: 1.063rem;
-    color: #aaaaaa;
+  .flexslider .view-project {
     background-color: rgba(0, 0, 0, 0.25);
   }
-  .view-project:hover, .view-project:focus {
+  .flexslider .view-project:hover, .flexslider .view-project:focus {
     color: #cccccc;
-    text-decoration: none;
   }
-  .view-project:active {
+  .flexslider .view-project:active {
     color: #3678b6;
   }
 }
 @media only screen and (min-width: 84em) {
-  .view-project {
+  .flexslider .view-project {
     padding: 11.328px 17.008px;
     padding: 0.708rem 1.063rem;
   }
@@ -766,6 +846,7 @@ fieldset:not(#foo) > .checkbox {
   padding-right: 25.504px;
   padding-right: 1.594rem;
   background: url("/assets/off.png") right 0.4em no-repeat;
+  background-size: auto 1.1em;
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
   transition: color .3s ease;
@@ -802,7 +883,7 @@ button {
   border-width: 1.344px;
   border-width: 0.084rem;
   border-style: solid;
-  font-family: "ff-meta-web-pro", "open sans", sans-serif;
+  font-family: "ff-meta-web-pro", sans-serif;
   font-size: 17.008px;
   font-size: 1.063rem;
   letter-spacing: 6.816px;
@@ -831,7 +912,7 @@ input, textarea {
   background-color: #3678b6;
 }
 .button:hover, .button:focus {
-  background-color: #306ba2;
+  background-color: #5391cc;
 }
 .button:active {
   background: #2a5e8f;
@@ -1077,7 +1158,6 @@ body {
 @media only screen and (min-width: 64em) {
   .portfolio {
     color: #f0f0f0;
-    padding-bottom: 0;
   }
 }
 .portfolio h2,
