@@ -1237,12 +1237,15 @@ $.format = $.validator.format;
 	});
 }(jQuery));
 
-// remap jQuery to $
-(function($){
+/* -------------------------------------------------------------------------------
+ * functions
+ * -------------------------------------------------------------------------------*/
 
+(function($){
     $('fieldset:not(#foo) #phone-q').click(function() {
         if($('#phone-q').is(':checked')) {
             $('#phone-c').removeClass('checkbox-focused').addClass('checkbox-checked-focused');
+
             $('#more-phone').addClass('display-more').removeClass('display-hide');
         } else {
             $('#phone-c').removeClass('checkbox-checked, checkbox-checked-focused').addClass('checkbox-focused');
@@ -1253,10 +1256,13 @@ $.format = $.validator.format;
     $('fieldset:not(#foo) #deadline-q').click(function() {
         if($('#deadline-q').is(':checked')) {
             $('#deadline-c').removeClass('checkbox-focused').addClass('checkbox-checked-focused');
+
             $('#more-deadline').addClass('display-more').removeClass('display-hide');
+
             $('#deadline').focus();
         } else {
             $('#deadline-c').removeClass('checkbox-checked, checkbox-checked-focused').addClass('checkbox-focused');
+
             $('#more-deadline').removeClass('display-more').addClass('display-hide');
         }
     });
@@ -1264,9 +1270,11 @@ $.format = $.validator.format;
     $('fieldset:not(#foo) #budget-q').click(function() {
         if($('#budget-q').is(':checked')) {
             $('#budget-c').removeClass('checkbox-focused').addClass('checkbox-checked-focused');
+
             $('#more-budget').addClass('display-more').removeClass('display-hide');
         } else {
             $('#budget-c').removeClass('checkbox-checked, checkbox-checked-focused').addClass('checkbox-focused');
+
             $('#more-budget').removeClass('display-more').addClass('display-hide');
         }
     });
@@ -1314,19 +1322,6 @@ $.format = $.validator.format;
     });
 
     $(document).ready(function() {
-
-        // // flexslider
-        // $(".flexslider")
-        // .flexslider({
-        //     animation: "slide",
-        //     slideshow: false,
-        //     useCSS: true,
-        //     animationLoop: false,
-        //     smoothHeight: false,
-  //           directionNav: false,
-        //     controlNav: false
-        // }).flexsliderManualDirectionControls();
-
         // smooth scrolling
         $('.scroll').click(function(event){
             event.preventDefault();
@@ -1337,6 +1332,7 @@ $.format = $.validator.format;
 
     });
 
+    // preload images
     function preload(arrayOfImages) {
         $(arrayOfImages).each(function(){
             $('<img/>')[0].src = this;
@@ -1346,22 +1342,17 @@ $.format = $.validator.format;
     $(window).bind("load", function() {
         preload([
             '/assets/check.png',
-            '/assets/check-retina.png',
             '/assets/off-focus.png',
-            '/assets/off-focus-retina.png',
-            '/assets/check-focus.png',
-            '/assets/check-focus-retina.png'
+            '/assets/check-focus.png'
         ]);
     });
-
-    /* form validation -------------------------------------------------------------- */
 
     // form validation http://jqueryvalidation.org/documentation/
     $(document).ready(function(){
         $('#contact').validate();
     });
 
-    // Ajax form http://malsup.com/jquery/form/
+    // ajax form http://malsup.com/jquery/form/
     $(document).ready(function(){
         var options = {
             dataType: 'jsonp',
@@ -1399,7 +1390,7 @@ $.format = $.validator.format;
 
 })(window.jQuery);
 
-// set #deadline placeholder to 3 months in advance
+// set deadline placeholder text to 3 months ahead
 var today = new Date();
 var mm = today.getMonth()+4; //January is 0!
 var yyyy = today.getFullYear();
