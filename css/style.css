@@ -558,6 +558,64 @@ a:active {
   }
 }
 
+.portfolio .portfolio-small-wrapper {
+  padding-left: 17.008px;
+  padding-left: 1.063rem;
+  padding-right: 17.008px;
+  padding-right: 1.063rem;
+}
+@media only screen and (min-width: 30em) {
+  .portfolio .portfolio-small-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media only screen and (min-width: 42em) {
+  .portfolio .portfolio-small-wrapper {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+
+.portfolio .portfolio-small {
+  font-size: 17.008px;
+  font-size: 1.063rem;
+  margin-top: 57.376px;
+  margin-top: 3.586rem;
+  color: #222222;
+}
+@media only screen and (min-width: 42em) {
+  .portfolio .portfolio-small {
+    margin-top: 116.432px;
+    margin-top: 7.277rem;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 2.94%;
+    padding-right: 2.94%;
+  }
+}
+@media only screen and (min-width: 84em) {
+  .portfolio .portfolio-small {
+    width: 33.3%;
+  }
+}
+.portfolio .portfolio-small h3 {
+  font-size: 23.008px;
+  font-size: 1.438rem;
+  margin-top: 25.504px;
+  margin-top: 1.594rem;
+}
+.portfolio .portfolio-small figure.photo {
+  float: none;
+  clear: none;
+  border: 1px solid #dddddd;
+}
+.portfolio .portfolio-small .p-summary p {
+  margin-top: 17.008px;
+  margin-top: 1.063rem;
+}
+
 .project-link {
   color: #f0f0f0;
   border-width: 2.016px;
@@ -575,30 +633,43 @@ a:active {
   border-color: #3678b6;
 }
 
+.view-project {
+  float: right;
+  clear: right;
+  display: inline-block;
+  margin-top: 7.552px;
+  margin-top: 0.472rem;
+  padding: 7.552px 11.328px;
+  padding: 0.472rem 0.708rem;
+  font-size: 17.008px;
+  font-size: 1.063rem;
+  color: #fcfcfc;
+  background-color: #3678b6;
+  font-family: "ff-meta-web-pro", sans-serif;
+}
+.view-project:hover, .view-project:focus {
+  color: #fcfcfc;
+  background-color: #5391cc;
+  text-decoration: none;
+}
+.view-project:active {
+  color: #fcfcfc;
+  background: #2a5e8f;
+  text-decoration: none;
+}
 @media only screen and (min-width: 64em) {
-  .view-project {
-    float: right;
-    clear: right;
-    display: inline-block;
-    margin-top: 7.552px;
-    margin-top: 0.472rem;
-    padding: 7.552px 11.328px;
-    padding: 0.472rem 0.708rem;
-    font-size: 17.008px;
-    font-size: 1.063rem;
-    color: #aaaaaa;
+  .flexslider .view-project {
     background-color: rgba(0, 0, 0, 0.25);
   }
-  .view-project:hover, .view-project:focus {
+  .flexslider .view-project:hover, .flexslider .view-project:focus {
     color: #cccccc;
-    text-decoration: none;
   }
-  .view-project:active {
+  .flexslider .view-project:active {
     color: #3678b6;
   }
 }
 @media only screen and (min-width: 84em) {
-  .view-project {
+  .flexslider .view-project {
     padding: 11.328px 17.008px;
     padding: 0.708rem 1.063rem;
   }
@@ -832,7 +903,7 @@ input, textarea {
   background-color: #3678b6;
 }
 .button:hover, .button:focus {
-  background-color: #306ba2;
+  background-color: #5391cc;
 }
 .button:active {
   background: #2a5e8f;
@@ -1078,7 +1149,6 @@ body {
 @media only screen and (min-width: 64em) {
   .portfolio {
     color: #f0f0f0;
-    padding-bottom: 0;
   }
 }
 .portfolio h2,

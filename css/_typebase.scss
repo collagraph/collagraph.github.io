@@ -255,6 +255,56 @@ nav.primary a {
     }
 }
 
+.portfolio .portfolio-small-wrapper {
+    @include rem-fallback(padding-left, $scale-0);
+    @include rem-fallback(padding-right, $scale-0);
+
+    @include mq(xs) {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    @include mq(s) {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+}
+
+.portfolio .portfolio-small  {
+    @include rem-fallback(font-size, $scale-0);
+    @include rem-fallback(margin-top, $scale-6);
+
+    color: $text-base;
+
+    @include mq(s) {
+        @include rem-fallback(margin-top, $scale-9);
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 2.94%;
+        padding-right: 2.94%;
+    }
+
+    @include mq(xxl) {
+        width: 33.3%;
+    }
+
+    h3 {
+        @include rem-fallback(font-size, $scale-1);
+        @include rem-fallback(margin-top, $scale-2);
+    }
+
+    figure.photo {
+        float: none;
+        clear: none;
+        border: 1px solid $grey-2;
+    }
+
+    .p-summary p {
+        @include rem-fallback(margin-top, $scale-0);
+    }
+}
+
 .project-link {
     color: $grey-1;
     @include rem-fallback(border-width, $scale-n11);
@@ -274,29 +324,46 @@ nav.primary a {
 }
 
 .view-project {
-    @include mq(xl) {
-        float: right;
-        clear: right;
-        display: inline-block;
-        @include rem-fallback(margin-top, $scale-n4);
-        @include rem-fallback(padding, $scale-n4, $scale-n2);
-        @include rem-fallback(font-size, $scale-0);
-        color: $grey-5;
-        background-color: rgba(0,0,0,0.25);
+    float: right;
+    clear: right;
+    display: inline-block;
+    @include rem-fallback(margin-top, $scale-n4);
+    @include rem-fallback(padding, $scale-n4, $scale-n2);
+    @include rem-fallback(font-size, $scale-0);
+    color: $background;
+    background-color: $submit;
+    font-family: $sans-stack;
 
-        &:hover,
-        &:focus {
-            color: $grey-3;
-            text-decoration: none;
-        }
-
-        &:active {
-            color: $submit;
-        }
+    &:hover,
+    &:focus {
+        color: $background;
+        background-color: lighten($submit, 10%);
+        text-decoration: none;
     }
 
-    @include mq(xxl) {
-        @include rem-fallback(padding, $scale-n2, $scale-0);
+    &:active {
+        color: $background;
+        background: darken($submit, 10%);
+        text-decoration: none;
+    }
+
+    .flexslider & {
+        @include mq(xl) {
+            background-color: rgba(0,0,0,0.25);
+
+            &:hover,
+            &:focus {
+                color: $grey-3;
+            }
+
+            &:active {
+                color: $submit;
+            }
+        }
+
+        @include mq(xxl) {
+            @include rem-fallback(padding, $scale-n2, $scale-0);
+        }
     }
 }
 
