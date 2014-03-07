@@ -245,13 +245,20 @@ nav.primary a {
     }
 
     h3 {
+        @include rem-fallback(padding-top, $scale-n4);
+
         @include mq(xl) {
+            padding-top: 0;
             @include rem-fallback(font-size, $scale-3);
         }
 
         @include mq(xxl) {
             @include rem-fallback(font-size, $scale-4);
         }
+    }
+
+    .p-summary p {
+        @include rem-fallback(margin-top, $scale-0);
     }
 }
 
@@ -294,14 +301,14 @@ nav.primary a {
         @include rem-fallback(margin-top, $scale-2);
     }
 
+    .p-summary p {
+        @include rem-fallback(margin-top, $scale-0);
+    }
+
     figure.photo {
         float: none;
         clear: none;
         border: 1px solid $grey-2;
-    }
-
-    .p-summary p {
-        @include rem-fallback(margin-top, $scale-0);
     }
 }
 

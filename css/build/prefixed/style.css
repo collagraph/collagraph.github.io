@@ -712,8 +712,14 @@ a:active {
   }
 }
 
+.project-info h3 {
+  padding-top: 7.552px;
+  padding-top: 0.472rem;
+}
+
 @media only screen and (min-width: 64em) {
   .project-info h3 {
+    padding-top: 0;
     font-size: 34.496px;
     font-size: 2.156rem;
   }
@@ -724,6 +730,11 @@ a:active {
     font-size: 38.256px;
     font-size: 2.391rem;
   }
+}
+
+.project-info .p-summary p {
+  margin-top: 17.008px;
+  margin-top: 1.063rem;
 }
 
 .portfolio .portfolio-small-wrapper {
@@ -780,15 +791,15 @@ a:active {
   margin-top: 1.594rem;
 }
 
+.portfolio .portfolio-small .p-summary p {
+  margin-top: 17.008px;
+  margin-top: 1.063rem;
+}
+
 .portfolio .portfolio-small figure.photo {
   float: none;
   clear: none;
   border: 1px solid #dddddd;
-}
-
-.portfolio .portfolio-small .p-summary p {
-  margin-top: 17.008px;
-  margin-top: 1.063rem;
 }
 
 .project-link {
